@@ -1,0 +1,2308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+ <title>Chi-Ning Chou</title>
+ <link href="http://cnchou.github.io/atom.xml" rel="self"/>
+ <link href="http://cnchou.github.io/"/>
+ <updated>2019-09-07T09:56:51-04:00</updated>
+ <id>http://cnchou.github.io</id>
+ <author>
+   <name>Chi-Ning Chou (周紀寧)</name>
+   <email></email>
+ </author>
+
+ 
+ <entry>
+   <title>Ph.D. 第二年心得</title>
+   <link href="http://cnchou.github.io/2019/07/21/secondyear/"/>
+   <updated>2019-07-21T00:00:00-04:00</updated>
+   <id>http://cnchou.github.io/2019/07/21/secondyear</id>
+   <content type="html">&lt;p&gt;在Harvard的第二年轉眼間就結束了，暑假也過了一半，很快的Ph.D.生涯也要到越過中線，看看現在的自己也許小有成長，但是完完全全不足原本對自己的期待。在今年的CCC中和Lijie聊了很多，聽他給了很多建議，雖然不見得完全適用，不過在剩下的時間，我是該好好重新思考策略和方向了。&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h3 id=&quot;這一年做了什麼&quot;&gt;這一年做了什麼？&lt;/h3&gt;
+
+&lt;p&gt;回想起來這一年實在是個蠻受挫的一年，在生活上遇到的打擊影響到了研究的心力與時間，而研究上方向的選擇也有點不太理想，無論是成果或是學到的東西似乎都不太及格。&lt;/p&gt;
+
+&lt;p&gt;這一年在研究上除了一些小分枝外，主要專注在matrix rigidity還有border Waring rank的研究。前者的目標是要找到一個和low rank matrices在$\ell_0$ norm上很遠的矩陣(in polynomial time甚至是$2^{O(n)}$都可以)，這樣的構造會得到logarithmic深度的super-linear circuit lower bound。我和合作者Sasha嘗試了好幾種思路，也慢慢降低我們的標準到比較差一點的參數(只有imply常數深度的circuit lower bound)，然而總感覺還是只有在問題的表面划水。而關於border Waring rank的研究，則是花了一個學期上課把representation theory學起來，把想看的paper看懂後，就覺得似乎要在懂更多的數學(lie algebra, algebraic geometry etc.)才做得動。&lt;/p&gt;
+
+&lt;p&gt;回想起來，覺得自己當初太只有根據對於一個問題的喜好來決定是否要深入研究，而忽略了自己或是身邊的人有沒有相對應的能力。就像Lijie說的：「這個問題憑什麼是被你解出來的？」，我除了時間比那些很忙的大老們多之外，還有什麼其他的優勢？&lt;/p&gt;
+
+&lt;h3 id=&quot;給自己的定位&quot;&gt;給自己的定位&lt;/h3&gt;
+
+&lt;p&gt;於是這就回到給自己的定位是什麼了。每個不同的研究者，都有各自的強項和弱項，有些人擅長high-level的直覺，有些人擅長複雜的計算，有些人懂得各式各樣的數學工具，有些人則可能像我一樣什麼都不太行…不過話說回來，對一個Ph.D.學生來說什麼都不行是很正常的，然而到了畢業的時候就不能再這樣了，至少要在一種能力上是頂尖的，才有可能在學界生存下來。於是一個很重要的問題就是，在Ph.D.的這段期間，我想要培養哪一種能力？然後我該如何去培養？&lt;/p&gt;
+
+&lt;p&gt;以我個人來說，從大學時期我給自己的設定就是建立廣的知識庫，無論是在TCS或是數學，然後同時可以具有一兩個專精的小方向，熟知那些方向的技術以及問題。目前看來在這兩個不同的軸向我都做得沒有很成功，在廣度方面，我自認接觸的還算多，不過內化的程度並不是很好，很多東西都還是停留在「聽過，知道些名詞，但是沒辦法和別人進行太多有意義的討論」的階段。而在深度方面，我想要專精的子領域是arithmetic circuits和boolean circuits，然而在這兩個方向上我都還停留在「知道許多重要結果，懂大約的證明思路，但是無法信手捻來，更不用說問出有意思的新問題」。&lt;/p&gt;
+
+&lt;p&gt;所以其實話說回來，我一直隱隱約約定位了自己的方向，然而問題出在我沒有把自己推往這個方向，而是常常因為偷懶或是被其他東西吸引，而偏離了主要的軸心。在所剩不多的時間，我該好好思考該怎麼樣把自己推回設定好的道路上了。&lt;/p&gt;
+
+&lt;h3 id=&quot;下一步&quot;&gt;下一步&lt;/h3&gt;
+
+&lt;p&gt;不過培養個人能力和研究是需要兼顧的，也正因為如此，在選擇要投入大量時間的研究時，更要謹慎地做出決定。像是我在第二年專攻的這兩個方向，都有點太過細微，只是解決一個大問題中的一個特殊approach，並不見得刻畫了大問題的面貌，在技術方面也很綁手綁腳。&lt;/p&gt;
+
+&lt;p&gt;既然主要想要專攻的方向是arithmetic circuits和boolean circuits，其實最主要的就是那幾個核心問題：lower bounds, derandomization等等，而其中又分為各式各樣不同的circuit models，各自有自己的frontier。對於現在的我來說，對於大部分的state-of-the-art結果，其實都只有些模糊的概念，無法準確地理解困難點在哪裡，然後有什麼潛在可以問的問題。所以一個要盡快完成的重要功課，就是好好的看書讀paper把這些東西抓起來吧。也希望自己趕快恢復當年勤奮寫notes的狀態，好好的內化這些技術，建立自己的知識庫，而不是腦中只有一團混在一起的概念而已。&lt;/p&gt;
+
+&lt;p&gt;除此之外，心理素質的養成也是很重要的。TCS其實還是個讓人挺有壓力的領域，畢竟非常厲害的人實在太多了，大家速度又非常的快。要如何不要太受影響，並且還是持續讓自己不斷推進，更是得要想清楚定位，而且不能封閉自己，要適當地與其他人交流學習。天呀，我真是覺得走這條路實在是個很自虐的選擇，不過成就感和滿足感也是特別的大。人生就這麼一次，就不要給自己後路，好好的拼下去了吧！&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Sensitivity Conjecture</title>
+   <link href="http://cnchou.github.io/2019/07/10/SensitivityConjecture/"/>
+   <updated>2019-07-10T00:00:00-04:00</updated>
+   <id>http://cnchou.github.io/2019/07/10/SensitivityConjecture</id>
+   <content type="html">&lt;p&gt;上禮拜整個理論CS界被&lt;a href=&quot;http://www.mathcs.emory.edu/~hhuan30/&quot;&gt;Hao Huang&lt;/a&gt;ㄧ篇只有&lt;a href=&quot;https://arxiv.org/abs/1907.00847&quot;&gt;六頁的論文&lt;/a&gt;震驚了：高懸三十年的Sensitivity Conjecture被解決了！&lt;/p&gt;
+
+&lt;p&gt;由於已經有眾多的blog bost(e.g., &lt;a href=&quot;https://www.scottaaronson.com/blog/?p=4229&quot;&gt;Scott Aaronson&lt;/a&gt;, &lt;a href=&quot;https://gilkalai.wordpress.com/2019/07/02/amazing-hao-huang-proved-the-sensitivity-conjecture/&quot;&gt;Gil Kalai&lt;/a&gt;, &lt;a href=&quot;https://windowsontheory.org/2019/07/02/sensitivity-conjecture-proved/&quot;&gt;Boaz Barak&lt;/a&gt;)介紹這個證明的美妙，在這邊我打算換個角度切入，來講講為什麼Sensitivity Conjecture是個有意思的東西。&lt;/p&gt;
+
+&lt;p&gt;一切可以從query complexity說起。對於任何一個boolean function $f:\bit^n\rightarrow\bit$，其中我們用$x\in\bit^n$來表示input variabes。一個很自然的complexity measure會是：在最壞的情況之下，需要query幾個input bits就足夠知道$f(x)$的值？舉例來說，如果$f$是一個constant function，那麼什麼input bit都不需要query我們就可以知道$f(x)$是多少了。而如果$f(x)=x_1\oplus x_1\oplus\cdots\oplus x_n$是個parity function，那麼可以看出來我們必須query所有的input bits。&lt;/p&gt;
+
+&lt;p&gt;上述的這個complexity measure，有個正式的名稱，叫做sensitivity，我們使用$s(f)$來表示。有意思的地方是，$s(f)$很自然地會是決策樹複雜度(decision tree complexity)的一個下界！回想一下，一個boolean function的決策樹是一個binary tree，其中每個內部的節點被一個input bit標記(e.g., $x_i$)，相對應的兩個邊分別是0和1，而最底下的葉子則是被0和1標註。下圖是個3個input bits的parity function的一顆決策樹。&lt;/p&gt;
+
+&lt;p&gt;&lt;a class=&quot;gallery img-center&quot; href=&quot;/images/Blog/Sensitivity Conjecture/DT.png&quot;&gt;&lt;img src=&quot;/images/Blog/Sensitivity Conjecture/DT.png&quot; width=&quot;60%&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;對於決策樹來說，我們在意的複雜度是它的深度，以下用$DDT(f)$來表示$f$最淺的決策樹的深度。而不難看出來，如果$f$有個深度為$d$的決策樹，那麼$f$的sensitivity最多為$d$，因為對於任何一個input $x$來說，最多query $d$個bits就可以走到決策樹的底端了。&lt;/p&gt;
+
+&lt;div class=&quot;theorem&quot;&gt;
+For any $n\in\N$ and $f:\bit^n\rightarrow\bit$, $s(f)\leq DDT(f)$.
+&lt;/div&gt;
+
+&lt;p&gt;有了上述這個定理，一個很自然的問題即是，另一個方向會不會也成立呢？也就是說，$DDT(f)$可不可以被$s(f)$有效率的upper bound呢？比較正式的問法則是，sensitivity和決測樹複雜度是不是多項式相關的(polynomially related)。這個問題看似很單純簡單的問題，其實是sensitivity conjecture的一個等價的陳述！&lt;/p&gt;
+
+&lt;div class=&quot;conjecture&quot; title=&quot;Sensitivity Conjecture&quot;&gt;
+Does there exist a polynomial $p$ such that for any $n\in\N$ and $f:\bit^n\rightarrow\bit$, $DDT(f)\leq p(s(f))$?
+&lt;/div&gt;
+
+&lt;p&gt;如果sensitivity conjecture的故事到這邊就結束了，那麼實在是看不出來他有去的地方在哪裡，充其量就是個關於兩種複雜度之間根本關係的一個問題。有趣的地方來了，除了這兩種query complexity的複雜度之外，人們還定義了十幾種的query complexity，而且除了sensitivity之外，其他任意兩種複雜度他們之間都是多項式相關的！&lt;/p&gt;
+
+&lt;p&gt;這樣講可能還是很虛幻，讓我定義一個常見的quary complexity複雜度，給各位一點點感覺。這個複雜度是block sensitivity，和sensitivity乍看之下非常地像。對於boolean function$f$還有input $x$來說，相對應的block sensitivity定義如下：令$B\subseteq[n]$，如果$f(x)\neq f(x^{(B)})$，那我們則稱$B$對於$f$和$x$來說很敏感。這邊$x^{(B)}$的意思是把$x$中在$B$相對應位置的bit都翻轉。而$f$在$x$上的block sensitivity則定義為最大的$k\in\N$使得存在$B_1,B_2,\dots,B_k\subseteq[n]$兩兩不相交，且每個$B_i$都對$f$和$x$來說很敏感！於是$f$本身的block sensitivity也就很自然的定義為所有input $x$中最大的block sensitivity，我們用$bs(f)$來表示。以下是一個簡單的例子。&lt;/p&gt;
+
+&lt;div class=&quot;example&quot; title=&quot;Rubinstein function&quot;&gt;
+令$m$為一個偶數，考慮一個$m\times m$的grid，令$n=m^2$，並且讓每個grid point上面放一個變數。定義Rubinstein function $f$如下：$f(x)=1$當存在一個row裡面恰好有兩個連續點被設為$1$。
+
+&lt;a class=&quot;gallery img-center&quot; href=&quot;/images/Blog/Sensitivity Conjecture/rubinstein.png&quot;&gt;&lt;img src=&quot;/images/Blog/Sensitivity Conjecture/rubinstein.png&quot; width=&quot;60%&quot; /&gt;&lt;/a&gt;
+
+Rubinstein function的block sensitivity是$n/2$，因為對於全部是$0$的input來說，兩個位於同一個row且相鄰格形成了一個sensitive的block。然而不難看出，Rubinstein function的sensitivity只有$m=\sqrt{n}$。
+&lt;/div&gt;
+
+&lt;p&gt;現在有了block sensitivity的概念後，上述的sensitivity conjecture可以被等價地陳述如下。&lt;/p&gt;
+
+&lt;div class=&quot;conjecture&quot; title=&quot;Sensitivity Conjecture&quot;&gt;
+Does there exist a polynomial $p$ such that for any $n\in\N$ and $f:\bit^n\rightarrow\bit$, $bs(f)\leq p(s(f))$?
+&lt;/div&gt;
+
+&lt;p&gt;除了block sensitivity之外，如剛才所說，還有好多有趣的複雜度彼此之間都是多項式相關(有興趣的讀者可以參考這個&lt;a href=&quot;&quot;&gt;survey&lt;/a&gt;)，就是除了跟sensitivity之外。而現在他們終於全部都互相多項式相關了，thanks to Huang Hao!&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>WACT 2019 at Bengaluru, India</title>
+   <link href="http://cnchou.github.io/2019/03/30/WACT/"/>
+   <updated>2019-03-30T00:00:00-04:00</updated>
+   <id>http://cnchou.github.io/2019/03/30/WACT</id>
+   <content type="html">&lt;script&gt;
+  $(document).ready(function(){
+  $(&quot;.india&quot;).colorbox({rel:'india'});
+    $(&quot;.icts&quot;).colorbox({rel:'icts'});
+  });
+&lt;/script&gt;
+
+&lt;p&gt;這個春假(其實是春假後的一個禮拜)很榮幸地受到&lt;a href=&quot;http://mrinalkr.bitbucket.io&quot;&gt;Mrinal&lt;/a&gt;還有&lt;a href=&quot;http://www.tcs.tifr.res.in/~ramprasad/&quot;&gt;Ramprasad&lt;/a&gt;的邀請，到了印度的班加羅爾(Bengaluru)參加今年的&lt;a href=&quot;https://www.icts.res.in/discussion-meeting/wact2019&quot;&gt;Workshop of Algebraic Complexity Theory (WACT 2019)&lt;/a&gt;。這是我第一次參加WACT，也是第一次來到印度，這個充滿神秘色彩的國度。一週的拜訪下來，無論是在學術上或是對於印度的印象上，都有了許多新的看法。回想起上週出發前還在那邊窮緊張的模樣，不禁感嘆，事情還是要親身經歷過後，才會有更真實的感受。&lt;/p&gt;
+
+&lt;p&gt;印度對於台灣人(甚至是整個東亞)來說，是個非常陌生的地方。從小接受到的資訊，不外乎那邊是個很落後，貧富差距很大，亂糟糟很危險的地方。唯一比較正面的印象，大概就是印度人的數學都特別好，尤其是代數方面，也很巧的是這趟旅行就是因為一個代數複雜度的workshop，讓我親身改變了過去這些不知道經過多少手資訊的落後印象。不過還是要先聲明一下，這一次我大部分的時間都是待在位於班加羅爾市中心北邊兩小時車程的&lt;a href=&quot;https://www.icts.res.in&quot;&gt;International Centre of Theoretical Science (ICTS)&lt;/a&gt;裡面，除此之外，只有一個晚上到了稍微市區一點的&lt;a href=&quot;https://www.iisc.ac.in&quot;&gt;Institute of Science (IISc)&lt;/a&gt;一帶，加上接觸到的人幾乎都是這邊的菁英，所以想必我接受到的資訊會比較biased一些。&lt;/p&gt;
+
+&lt;h2 id=&quot;多元複雜和混亂的社會&quot;&gt;多元、複雜和混亂的社會&lt;/h2&gt;
+
+&lt;p&gt;印度總人口十三億，全國劃分為29個邦，主要使用的語言除了英文之外還有印地語(Hindi)等等超過二十種被廣泛使用，常見的宗教更是五花八門(還記得在申請visa的時候，宗教的欄位有十幾二十個可以選，唯獨沒有“無信仰”這個選項…)。一位印度小哥曾經跟我說，大概每隔個五十公里，村落之間的語言使用方法就會稍微的不同。再加上五百年前(有些說法是兩千年前)開始的種姓制度(19世紀末取消)以及英國的殖民(1947才結束)，印度是一個如此多元、複雜和混亂的社會。然而就像在印度街頭不時能看見計程車驚險環生卻又平安無事，整個印度社會在現行的民主制度下，套句Mrinal最愛說的一句話：『somehow everything works out』。&lt;/p&gt;
+
+&lt;p&gt;老實說，印度的確是我目前去過最混亂的地方，但是也沒有想傳言中的那般恐怖，至少一週下來我沒有拉過一次肚子，在街頭也沒有被奇怪的人騷擾，不像在美國街頭還會被流浪漢大吼。雖然在機場看到配著長槍的軍人，還有從超市出來前要被檢查有沒有偷東西，讓人還是覺得有點稍微被侵犯到，站在他們多元複雜的背景下重新評量這個國家，還是不得不驚嘆現在這個平衡。&lt;/p&gt;
+
+&lt;p&gt;&lt;a class=&quot;gallery india img-center&quot; href=&quot;/images/WACT2019/india1.jpg&quot;&gt;&lt;img src=&quot;/images/WACT2019/india1.jpg&quot; width=&quot;800px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a class=&quot;india&quot; href=&quot;/images/WACT2019/india2.jpg&quot;&gt;&lt;/a&gt;
+&lt;a class=&quot;india&quot; href=&quot;/images/WACT2019/india3.jpg&quot;&gt;&lt;/a&gt;
+&lt;a class=&quot;india&quot; href=&quot;/images/WACT2019/india4.jpg&quot;&gt;&lt;/a&gt;
+&lt;a class=&quot;india&quot; href=&quot;/images/WACT2019/india5.jpg&quot;&gt;&lt;/a&gt;
+&lt;a class=&quot;india&quot; href=&quot;/images/WACT2019/india6.jpg&quot;&gt;&lt;/a&gt;
+&lt;a class=&quot;india&quot; href=&quot;/images/WACT2019/india7.jpg&quot;&gt;&lt;/a&gt;
+&lt;a class=&quot;india&quot; href=&quot;/images/WACT2019/india8.jpg&quot;&gt;&lt;/a&gt;
+&lt;a class=&quot;india&quot; href=&quot;/images/WACT2019/india9.jpg&quot;&gt;&lt;/a&gt;
+&lt;a class=&quot;india&quot; href=&quot;/images/WACT2019/india10.jpg&quot;&gt;&lt;/a&gt;
+&lt;a class=&quot;india&quot; href=&quot;/images/WACT2019/india11.jpg&quot;&gt;&lt;/a&gt;
+&lt;a class=&quot;india&quot; href=&quot;/images/WACT2019/india12.jpg&quot;&gt;&lt;/a&gt;
+&lt;a class=&quot;india&quot; href=&quot;/images/WACT2019/india13.jpg&quot;&gt;&lt;/a&gt;
+&lt;a class=&quot;india&quot; href=&quot;/images/WACT2019/india14.jpg&quot;&gt;&lt;/a&gt;
+&lt;a class=&quot;india&quot; href=&quot;/images/WACT2019/india15.jpg&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;令人驚嘆的高等教育環境&quot;&gt;令人驚嘆的高等教育環境&lt;/h2&gt;
+
+&lt;p&gt;這次WACT的與會人員中，大約有一半是在印度各地頂尖學校的博士生。首先讓我很驚訝的是竟然大部分頂尖的學校，都一定會有做代數複雜度的老師和學生，光是在WACT就遇到至少30個博士生專精在代數複雜度，而反觀美國，全部加起來可能十個不到吧…而更讓我驚嘆的是老師和學生之間的關係。就我這次遇到的幾個例子中(Nitin Saxena, Chandon Saha, Ramprasad)，老師和學生之間的互動讓人可以很感受到一種“知識傳承”的感覺。不像在美國，大部分的教授(至少是我經驗到的)和學生的關係比較平行一點，即使一起做同一個研究，老師比較會把學生當成合作者看待，你必須要自己想辦法把相關的背景知識補起來。而在這邊聽到了好多例子，老師會每個禮拜花好幾個小時，教導學生特定的相關數學知識。此外也會從頭教學生改怎麼樣問出好的研究問題，在學生要報告之前花一個晚上幫學生練習。在這樣的環境下，印度每年都可以解出非常頂尖的問題，並且培養大量的本土優秀學術人才。雖然外流到美國的比例仍然不少，但是至少在代數複雜度這個領域中，在印度本土接受到的訓練是絕對不遜色於其他地方的。&lt;/p&gt;
+
+&lt;p&gt;除了令人稱羨師徒的關係之外，這邊對於基礎科學的投資和重視，更是讓人自相形穢。印度有著為數不少的純高等教育機構，像是這次拜訪的ICTS，或是有名的Chennai Mathematical Institute (CMI)和Tata Institute of Fundamental Research (TIFR)。這些機構提供非常完善的校園，然後有著非常多的workshop或是conference，鼓勵基礎的理論研究。有點類似於台灣的中研院，但是更加重視純理論的研究，不像在台灣做理論還不時會被嘲弄…&lt;/p&gt;
+
+&lt;p&gt;以這次WACT舉辦地ICTS來說，是個兩年前剛建好的小校區。不知道是不是故意設在有點荒郊野外的地方(要搭45分鐘的交通車才能到稍微熱鬧點的地方)，讓拜訪者被困在校區中，只好不斷地討論研究。隨然周邊無聊了一些，但是校區還算五臟俱全，餐廳提供極度便宜的三餐(大約新台幣20塊就可以讓你吃到撐)，也有著運動中心，可以打羽球桌球壁球游泳。甚至還有小型足球和板球場，圖書館和演講廳也都沒有少。至少是個會讓人即使被困住了，還是可以心甘情願的地方。真希望哪一天台灣也可以有像這樣的地方…&lt;/p&gt;
+
+&lt;p&gt;&lt;a class=&quot;gallery icts img-center&quot; href=&quot;/images/WACT2019/icts1.jpg&quot;&gt;&lt;img src=&quot;/images/WACT2019/icts1.jpg&quot; width=&quot;800px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a class=&quot;icts&quot; href=&quot;/images/WACT2019/icts2.jpg&quot;&gt;&lt;/a&gt;
+&lt;a class=&quot;icts&quot; href=&quot;/images/WACT2019/icts3.jpg&quot;&gt;&lt;/a&gt;
+&lt;a class=&quot;icts&quot; href=&quot;/images/WACT2019/icts4.jpg&quot;&gt;&lt;/a&gt;
+&lt;a class=&quot;icts&quot; href=&quot;/images/WACT2019/icts5.jpg&quot;&gt;&lt;/a&gt;
+&lt;a class=&quot;icts&quot; href=&quot;/images/WACT2019/icts6.jpg&quot;&gt;&lt;/a&gt;
+&lt;a class=&quot;icts&quot; href=&quot;/images/WACT2019/icts7.jpg&quot;&gt;&lt;/a&gt;
+&lt;a class=&quot;icts&quot; href=&quot;/images/WACT2019/icts8.jpg&quot;&gt;&lt;/a&gt;
+&lt;a class=&quot;icts&quot; href=&quot;/images/WACT2019/icts9.jpg&quot;&gt;&lt;/a&gt;
+&lt;a class=&quot;icts&quot; href=&quot;/images/WACT2019/icts10.jpg&quot;&gt;&lt;/a&gt;
+&lt;a class=&quot;icts&quot; href=&quot;/images/WACT2019/icts11.jpg&quot;&gt;&lt;/a&gt;
+&lt;a class=&quot;icts&quot; href=&quot;/images/WACT2019/icts12.jpg&quot;&gt;&lt;/a&gt;
+&lt;a class=&quot;icts&quot; href=&quot;/images/WACT2019/icts13.jpg&quot;&gt;&lt;/a&gt;
+&lt;a class=&quot;icts&quot; href=&quot;/images/WACT2019/icts14.jpg&quot;&gt;&lt;/a&gt;
+&lt;a class=&quot;icts&quot; href=&quot;/images/WACT2019/icts15.jpg&quot;&gt;&lt;/a&gt;
+&lt;a class=&quot;icts&quot; href=&quot;/images/WACT2019/icts16.jpg&quot;&gt;&lt;/a&gt;
+&lt;a class=&quot;icts&quot; href=&quot;/images/WACT2019/icts17.jpg&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;wact&quot;&gt;WACT&lt;/h2&gt;
+
+&lt;p&gt;前面講了這麼多和workshop無關的心得，最終還是該回來談談正事XD&lt;/p&gt;
+
+&lt;p&gt;&lt;a class=&quot;gallery img-center&quot; href=&quot;/images/WACT2019/Gorup-Photo.jpg&quot;&gt;&lt;img src=&quot;/images/WACT2019/Gorup-Photo.jpg&quot; width=&quot;100%&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;WACT是一個專精在代數複雜度的一個workshop，從2013年創辦至今，每年在丹麥、德國、以色列、印度等地輪流舉辦。和之前我參加過的workshop(&lt;em&gt;e.g.&lt;/em&gt;, CMSA的combinatorics workshop, Simons的lower bound workshop, Oxford的complexity theory workshop)很不同的是，WACT的學生比例比較高，演講的講者也比較年輕，只有少數幾個是很senior的教授。蠻讓我佩服的是，雖然參加人看起來沒有很diverse，但是演講的主題可是涵括了代數複雜度相關的各種子領域，從各式各樣的arithmetic circuits問題，到geometric complexity theory (GCT)，還有univariate polynomial factorization等等。雖然不是每個talk都可以聽得很懂，但是至少在這個workshop之後，又對整個代數複雜度的領域更有了一些概念。&lt;/p&gt;
+
+&lt;p&gt;不過我畢竟還是從比較離散的領域出來的，所以還是對arithmetic circuits相關的talks比較有共鳴。像是第一天幾個關於read once arithmetic branching program (ROABP)的talks就學到了蠻多。另外幾個multilinear circuits的talks稍微有點technical所以比較沒有很跟得上，但是至少能夠大概了解目前最前端的問題是卡在哪裡。至於其他不太熟悉的領域像是GCT，目前打算接下來一兩年好好在Harvard修一些代數幾何和representation theory的課，把基礎打起來，說不定三五年後可以考慮做做看相關的題目。&lt;/p&gt;
+
+&lt;p&gt;而五天下來，有蒐集到一些感興趣的方向，在這邊簡單記錄一下以免自己忘記XD&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h3 id=&quot;multilinear-formula-separation&quot;&gt;Multilinear formula separation&lt;/h3&gt;
+
+&lt;p&gt;Srikanth還有Nutan等人在&lt;a href=&quot;https://eccc.weizmann.ac.il/report/2018/062/&quot;&gt;去年FOCS有了一篇&lt;/a&gt;separate深度$O(\log n/\log\log n)$multilinear formula和formula的paper。他們分析了constant width的iterated multiplication matrix (IMM)然後得出一個$2^{n^{1/\Delta}}$對於深度$\Delta$的multilinear formula lower bound。而經典的GKKS depth reduction有一個$2^{n^{1/2\Delta}}$深度$\Delta$的formula upper bound。在這個work之後一個很自然的問題便是有沒有辦法在$O(\log n)$深度範圍也給出super polynomial的separation。&lt;/p&gt;
+
+&lt;p&gt;很顯然constant width的IMM無法成為candidate，如果把width加大一點，那麼基本上就是考慮determinant，如果能夠把determinant目前的$n^{O(\log n)}$formula upper bound改進到$n^{o(\log n)}$那麼就成功了。然而在跟Srikanth聊了過後，他覺得determinant的確有可能是個candidate，但是要改進determinant的upper bound很有可能會是一個更困難的問題，畢竟這基本上是在挑戰$\VF=\VBP$。而他個人覺得一個可能的方向是利用GKKS中的幾個元素，例如&lt;a href=&quot;/notes/Arithmetic Circuits/Useful Tricks&quot;&gt;Ryser-Fischer identity&lt;/a&gt;和duality trick，來構造特殊的polynomial。不過目前沒有什麼想法就是了。&lt;/p&gt;
+
+&lt;h3 id=&quot;design-polynomial&quot;&gt;Design polynomial&lt;/h3&gt;
+
+&lt;p&gt;IISc的一個學生Nikhil Gupta報告了一些關於design polynomial的相關問題，感覺還蠻值得想想的。讓我相定義一下他使用的&lt;em&gt;Nisan-Wigderson design polynomial&lt;/em&gt;。有三個參數：degree $k$, field size $q$和set size $n$，對應的Nisan-Wigderson design polynomial定義如下&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;NW_{k,q,n}\sum_{p\in\mathbb{F}_q,\deg(p)\leq k}\prod_{i=1}^nX_{i,p(i)} \, .&lt;/script&gt;
+
+&lt;p&gt;所以總共有$nq$個變數然後$NW_{k,q,n}$是個monotone的multilinear polynomial而且每個monomial最多共用$k$個變數。&lt;/p&gt;
+
+&lt;p&gt;有兩個相關的問題是讓我蠻感興趣的，分別是compression問題和0/1 testing問題。Compression問題是在問有沒有比最直接的size $\poly(q^k,n)$ circuit更小的circuit computes $NW_{k,q,n}$。目前我有個想法是用比較小的field拼湊出大的field的NW polynomial，不過每一部的blow up有點太大，需要$q^n$比原本的還慘。而這個blow up主要是來自於interpolation，所以我在想有沒有辦法用border complexity的技巧改進一下。&lt;/p&gt;
+
+&lt;p&gt;另外一個問題是0/1 testing，input是$\mathbf{a}\in\mathbb{F}_q^n$，然後目標是要回答$NW_{k,q,n}(\mathbf{a})$是不是0。這個問題明顯在$\NP$，但是不太可能是$\NP$-hard(否則會prove $\VP\neq\VNP$)，然後如果能證明是在$\coNP$的話有些hardness amplification的應用。感覺蠻值得想想看$\coMA$或是$\coNPpoly$這個方向。不過像在還沒有什麼想法就是了。&lt;/p&gt;
+
+&lt;h3 id=&quot;depth-two-symmetric-linear-circuits&quot;&gt;Depth two symmetric linear circuits&lt;/h3&gt;
+
+&lt;p&gt;另外一個很有趣的問題是關於depth two symmetric linear circuits。這個等價於sparse matrix factorization問題定義如下。Given $A\in\mathbb{F}^{n\times n}$，目標找到$B\in\mathbb{F}^{n\times m}$和$C\in\mathbb{F}^{m\times n}$使得$A=BC$，而且$|B|_0+|C|_0$越小越好。這對應到了$A$的depth two linear circuit complexity，而目前最好的explicit lower bound只有$\Omega(n\log^2n/\log^2\log n)$）(trivial的upper bound是$O(n^2)$)。而Mrinal和Ben Lee他們考慮$B=C^\top$的情況，定義了相對應的depth two symmetric linear circuits，並且證明了$\Omega(n^2)$的lower bound在$\R$或是很大的finite field。&lt;/p&gt;
+
+&lt;p&gt;證明本身蠻可愛的，不過似乎只會對夠大的field才會成立，所以一個有趣的方向是看看小的field會不會也成立，目前試了一下沒有什麼結果。而主要的動機是想要separate depth two symmetric linear circuits和depth two linear circuits。尤其是因為Gal et. al.有個error correcting code的construction可以被size $O(n\log^2n)$的depth two linear circuits計算，加上Mrinal他們lower bound的構造基本上是用一些linear error correcting code，這邊說不定有些東西可以玩玩看。&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>On the Algorithmic Power of Spiking Neural Networks</title>
+   <link href="http://cnchou.github.io/2019/01/15/SNN/"/>
+   <updated>2019-01-15T00:00:00-05:00</updated>
+   <id>http://cnchou.github.io/2019/01/15/SNN</id>
+   <content type="html">&lt;p&gt;2019的第一趟旅行，來到了四季如春的San Diego，這三年來在三個不同的季節拜訪這裡，每次的天氣都是一樣的舒適，難怪大家都說San Diego是個適合養老的地方。不過硬要說個讓我不會想要長久待在這邊的原因，大概就是這邊的植物真的常常讓我看的不順眼吧，這些沙漠植物對我來說真的有點太沒氣質了！？&lt;/p&gt;
+
+&lt;p&gt;這次的目的是來&lt;a href=&quot;http://itcs-conf.org/itcs19/&quot;&gt;ITCS 2019&lt;/a&gt;報告最近的一篇和中研院&lt;a href=&quot;http://www.iis.sinica.edu.tw/~kmchung/&quot;&gt;鍾楷閔老師&lt;/a&gt;還有&lt;a href=&quot;http://www.iis.sinica.edu.tw/pages/cjlu/&quot;&gt;呂及人老師&lt;/a&gt;合作的paper：「&lt;a href=&quot;https://arxiv.org/abs/1803.10375&quot;&gt;On the Algorithmic Power of Spiking Neural Netowrks&lt;/a&gt;」，這是我研究生涯中第一個開始的project，也是做最久的一個。從初期毫無方向，不知道該怎麼開頭，到開始有點小結果，但是卻遲遲證明不出最理想的大定理。在申請Ph.D.的時候還常常自怨自艾，為什麼要想不開去做這種吃力不討好的題目。到了現在，終於在去年暑假把塵封已久的問題解決掉了，文章也順利地被ITCS接受，如今來到San Diego開會，在準備的過程中，更是讓我重新檢視了這個work的定位，甚至是說讓我重新愛上了這個work。&lt;/p&gt;
+
+&lt;h2 id=&quot;緣起&quot;&gt;緣起&lt;/h2&gt;
+
+&lt;p&gt;難得這次不是搭紅眼班機從西岸飛回Boston，趁著Alaska airline沒有提供電影設施，就來寫寫這個研究的心路歷程吧！&lt;/p&gt;
+
+&lt;p&gt;時間要先拉回升大四的那年暑假，在經過了軟體工程的專題之後，我終於下定決心要來做理論研究，於是到了中研院找鍾楷閔老師(簡稱KM)做暑期實習生。KM的研究興趣是(量子)密碼學，然而在那時我年輕不懂事，在基礎知識不足的情況下，還不太能appreciate這個方向的研究，也因此在讀了幾篇paper還有上完了暑期的密碼學課程後，還是遲遲沒有找到一個感興趣的研究方向。在暑假的尾聲，我決定要繼續待在KM這邊，而KM也跟我講了幾個他感興趣的研究方向，如果我的記憶正確的話，還記得一個是multiparty computation的問題，一個是circuits lower bounds，一個則是今天的主角spiking neural networks。&lt;/p&gt;
+
+&lt;p&gt;當時的我大概是覺得前兩個研究方向KM似乎也沒有什麼具體的想法，而且又是非常深的坑，即使我很感興趣(turns out我現在很著迷於circuits lower bounds)，也不見得做得動，可能淪落於做些survey，這樣我自己offline做不就可以了。而如果是做spiking neural networks相關的研究，這在當時的理論CS圈子內，幾乎沒有什麼人在研究。雖然KM也不是這邊的專家，但是也許透過這樣的過程，能夠讓我學習一個厲害的研究人員是怎麼樣做自己完全不懂的方向吧？於是就抱持這樣的想法，開始了這趟耗時超過三年的旅程。&lt;/p&gt;
+
+&lt;h2 id=&quot;背景&quot;&gt;背景&lt;/h2&gt;
+
+&lt;p&gt;脈衝神經網路(Spiking neural networks, SNNs)是指neuroscientists在研究真正生物的神經網路(例如我們的大腦)時所用的數學模型，由於生物的神經網路實在太複雜了，於是neuroscientists會抽象出許多不同的SNNs模型，來幫助他們了解實際的生物現象。&lt;/p&gt;
+
+&lt;p&gt;而對於computer scientists來說，有一群人他們的目標是想要設計出類似大腦神經元的晶片，然後想要能夠比傳統電腦在某些常見的計算問題上，能夠有更快更好的效率。因此他們試圖在SNNs的模型框架之下，設計演算法，想要解決實際的問題。然而在現階段來說，這些都是完全沒有理論支持的。具體來說，沒有理論可以說明為什麼使用SNNs模型可以在這些計算問題上有好的表現，而且即使SNNs在一些模擬中能夠有好的表現，大家也不知道SNNs是怎麼做到的，然後在什麼樣的情況下有可能會表現得很差。&lt;/p&gt;
+
+&lt;p&gt;這樣缺乏理論支持的情況，主要是因為SNNs是個看似簡單，但是卻有著非常&lt;em&gt;不連續&lt;/em&gt;行為的數學模型。具體來說，讓我們看看一個常見的SNN模型，叫做 &lt;em&gt;integrate-and-fire SNN&lt;/em&gt;。在這個模型中，每個神經元(neuron)會有個電位(membrane potential)隨著時間變化。有兩種因子會影響電位的改變，第一種是個固定的&lt;em&gt;外部充電&lt;/em&gt;，可以想成是這群神經元以外的東西造成的影響，而為了分析方便，通常我們會先假設這個充電的速率是個穩定不改變的值。第二種影響電位的因子是脈衝(spike)造成的影響。首先在integrate-and-fire SNN中，一個神經元會在他的電位超過閥值的時候，發射一個脈衝(fires a spike)，然後這個脈衝會傳輸到其他的神經元，然後影響它們的電位。這個影響的程度，是根據神經元之間的突觸強度(synapse)來決定的。而在數學模型中，突觸的強度則是簡單的被用一個數字表示。如果現在有$n$個神經元，那麼最多就會有$n^2$個突觸(包括神經元自己跟自己的)，而這些數字可以被一個$n\times n$的矩陣記錄起來。&lt;/p&gt;
+
+&lt;p&gt;更多的背景介紹，歡迎參考我們的&lt;a href=&quot;https://arxiv.org/abs/1803.10375&quot;&gt;paper&lt;/a&gt;或是&lt;a href=&quot;/docs/research/slides-itcs19.pdf&quot;&gt;投影片&lt;/a&gt;！&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h2 id=&quot;研究初期&quot;&gt;研究初期&lt;/h2&gt;
+
+&lt;p&gt;這個研究最一開始的起點是一篇神經網路學家的paper(&lt;a href=&quot;https://papers.nips.cc/paper/5053-firing-rate-predictions-in-optimal-balanced-networks&quot;&gt;Barret-Denéve-Machens NIPS 2013&lt;/a&gt;)。對於neuroscientists來說，透過深入了解SNN模型的一些基本性質，可以幫助他們更認識生物的神經網路。而在這一篇paper中，他們在探討integrate-and-fire SNN的平均脈衝個數(firing rate)。他們觀察到平均脈衝個數在實驗中會收斂到一個最佳化問題的解。具體來說，當外部充電是$\mathbf{I}$和突觸矩陣是$C$的時候，平均脈衝個數在實驗中會很快的收斂到下面這個非負最小平方問題的解答：&lt;/p&gt;
+
+&lt;p&gt;\begin{equation}
+\min_{\bx\in\bbR^n,\ \bx\geq0}\|C\bx-\bfI\|_ {2}.
+\end{equation}&lt;/p&gt;
+
+&lt;p&gt;對神經網路學家來說，這個觀察可以讓他們使用這個最佳化問題來幫助了解SNN的平均脈衝個數。不過如果換另一個角度來看，這個觀察也可以被理解成integrate-and-fire SNN使用著平均脈衝個數去解了一個非負最小平方問題，也就是說我們可以把integrate-and-fire SNN看成一個非負最小平方問題的演算法！不過在這篇arret-Denéve-Machens的paper中，沒有任何的理論分析還有解釋。因此身為理論電腦科學家(當時我可能只是理論電腦科學學徒就是了…)，我們的目標便是要對這個關於平均脈衝個數和非負最小平方問題的觀察提出嚴謹的理論根據。&lt;/p&gt;
+
+&lt;p&gt;不過什麼叫做「提出嚴謹的理論根據」呢？精確來說的話，是指能夠(i)找到一些關於$C$還有$\mathbf{I}$的條件，然後(ii)證明在讓SNN跑了$t$秒之後，平均脈衝速率會和非負最小平方問題的解有多接近。在專業的術語上，這稱之為做出一個 &lt;em&gt;收斂速率(convergence rate)&lt;/em&gt; 的分析。&lt;/p&gt;
+
+&lt;p&gt;在經過幾個月的學習和研究之後，我們很快的就針對一個特別的條件，證明出平均脈衝個數會很快的收斂到最小平方問題的解。雖然這個證明只用到了很基礎的線性代數，不過令當時的我雀躍不已。但是我也知道這只是剛開始而已，畢竟我們考慮的這個條件有點太過於限制，而且我們只會證明平均脈衝個數會收斂到最小平方問題的解，而不是 &lt;strong&gt;非負&lt;/strong&gt; 最小平方問題的解。&lt;/p&gt;
+
+&lt;h2 id=&quot;有了關鍵的發現卻證明不出來關鍵的定理&quot;&gt;有了關鍵的發現，卻證明不出來關鍵的定理&lt;/h2&gt;
+
+&lt;p&gt;當我們在一個特殊條件下證明出想要的收斂結果後，一時之間沒有什麼頭緒該把這個條件拿掉。不過倒是很快有個很有趣的發現：當最小平方問題有不只一個解答的時候(當矩陣$C$是overdetermined的時候會發生)，平均脈衝速率在實驗上似乎都會收斂到比較稀疏(sparse)的解答。更精確一點來說，我們強烈猜測平均脈衝速率會收斂到最小平方問題的最小$\ell_1$ norm解。
+\begin{equation}
+\min_{\bx\in\bbR^n,\ A\bx=\bb}\|\bx\|_ 1.
+\end{equation}
+這個最佳化問題又被稱為 &lt;em&gt;最小$\ell_1$問題&lt;/em&gt;。&lt;/p&gt;
+
+&lt;p&gt;這對當時的我們來說是個非常興奮的發現，在系統性的調查相關的研究後，我們發現沒有人對於integrate-and-fire SNN提出類似的觀察，更不用說理論的證明了。&lt;/p&gt;
+
+&lt;p&gt;除了在實驗上的這個觀察之外，另外一個更振奮人心的發現是我們在integrate-and-fire SNN的數學模型中，找到了一個很有趣的變量，這個變量乍看之下非常自然的會收斂到最小$\ell_1$問題的 &lt;em&gt;對偶問題&lt;/em&gt; 的解！具體來說，這個變量的行為可以被下面這個數學式描述：
+\begin{equation}
+\bv(t+1) = \bv(t) - A\bs(t)+\bb.
+\end{equation}
+而最小$\ell_1$問題的對偶問題則是如下。
+\begin{equation}
+\max_{\bv\in\bbR^n,\ \|A^\top\bv\|_ \infty\leq1}\bb^\top\bv.
+\end{equation}
+根據integrate-and-fire SNN中神經元發射脈衝的規則，在直覺上可以把\bv(t)式子中的$\bb$想成是對偶問題的梯度方向(gradient)，然後把脈衝的影響$-A\bs(t)$想成是幫助$\bv(t)$回到對偶問題的合適空間(feasible region)。&lt;/p&gt;
+
+&lt;p&gt;然而上面描述的當時都還處於觀察臆測階段，但是這個和對偶問題的關聯實在是太乾淨漂亮了，讓我們覺得這應該就要是個對的方式來做integrate-and-fire SNN的理論分析了。於是我開始著手研究這些相關的最佳化問題，然後試著用各種技巧來突破，可是卻不斷地失敗。還記得當初有一段期間，每天一大早我就會帶著新想到的方法跑到KM的辦公室找他討論，然後過了一陣子後就找到一些反例。回家思考半天之後，覺得解決掉這個反例了，隔天要興沖沖的跑去討論，然後又再度帶著失望離開。&lt;/p&gt;
+
+&lt;p&gt;於是我們就這樣在一個「有了關鍵的發現，卻證明不出來關鍵的定理」的階段卡了整整一年，直到我離開台灣去Harvard讀Ph.D.之前，我們依然不知道怎麼嚴謹的證明我們的這個觀察。&lt;/p&gt;
+
+&lt;h2 id=&quot;進入寫作階段但是卻不斷地被reject&quot;&gt;進入寫作階段，但是卻不斷地被reject&lt;/h2&gt;
+
+&lt;p&gt;來到Harvard之後，我們暫時的放棄嘗試去證明這個有趣的發現，轉而投入先把已經有的結果和觀察寫出來，然後試著投稿到理論的會議，看看有沒有機會讓這個問題被更多人看到，然後說不定就會有些想法可以來做做看了。&lt;/p&gt;
+
+&lt;p&gt;然而迎接我們的卻是整整一年滿滿的rejection，由於我們不會證明理想中的大定理，已經有的結果又限制太多，再加上我們對於這種跨領域的題目掌握度還不夠好，在前面嘗試的幾個版本中，常常讓讀者誤解我們的研究方法，有時候甚至可以說是我們自己都還沒有很清楚該怎麼樣定位這一個研究。&lt;/p&gt;
+
+&lt;p&gt;這段期間大概是這個研究最低潮的階段了吧，我們一度還考慮乾脆就送到一個排名比較後面的會議就好了。要不是我在Harvard有些其他的研究結果，我真的會時常懷疑自己做研究的能力。很幸運的是，兩位老師在這個研究上給我很大的鼓勵和自由度，所以最後沒有放棄，也因此才有了最後的轉捩點。&lt;/p&gt;
+
+&lt;h2 id=&quot;下定決心的全力一搏&quot;&gt;下定決心的全力一搏&lt;/h2&gt;
+
+&lt;p&gt;在2018年的暑假，我在&lt;a href=&quot;http://www.computationalcomplexity.org/Archive/2018/program.php&quot;&gt;CCC 2018&lt;/a&gt;(也是在San Diego舉辦的！)報告了一篇關於&lt;a href=&quot;https://arxiv.org/abs/1803.05933&quot;&gt;multivariate polynomials factorization的研究&lt;/a&gt;，然後順路去了LA參加&lt;a href=&quot;http://acm-stoc.org/stoc2018/&quot;&gt;STOC 2018&lt;/a&gt;。在那邊的其中一個午餐，和一個UC Berekeley做圖論算法相關的學生，聊到了這個SNN的研究。原本想說跟他講講說不定他會有些有趣的技巧，最後雖然沒有如願得到有用的feedback，但是卻莫名的讓我想要重新來證明看看，於是在暑假到處跑來跑去之餘，腦中開始構思證明的一些新思路。&lt;/p&gt;
+
+&lt;p&gt;開學前的最後幾個禮拜，我來到了Simons institute去參加lower bounds的workshops。眼看ITCS的死線將近，我開始在通勤的一些閒雜時間開始重新思考如何擊破這個證明。當初我們其實已經有個還蠻完整的計畫，只是一直找不到合適的“potential function”。&lt;/p&gt;
+
+&lt;p&gt;通常在證明一個演算法可以解一個最佳化問題的時候，常見的做法是找出一個”potential function”，然後證明(i)這個演算法的error會被potential function控制住(ii)這個potential function會持續的遞減。如果能夠同時達到這兩件事式，那麼就可以證明這個演算法可以慢慢逼近最佳化問題的最優解。&lt;/p&gt;
+
+&lt;p&gt;然而在這個問題中，我們嘗試過各種很直接的potential function，但是每一個都會在一些特殊的情況下違法了兩個條件的其中一個。真的是絞盡了腦汁，都還是沒有一次成功過。於是在這次的嘗試中，我決定採取不一樣的方式。我先從一個很早期嘗試過但是失敗的potential function作為起點，然後一旦遇到了反例，我就在定義另外一個potential function使得他在這個反例中會正常的運作。然而這個potential function還會有其他的反例，不過沒關係，我就在定義另外一個potential function。如此依樣畫葫蘆的弄下去，最終我可以定義出一連串的potential functions，使得(i)SNN firing rate的error會被這些potential function的“和”給控制住(ii)在SNN的每一個步驟中，至少會有一個potential function會嚴格的遞減。如此一來，這些potential function的“和”就可以同時達成一個potential function該符合的兩個條件了！&lt;/p&gt;
+
+&lt;h2 id=&quot;收尾&quot;&gt;收尾&lt;/h2&gt;
+
+&lt;p&gt;再把一切細節搞定之後，花了一個週末和幾個下午，好好的把paper改寫好，順利地趕上ITCS的死線，最終也順利地被接受。在收到通知信的當下，心中除了喜悅和成就感之外，更是在研究上多了許多自信。&lt;/p&gt;
+
+&lt;p&gt;在開會前的一個月，趁著放寒假，也開始慢慢的構思演講的結構。這次ITCS的演講長度只有12分鐘，也就是說幾乎不太可能把所有想要講的東西清楚地講完。經過一個多禮拜的醞釀，我做出了第一個版本的投影片，然後試著報告一次給KM聽。結果因為要省時間，加上又想要強調一些技術細節，犧牲了big picture，反而更沒辦法讓聽眾抓到這個研究的貢獻。於是又花了幾天做了第二個版本，試圖交代多一點的背景知識還有大方向的想法，結果變成改太多，整個報告變得太過天馬行空，不夠具體。就這樣不斷地一來一回，最後終於在報告前三天抓到了一個不錯的平衡。然後開始不斷的練習，終於可以穩定的把時間掌控在11到12分鐘。&lt;/p&gt;
+
+&lt;p&gt;時間一晃眼就來到開會報告的日子了，雖然運氣很不好遇到了San Diego的下雨天，不過還是順利完成報告，也獲到了不少人的稱讚。收到稱讚固然很開心，但是最讓我開心的還是莫過於總算好好的完成了一個從零開始的研究，一路上從定義出問題、尋找相關資料、和其他人交流討論、卡關在困難的技術問題，到最後終於解決難題，然後透過寫paper還有給演講把整個研究定位清楚，並且讓別人輕鬆的搞懂我們在做些什麼。&lt;/p&gt;
+
+&lt;p&gt;&lt;a class=&quot;gallery img-center&quot; href=&quot;/images/Research/ITCS2019.jpg&quot;&gt;&lt;img src=&quot;/images/Research/ITCS2019.jpg&quot; width=&quot;500px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;回想當初還沒出國念Ph.D.的時候，總是覺得自己都沒有研究結果，然後唯一一個在進行的研究又是個這麼不是標準TCS style的問題，時常會懷疑這個研究的價值到底在哪裡。在經歷了三年多的起起伏伏，現在我終於可以很有自信將這個Spiking Neural Networks的研究介紹給朋友，告訴他們在想法上還有技術上我們做出的貢獻是什麼，對於其他相關領域的影響會是什麼。&lt;/p&gt;
+
+&lt;p&gt;不過話說回來，看看現在的自己，反而沒有像當初一樣挑戰這種長期的研究目標，而是把大部分時間花在一些比較技術性但是缺少原創性的問題。雖然也許比較有穩定一點的產出，不過Ph.D.這麼多的時間，還是該來做一些大的問題呀！期待接下來可以找到一個好的大方向，定下來做出一些比較有原創性的工作！&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>2018 Lower Bounds Program at Simons Insitute</title>
+   <link href="http://cnchou.github.io/2018/09/22/Simons/"/>
+   <updated>2018-09-22T00:00:00-04:00</updated>
+   <id>http://cnchou.github.io/2018/09/22/Simons</id>
+   <content type="html">&lt;p&gt;今年秋季&lt;a href=&quot;https://simons.berkeley.edu/&quot;&gt;Simons Institute&lt;/a&gt;的其中一個&lt;a href=&quot;https://simons.berkeley.edu/programs/complexity2018&quot;&gt;program&lt;/a&gt;是關於計算複雜度的下界問題，這恰巧是我最感興趣的方向。為了抓住夏天的尾巴，不顧開學即在眼前，我匆匆買了機票，到舒服的加州享受太平洋的涼風。&lt;/p&gt;
+
+&lt;p&gt;這個program橫跨一學期，包含了四個正式的workshops，還有無數的相關訪問學者以及他們帶來的reading groups和seminars，可以說是把地球上做相關領域一半的專家都吸引了過來。身為一個小小博士生，這正是個好好學習的機會呀！在拜訪的這一個月中，參加了兩個workshops(&lt;a href=&quot;https://simons.berkeley.edu/complexity2018-boot-camp&quot;&gt;bootcamp&lt;/a&gt;還有&lt;a href=&quot;https://simons.berkeley.edu/complexity2018-1&quot;&gt;boolean devices&lt;/a&gt;)還有和一些身邊的visitors交流學習，雖然並不是特別外向到處去認識大老們，不過還是有多多少少在一些互動中增加了不少新的知識還有直覺。最重要的是，在這個眾星雲集的地方，了解了不少最尖端的問題。&lt;/p&gt;
+
+&lt;p&gt;身為一個還很菜的研究者，我覺得在做研究中最困難的一步就是找出做得動又重要的問題。一個很常犯的錯誤往往是想一個太過於困難的問題，而前人已經有非常多失敗的原因解釋為什麼現階段的工具不夠用。這並不是說想困難的問題不好，而是說一個研究者要時時刻刻清楚的知道這個問題的定位，哪些方法一定不會成功，然後原因是什麼。一個好的研究題目就是在這些複雜的問題海中，找出既有希望有些突破，又能夠帶來一些後續的影響。&lt;/p&gt;
+
+&lt;p&gt;當然，說說總是很容易，這一個月下來聽了無數場的演講還有各種open problems，也說不準有哪些是值得深入研究思考的，大概也是到有人做出來了才會豁然開朗。不過趁著年輕不怕出醜，還是把握這個機會來想想看哪些問題是值得進一步研究下去的。以下整理一些我個人覺得重要或是有機會做得動的open directions，有些明顯是非常困難的long standing problems，不過也許是缺乏人們用力的去不斷想它，是個可以放在心上定期拿出來想想的東西。&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h2 id=&quot;multilinear-formula-vs-formula&quot;&gt;Multilinear formula vs. Formula&lt;/h2&gt;
+&lt;p&gt;Multilinear formula是一個arithmetic circuits中的特例，限制使用formula(每個gate的out-degree是1)，然後每個gate計算的polynomial是multilinear的，也就是每個variable的degree不超過1。例如$x^2yz$不是multilinear但$xz$是。&lt;/p&gt;
+
+&lt;p&gt;在沒有multilinear限制時，一般的arithmetic circuit還有formula只有$\Omega(n\log n)$和$\Omega(n^2)$的lower bounds，不過到了multilinear formula時，使用partial derivative matrix的技巧，可以獲得exponential的lower bound。&lt;/p&gt;
+
+&lt;p&gt;這樣看似這個方向的問題已經結束了，畢竟我們還是沒有formula的exponential lower bound，看來multilinear把formula弱化太多了，不過事情沒有這麼單純。仔細去看看multilinear formula的lower bounds時，會發現到那些lower bound使用的polynomials，都是比較複雜的polynomials。例如permanent, determinant等，他們本身並沒有已知的polynomial-size的formula(最小的是可以被$O(\log^2n)$-depth的circuit計算)。也就是說，目前人們可以separate一般的circuit還有multilinear formula，但是formula還有multilinear formula之間的強弱關係是還沒有被完全解決的。&lt;/p&gt;
+
+&lt;p&gt;這樣有趣的點會是什麼呢？我個人的看法是這會是一個雙贏的局面：如果很意外的formula和multilinear formula的計算能力是差不多的(這大概沒有人相信，不過目前也沒有人可以排除這個情況)，那麼我們將會馬上獲得formula的exponential lower bound，這將會是一個重大的突破。另一方面，如果可以把formula和multilinear formula分開，那某種程度是發現了formula的新強大計算能力，畢竟只有polynomial-size的formula可以計算multilinear formula需要exponential-size才做得到的事情。這樣的發現相信可以幫助我們更了解formula的能力，也許能有更多insight了解為什麼要證明$\omega(n^2)$的formula lower bound是這麼困難的事情。也就是因為這樣雙贏的局面，讓我認為這個問題是重要的。&lt;/p&gt;
+
+&lt;p&gt;而這個問題也是我覺得在近期內也許有希望能被解決的。我目前是沒有什麼具體的想法，所以這邊就只簡單整理一下兩個方向的state-of-the-art。&lt;/p&gt;
+
+&lt;p&gt;如果要證明formula和multilinear formula的計算能力是差不多的(再次強調，這個方向應該大部分人都覺得不可能)，那麼基本上就是要把一個一般的formula轉成一個multilinear formula並且只有polynomial的size blowup。目前只有Ran Raz在一篇把&lt;a href=&quot;http://www.wisdom.weizmann.ac.il/~ranraz/publications/Ptensor.pdf&quot;&gt;formula lower bound和tensor rank lower bound扯在一起的文章&lt;/a&gt;中，把一般的formula轉成了set-multilinear formula，其中只允許有$\tilde{O}(\log n)$個variable sets(這邊不詳細定義set-multilinear，其實就是規定在同一個set中的variable只能有一個出現，請參考Raz的paper)。如果要證明formula和multilinear formula的計算能力是差不多的，那麼把Raz的$\tilde{O}(\log n)$變成$O(n)$就夠了，不過他的技巧很顯然沒辦法做到這樣。目前也沒有什麼跡象可以做的這樣，即使這個方向是對的，大概也需要蠻多的新想法。&lt;/p&gt;
+
+&lt;p&gt;另一個方向則是非常接近了。Suryajith Chillara, Nutan Limaye, Srikanth Srinivasan最近&lt;a href=&quot;https://eccc.weizmann.ac.il/report/2017/156/&quot;&gt;證明&lt;/a&gt;了當我們限制formula和multilinear formula的深度是$o(\log n)$時，那麼就會有polynomial-size的formula和multilinear formula的separation。也就是說，如果把他們的$o(\log n)$變成$O(\log n)$就大功告成了。但是為什麼他們就這樣停在門口呢？這就要從他們使用的技術來看起。先說結論，他們的套路是沒辦法突破$o(\log n)$的，除非有些很新的想法。&lt;/p&gt;
+
+&lt;p&gt;Suryajith Chillara, Nutan Limaye, Srikanth Srinivasan的做法有兩步：(i)用Ran Raz之前證明exponential multilinear formula lower bound的partial derivative matrix技術證明一個特別的polynomial(其實也沒有那麼特別，是$d$個$2\times 2$的iterative matrix multiplication)在深度$\Delta$的multilinear formula需要大小$exp(d^{1/\Delta})$。(ii)使用有名的GKKS深度節約(depth reduction)技術，證明這個polynomial可以有大小$exp(d^{1/2\Delta})$深度$\Delta$的formula。大家可以把$d$設成$\log^{2\Delta} n$那麼就會有個exponential的separation了。然而，也不難發現$\Delta$必須要比$O(\frac{\log n}{\log\log n})$小不然GKKS得到的formula size也超過polynomial了。而至於為什麼我說他們大概無法突破深度$o(\log n)$的限制，是因為這已經是GKKS能夠給出最好的upper bound了。如果想用同一個polynomial繼續弄下去，必然會需要更厲害的技術，也就等同於要開發出formula更厲害的計算能力。&lt;/p&gt;
+
+&lt;p&gt;總結一下這個問題，我個人覺得兩個方向都直得思考一下，畢竟這個問題會卡住，似乎代表著我們對於formula的了解不夠(upper和lower bounds都是)，而無論哪個方向結果都會是有趣的。&lt;/p&gt;
+
+&lt;h2 id=&quot;different-proof-for-ac0-lower-bounds&quot;&gt;Different proof for AC0 lower bounds?&lt;/h2&gt;
+&lt;p&gt;$\AC{0}$是一個經典的circuit class，包含了所有(polynomial-size的)contant depth且unbounded fan-in的circuits。$\AC{0]}$基本上是最所有non-trivial的circuit classes中最簡單的一個，早在三十年前就已經有exponential的lower bound存在。事實上，這個lower bound：$PARITY\notin\AC{0}$是目前已知對於$\AC{0}$最好的一個lower bound。具體來說，對於深度$d\geq0$的$\AC{0}$ circuit來說，需要$2^{\Omega(n^{1/(d-1)})}$個gates來計算PARITY。&lt;/p&gt;
+
+&lt;p&gt;當深度$d=2$時，PARITY的$\AC{0}$ lower bound是$2^{\Omega(n)}$，這又被稱為strong exponential lower bound。然而當$d&amp;gt;2$的時候，這個lower bound就變得不夠強了，例如當$d=3$，只有$2^{\Omega(\sqrt{n})}$。同時對於PARITY來說，這個lower bound是緊的，也就是說對於深度$d&amp;gt;2$的$\AC{0}$來說，無法用PARITY獲得strong exponential lower bound。&lt;/p&gt;
+
+&lt;p&gt;更悲慘的是，目前已知證明$\AC{0}$ lower bounds的技術很侷限於兩種：(1)隨機限縮法(random restriction)還有(2)多項式逼近法(polynomial approximation)。基本上PARITY是這兩種方法可以獲得最強lower bound的候選人了，雖然我們看似很了解$\AC{0}$，但是我們真的那麼了解嗎？有沒有可能找出新的證明$\AC{0}$ lower bound的方式？此外，有沒有除了PARITY以外的$\AC{0}$strong lower bound候選人？&lt;/p&gt;
+
+&lt;p&gt;目前我也是完全沒有什麼具體想法，一個潛在想要了解的方向是隨機限縮法的極限在哪。畢竟PARITY的lower bound是用最基本的一個隨機限縮法就做到了，如果使用一些比較花俏的限縮方式，&lt;a href=&quot;http://www.math.toronto.edu/rossman/k-clique-stoc.pdf&quot;&gt;Benjamin Rossman有個$k$-clique的exponential lower bound&lt;/a&gt;。有沒有辦法用比較複雜一點的隨機限縮法得到$\AC{0}$的strong exponential lower bound？或是能夠說明隨機限縮法做不到？&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Updates:&lt;/strong&gt; 這幾天又多看了一些書，學到了一些針對三層$\AC{0}$的相關結果。如上面所說目前三層$\AC{0}$最好的lower bound是$2^{\Omega(\sqrt{n})}$，Valiant多年前的一個結果說了如果可以把這個lower bound改進到$2^{\Omega(n/\log\log n)}$，那麼就會有個$O(\log n)$深度的$\omega(n)$ circuit lower bound。這個lower bound是證明$\NP\not\subseteq\Ppoly$的必經之路，但是還離目前大家會證的lower bound差很遠。&lt;/p&gt;
+
+&lt;p&gt;而三層$\AC{0}$的lower bound也不是完全沒有潛在的方法，一個古早的做法是考慮圖的複雜度(graph complexity)。例如如果可以證明對於所有$D$，每個$D$-regular的$K_{2,2}$-free圖，都需要$D^{\Omega(1)}$個independent set才能覆蓋所有的邊，那麼就可以得到$2^{\Omega(n)}$的三層$\AC{0}$ lower bound。&lt;/p&gt;
+
+&lt;h2 id=&quot;depth-2-threshold-circuits-lower-bounds&quot;&gt;Depth-2 threshold circuits lower bounds?&lt;/h2&gt;
+&lt;p&gt;目前boolean circuit lower bound的最前戰線被拉到了深度2的threshold circuits。在這邊threshold circuit是指所有的gate都是長得像下面這個樣子：
+\begin{equation}
+g(x) = sgn(\sum_{i\in[n]}w_i\cdot x_i-t)
+\end{equation}
+其中$sgn(X)$是$X$的正負號，然後$w_i$還有$t$是一些整數。當$w_i$還有$t$的大小是polynomial in $n$，那麼我們稱$g$為一個&lt;em&gt;majority gate&lt;/em&gt;，不是的話稱為&lt;em&gt;threshold gate&lt;/em&gt;。&lt;/p&gt;
+
+&lt;p&gt;To be continued…&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>CCC 2018</title>
+   <link href="http://cnchou.github.io/2018/07/18/CCC/"/>
+   <updated>2018-07-18T00:00:00-04:00</updated>
+   <id>http://cnchou.github.io/2018/07/18/CCC</id>
+   <content type="html">&lt;p&gt;Few weeks ago, I attended the &lt;a href=&quot;http://www.computationalcomplexity.org/Archive/2018/program.php&quot;&gt;33rd Computational Complexity Conference&lt;/a&gt; (CCC 2018) at UCSD. It was my first time going to CCC and I really enjoyed it a lot. As some of my friends told me before, since CCC is quite small and focused (in complexity), sometimes one can find it more useful and helpful. Personally I even like CCC 2018 more than FOCS 2017. The following are some papers that I found interesting to me during the conference. I decided to carefully study these papers and write some thoughts about them after the conference, however, it took much more time than I expected to finish this task.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#the-power-of-natural-properties-as-oracles&quot; id=&quot;markdown-toc-the-power-of-natural-properties-as-oracles&quot;&gt;The Power of Natural Properties as Oracles&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#pseudorandom-generators-from-polarizing-random-walks&quot; id=&quot;markdown-toc-pseudorandom-generators-from-polarizing-random-walks&quot;&gt;Pseudorandom Generators from Polarizing Random Walks&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#np-hardness-of-minimum-circuit-size-problem-for-or-and-mod-circuits&quot; id=&quot;markdown-toc-np-hardness-of-minimum-circuit-size-problem-for-or-and-mod-circuits&quot;&gt;NP-hardness of Minimum Circuit Size Problem for OR-AND-MOD Circuits&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#a-story-of-am-and-unique-sat&quot; id=&quot;markdown-toc-a-story-of-am-and-unique-sat&quot;&gt;A story of AM and UNIQUE-SAT&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#references&quot; id=&quot;markdown-toc-references&quot;&gt;References&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;the-power-of-natural-properties-as-oracles&quot;&gt;The Power of Natural Properties as Oracles&lt;/h2&gt;
+&lt;p&gt;Author(s): &lt;em&gt;Russell Impagliazzo&lt;/em&gt;, &lt;em&gt;Valentine Kabanets&lt;/em&gt;, and &lt;em&gt;Ilya Volkovich&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;The goal of this paper is two-fold. Firstly they want to investigate how powerful a natural property is following the &lt;em&gt;learning with natural proof&lt;/em&gt; work by &lt;a href=&quot;#CIKK16&quot;&gt;(Carmosino, Impagliazzo, Kabanets, &amp;amp; Kolokolova, 2016)&lt;/a&gt;. On the other hand, they provide envidence that the &lt;em&gt;minimum circuit size problem&lt;/em&gt;, &lt;em&gt;i.e.,&lt;/em&gt; $\MCSP$, is as hard as $\NP$.&lt;/p&gt;
+
+&lt;p&gt;Here, we list some of their results in the following.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;$\ZPEXP^{\MCSP}\not\subseteq\Ppoly$ improving the previous $\ZPEXP^{\NP}\not\subseteq\Ppoly$.&lt;/li&gt;
+  &lt;li&gt;$\ZPP^{\MCSP}/1\not\subseteq\SIZE[n^k]$ for all $k\in\N$.&lt;/li&gt;
+  &lt;li&gt;Suppose indistinguishable ofuscation exists, then $\MCSP\in\ZPP$ if and only if $\NP=\ZPP$.&lt;/li&gt;
+  &lt;li&gt;Replace the $\NP$ oracle in many complexity relations with $\MCSP$ oracle.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;collapse-theorem&quot;&gt;Collapse theorem&lt;/h4&gt;
+&lt;div class=&quot;theorem&quot;&gt;
+Let $\Gamma\in\{\PaP,\ShP,\PSPACE,\EXP,\NEXP,\EXP^{\NP}\}$. If $\Gamma\subseteq\Ppoly$, then $\Gamma\subseteq\ZPP^{\MCSP}$.
+&lt;/div&gt;
+
+&lt;p&gt;To interpret this theorem, one have to compare with the previous results. Prior to this work, $\Gamma$ would only collapses to $\MA$ (see this &lt;a href=&quot;/notes/collapse&quot;&gt;note&lt;/a&gt;) which lies in $\ZPP^{\NP}$. The above theorem in some sense indicates the power of $\MCSP$ being an oracle is as powerful as $\SAT$.&lt;/p&gt;
+
+&lt;h4 id=&quot;circuit-lower-bounds&quot;&gt;Circuit lower bounds&lt;/h4&gt;
+&lt;div class=&quot;theorem&quot;&gt;
+$\ZPP^{\MCSP}/1\not\subseteq\SIZE[n^k]$ for all $k\in\N$.
+&lt;/div&gt;
+
+&lt;p&gt;Note that this is an analogy to the $\MA/1\not\subseteq\SIZE[n^k]$ due to Santhanam &lt;a href=&quot;#San09&quot;&gt;(Santhanam, 2009)&lt;/a&gt; (see this &lt;a href=&quot;/notes/MA1notinPpoly&quot;&gt;note&lt;/a&gt;). As we mentioned previously, $\MA\subseteq\ZPP^{\NP}$ and thus $\ZPP^{\MCSP}$ can be thought of as a $\MCSP$ analogy for $\MA$.&lt;/p&gt;
+
+&lt;h4 id=&quot;key-technique&quot;&gt;Key technique&lt;/h4&gt;
+&lt;p&gt;The following is a kel lemma extracted from &lt;a href=&quot;#CIKK16&quot;&gt;(Carmosino, Impagliazzo, Kabanets, &amp;amp; Kolokolova, 2016)&lt;/a&gt; using natural proof (see this &lt;a href=&quot;/notes/natural&quot;&gt;note&lt;/a&gt;) to learn boolean function.&lt;/p&gt;
+
+&lt;div class=&quot;lemma&quot;&gt;
+Let $\mathcal{R}$ be a strongly useful natural proof and let $L$ be a downward self-reducible and self-correctable language. Then, there exists a randomized  algorithm with oracle queries to $\mathcal{R}$ such that on input $x$, output $L(x)$ correctly with probability at least $1-1/\poly(n)$ in time $\poly(\card{x},\text{size}(L))$.
+&lt;/div&gt;
+
+&lt;p&gt;An immediate corollary would be a conditional collapse of $\PSPACE$ to $\BPP^{\MCSP}$ since there is a downward self-reducible and self-correctable language in $\PSPACE$ and $\MCSP$ is a strongly useful natural proof.&lt;/p&gt;
+
+&lt;p&gt;To move from $\BPP^{\MCSP}$ to $\ZPP^{\MCSP}$, we need one more lemma as follows.&lt;/p&gt;
+
+&lt;div class=&quot;lemma&quot;&gt;
+Let $\mathcal{R}$ be a strongly useful natural property. Then, $\BPP\subseteq\ZPP^{\mathcal{R}}$. Moreover, if $\mathcal{R}\in\Ppoly$, then $\BPP^{\mathcal{R}}=\ZPP^{\mathcal{R}}$.
+&lt;/div&gt;
+
+&lt;h4 id=&quot;some-thoughts&quot;&gt;Some thoughts&lt;/h4&gt;
+
+&lt;p&gt;To some extent, the techniques used in this paper are not that surprising after the CIKK paper, however, the high-level message is informative. I feel that these results all highly rely on the &lt;em&gt;self-reducibility&lt;/em&gt; of a $\PSPACE$-complete language. Is that possible to go beyond this? Say having similar results for lower complexity classes that do not have a self-reducible language?&lt;/p&gt;
+
+&lt;h2 id=&quot;pseudorandom-generators-from-polarizing-random-walks&quot;&gt;Pseudorandom Generators from Polarizing Random Walks&lt;/h2&gt;
+&lt;p&gt;Author(s): &lt;em&gt;Eshan Chattopadhyay&lt;/em&gt;, &lt;em&gt;Pooya Hatami&lt;/em&gt;, &lt;em&gt;Kaave Hosseini&lt;/em&gt;, and &lt;em&gt;Shachar Lovett&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;This work gives a new framework of constructing &lt;em&gt;pseudo random generator (PRG)&lt;/em&gt; by using &lt;em&gt;fractional PRG&lt;/em&gt;. They construct PRG for functions with low sensitivity with better seed length as well as PRGs for other family of well-studied functions. The key constrution is a fractional PRG for function with exponentially decaying $\ell_1$ tail. In the following, we will first define some notations and present some of their results.&lt;/p&gt;
+
+&lt;p&gt;Here, we think of PRG as a random variable $X$ distributes in ${-1,1}^n$ defined as $X=G(U_r)$ where $G:{-1,1}^r\rightarrow{-1,1}^n$ is the generator function, $U_r$ is uniformly distributed over ${-1,1}^r$, and $r$ is the seed length. We say $X$ $\epsilon$-fools a function $f:{-1,1}^n\rightarrow{-1,1}$ if
+\begin{equation}
+\left|\E[f(X)]-\E[f(U_n)]\right|\leq\epsilon.
+\end{equation}
+The goal is to minimize the seed length $r$. Note that there are other ways to define PRG and they are basically equivalent.&lt;/p&gt;
+
+&lt;h4 id=&quot;fractional-prg&quot;&gt;Fractional PRG&lt;/h4&gt;
+
+&lt;p&gt;A &lt;em&gt;fractional&lt;/em&gt; PRG prosed in this paper is a random variable $X$ distributes in $[-1,1]^n$ instead of ${-1,1}^n$ while having the same $\epsilon$-fool property. However, to avoid triviality ($X$ always being $0^n$), we say $X$ is $p$-noticeable for some $p&amp;gt;0$ if $\E[X^2]\geq p^2$.&lt;/p&gt;
+
+&lt;p&gt;The paper mentions that a $p$-noticeable fractional PRG that fools function with exponentially decaying $\ell_1$ Fourier tail can be constructed with bounded-wise independent random variables. Concretely, they have the following lemma.&lt;/p&gt;
+
+&lt;div class=&quot;lemma&quot;&gt;
+For any $a,b&amp;gt;0$ define $\mathcal{F}_{a,b}^n=\{f\ |\ \sum_{S\subseteq[n]:|S|=k}\card{\hat{f}(S)}\leq a\cdot b^k\}$ be the family of functions with exponentially decaying $\ell_1$ Fourier tail. There exists a $p$-noticeable fractional PRG $X$ that $\epsilon$-fools $\mathcal{F}_{a,b}^n$ with seed length $O(\log\log n+\log(a/\epsilon))$ and $p=\frac{1}{4b^2}$.
+&lt;/div&gt;
+
+&lt;p&gt;Note that many well-studied family of boolean functions have exponentially decaying $\ell_1$ Fourier tail. For instance, $\AC{0}$ circuit, functions with bounded sensitivity, functions computed by certain branching programs, etc.&lt;/p&gt;
+
+&lt;h4 id=&quot;from-fractional-prg-to-prg&quot;&gt;From fractional PRG to PRG&lt;/h4&gt;
+
+&lt;p&gt;Now that we have fractional PRG for a bunch of boolean function families, the goal is to construct PRG for them. This paper shows how to use fractional PRG to construct PRG for the same family of functions with little blow-up in seed length.&lt;/p&gt;
+
+&lt;p&gt;The key idea is using a sequence of indpendent fractional PRG to do a random walk in $[-1,1]^n$ and then rounding to boolean value after few steps. The analysis is based on polarization in one-dimensional martingale. Here, we skip the proof and only state the theorem as follows. Note that we need the function family $\mathcal{F}$ to have some self-trstrictable property in the sense that after fixing some input, the function still lies in the same family.&lt;/p&gt;
+
+&lt;div class=&quot;theorem&quot;&gt;
+Let $X_1,X_2,\dots,X_t$ be independent $p$-noticeable fractional PRG that $\epsilon$-fools self-restrictable $\mathcal{F}_{a,b}^n$. When $t=O(\log(n/\epsilon)/p)$, we have $X=M(X_1,X_2,\dots,X_t)$ a PRG that $(t+1)\epsilon$-fools $\mathcal{F}_{a,b}^n$ where $M(\cdot,\dots,\cdot)$ is some random walk function.
+&lt;/div&gt;
+
+&lt;h4 id=&quot;some-thoughts-1&quot;&gt;Some thoughts&lt;/h4&gt;
+
+&lt;p&gt;The idea of fractional PRG is quite interesting and it is surprising to me that one can really use it to contruct PRG with seed lengths comparable to other highly non-trivial PRG for various computational models. Also, the recent exiciting &lt;a href=&quot;https://eccc.weizmann.ac.il/report/2018/107/&quot;&gt;oracle separation for $\BQP$ and $\PH$&lt;/a&gt; used the analysis in this paper. I still haven’t fully understood the intuition why their tools overcome the previous barrier and it would be interesting to see if this can be applied in other places.&lt;/p&gt;
+
+&lt;p&gt;Another intersting research direction here could be generalizing the idea of fractional PRG as the authors suggested in the end the talk/paper. Basically, the currect reduction from fractional PRG to PRG is via a simple summation and rounding. Could a more complicated composition of fractional PRG be more efficient?&lt;/p&gt;
+
+&lt;h2 id=&quot;np-hardness-of-minimum-circuit-size-problem-for-or-and-mod-circuits&quot;&gt;NP-hardness of Minimum Circuit Size Problem for OR-AND-MOD Circuits&lt;/h2&gt;
+
+&lt;p&gt;Author(s): &lt;em&gt;Shuichi Hirahara&lt;/em&gt;, &lt;em&gt;Igor C. Oliveira&lt;/em&gt;, and &lt;em&gt;Rahul Santhanam&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;The &lt;em&gt;minimum circuit size problem (MCSP)&lt;/em&gt; is a well-known problem in $\NP$ in the situation that people do not know if MCSP lies in $\P$ or is $\NP$-complete. The input of MCSP is the truth table of a boolean function $f$ and an integer $s$ such that the goal is to decide whether there exists a circuit of size at most $s$ computing $f$. Currently there’s no evidence against the $\NP$-hardness of MCSP. The only obstacle in showing MCSP is $\NP$-hard is due to Kabanets and Cai showing that a &lt;em&gt;natural&lt;/em&gt; reduction from SAT to MCSP would imply a super-polynomial lower bound against $\mathbf{E}$, the family of problems solvable in linear exponential time.&lt;/p&gt;
+
+&lt;p&gt;There are not so many results either even one considers MCSP for restricted circuit family. In 1979, Masek showed DNF-MCSP is $\NP$-hard and this is the state-of-the-art. This paper gives the first improvement for the hardness of MCSP for depth-3 circuit.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Theorem&lt;/strong&gt;
+The MCSP for $\text{Or}\circ\text{And}\circ\text{Mod}_m$ is $\NP$-hard.&lt;/p&gt;
+
+&lt;p&gt;The main idea is viewing the $\text{Or}\circ\text{And}\circ\text{Mod}_m$ as an indicator function for an union of affine spaces. Concretely, let’s start with $m=2$ where $\text{Mod}_2$ is the parity gate. One can see that the preimage of 1 of each parity gate gives an affine space. As a result, one can think of a $\text{Or}\circ\text{And}\circ\text{Mod}_m$ circuit for boolean function $f$ as using affine spaces to cover the 1-preimage of $f$. Quantitatively, the number of affine spaces needed is a lower bound for the number of $\text{And}$ gates needed.&lt;/p&gt;
+
+&lt;h2 id=&quot;a-story-of-am-and-unique-sat&quot;&gt;A story of AM and UNIQUE-SAT&lt;/h2&gt;
+
+&lt;p&gt;Author(s): &lt;em&gt;Ilya Volkovich&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;This paper was presented by Ilya in the rump session. He showed that $\AM=\SBP$ if Unique-Sat ($\USAT$) is $\NP$-hard. Recall that $\MA\subseteq\SBP\subseteq\AM$ and whether $\MA$ euqals to $\AM$ is one of the important question in complexity theory. This paper can be thought of as an indication of $\MA=\AM$. A natural open question after this work would be either (i) improving the assumption, &lt;em&gt;i.e.,&lt;/em&gt; basing on more believing condition than the $\NP$-hardness of $\USAT$, or (ii) improving the conclusion, &lt;em&gt;i.e.,&lt;/em&gt; $\MA=\AM$ instead of $\AM=\SBP$.&lt;/p&gt;
+
+&lt;p&gt;Let us start with some definitions.&lt;/p&gt;
+
+&lt;h4 id=&quot;ma-sbp-and-am&quot;&gt;$\MA$, $\SBP$, and $\AM$&lt;/h4&gt;
+
+&lt;p&gt;One convenient way to view $\MA$ is to think of it as $\NP$ with a randomized verifier. Formally, a language $L$ is in $\MA$ if there exists a polynomial-time computable predicate $R(x,w,r)$ such that
+\begin{align*}
+x\in L\Rightarrow\ \exists w,\ \Pr_r[R(x,w,r)=1]\geq\frac{2}{3},\\
+x\not\in L\Rightarrow\ \forall w,\ \Pr_r[R(x,w,r)=1]\leq\frac{1}{3}.
+\end{align*}&lt;/p&gt;
+
+&lt;p&gt;As for $\AM$, the verifier (Arthur) will toss the randomness before the prover (Merlin) sends the witness. It immediately follows from the definitions that $\MA\subseteq\AM$. Intuitively, one can think of $\AM$ as a class of languages that have a randomized reduction to $\NP$. Formally, we say $L\in\AM$ if there exists a polynomial-time computable predicate $R(x,w,r)$ such that
+\begin{align*}
+x\in L\Rightarrow\ \Pr_r[\exists w,\ R(x,w,r)=1]\geq\frac{2}{3},\\
+x\not\in L\Rightarrow\ \Pr_r[\exists w,\ R(x,w,r)=1]\leq\frac{1}{3}.
+\end{align*}&lt;/p&gt;
+
+&lt;p&gt;$\SBP$ is not as well known as $\MA$ and $\AM$ since most complexity courses would not introduce it. However, it is a fairly natural existence between these two very important complexity classes. Let us directly state the definition of $\SBP$. We say $L\in\SBP$ if there exists a polynomial-time computable predicate $R(x,r)$ such that there exists $\epsilon&amp;gt;0$ and $k\in\N$,
+\begin{align*}
+x\in L\Rightarrow\ \Pr_r[R(x,r)=1]\geq(1+\epsilon)\cdot\frac{1}{2^{n^k}},\\
+x\not\in L\Rightarrow\ \Pr_r[R(x,r)=1]\leq(1-\epsilon)\cdot\frac{1}{2^{n^k}}.
+\end{align*}
+It is a simple exercise to check $\MA\subseteq\SBP\subseteq\AM$ by viewing the witness $w$ in $\MA$ and $\AM$ as a part of the randomness $r$.&lt;/p&gt;
+
+&lt;h4 id=&quot;intuition-for-the-conditional-collapse-theorem&quot;&gt;Intuition for the conditional collapse theorem&lt;/h4&gt;
+
+&lt;p&gt;We are going to briefly explain the intuition for the following main theorem.&lt;/p&gt;
+&lt;div class=&quot;theorem&quot;&gt;
+If $\USAT$ is $\NP$-hard, then $\AM=\SBP$.
+&lt;/div&gt;
+
+&lt;p&gt;The idea is actualy quite straightforward. Recall the definition of $\AM$. Suppose for a language $L\in\AM$, each yes instance $x\in L$ has a unique witness $w$. Then it immediately follows from the definition that $L\in\SBP$ by simply let the randomness to be $r’=(w,r)$. Namely, to collapse $\AM$ into $\SBP$, it suffices to transform every language $L\in\AM$ to a language that has unique witness.&lt;/p&gt;
+
+&lt;p&gt;With this sufficient condition in mind, it is then no difficult to see that under the assumption that $\USAT$ is $\NP$-hard, one can collapse $\AM$ into $\SBP$.&lt;/p&gt;
+
+&lt;h4 id=&quot;some-thoughts-2&quot;&gt;Some thoughts&lt;/h4&gt;
+
+&lt;p&gt;This is quite a cute paper that gives a detailed connection between $\MA,\SBP,\AM$. Though the conditional collapse theorem is not too deep after knowing the definitions of these classes, the paper points out a pave to prove $\AM\subseteq\MA$. A the paper suggested in the end, some natural open questions would then be either improving the assumption or improving the consequence. I personally would be more interested in finding more suitable assumption to collapse $\AM$.&lt;/p&gt;
+
+&lt;!--
+## Unbalancing Sets and an Almost Quadratic Lower Bound for Syntactically Multilinear Arithmetic Circuits
+
+
+
+
+## A PRG for Boolean PTF of Degree 2 with Seed Length Subpolynomial in ε and Logarithmic in n
+
+--&gt;
+
+&lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
+&lt;ol class=&quot;bibliography&quot;&gt;&lt;li&gt;&lt;span id=&quot;CIKK16&quot;&gt;Carmosino, M. L., Impagliazzo, R., Kabanets, V., &amp;amp; Kolokolova, A. (2016). Learning algorithms from natural proofs. In &lt;i&gt;LIPIcs-Leibniz International Proceedings in Informatics&lt;/i&gt; (Vol. 50). Schloss Dagstuhl-Leibniz-Zentrum fuer Informatik.&lt;/span&gt;&lt;/li&gt;&lt;/ol&gt;
+&lt;ol class=&quot;bibliography&quot;&gt;&lt;/ol&gt;
+
+&lt;hr /&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Ph.D. 第一年心得</title>
+   <link href="http://cnchou.github.io/2018/06/04/firstyear/"/>
+   <updated>2018-06-04T00:00:00-04:00</updated>
+   <id>http://cnchou.github.io/2018/06/04/firstyear</id>
+   <content type="html">&lt;p&gt;其實2018 Spring的學期已經結束一個月左右了，也即將要從台灣回去波士頓。來到了一個新的環境求學，在自己不斷繼續成長的同時，要適應新的研究模式、身邊的合作對象、修課方式，甚至是語言還有表達與溝通。一直想要找個機會整理一下這段時間下來的想法，很多不同的思緒混在一起，讓我就這樣不知不覺拖到現在，終於下定決心就不管太多寫就對了。&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h3 id=&quot;harvard-vs-taiwan&quot;&gt;Harvard vs. Taiwan&lt;/h3&gt;
+
+&lt;p&gt;在回台灣的這段日子中，最常被問到的一個問題就是：「你覺得Harvard那邊和以前在台大或中研院差最多的地方在哪？」。很多人會猜是這邊的人比較聰明，或是這邊的資源比較多等等。這些也許是這樣子的(雖然我不完全這麼認為)，不過就我個人的感受來講，這邊和在台灣最不同的地方就是，這邊大部分的人(學生和老師)都非常的努力認真。&lt;/p&gt;
+
+&lt;p&gt;還記得在台灣的時候，特別是在高中時，身邊常常瀰漫著一種氛圍，讓人感覺好像不用很努力就考很高分是最厲害的。許多同學最喜歡做的就是在考試前後到處宣揚自己都沒有什麼唸書，然後在成績出來時哀號自己考很爛，結果卻在期末時默默拿了書卷獎。當然並不是所有人都是這樣，在台大和中研院還是讓我遇到了非常多令人敬佩的人。不過到了Harvard之後我才突然驚覺身邊竟然幾乎所有人都是這樣子。很多在Harvard的學生的確背景很硬很聰明，但是他們的拼勁還有求學做學問的精神更是他們成功的原因！&lt;/p&gt;
+
+&lt;p&gt;舉個令我印象非常深刻的例子，主角是一個大我三屆的波蘭人學長J。在進去Harvard前參加的visit day時，和他閒聊之際討論到了一篇剛剛發表在arXiv上我很感興趣的文章，我們都只大約知道文章在講些什麼，對於細節沒有很懂，因此討論到一定程度後就發現只能遊走在邊緣，無法做建設性的討論。到了隔一天的晚宴，在經過行程滿滿的兩天之後，我幾乎已經忘記跟這篇文章了，結果J就興沖沖地坐到我旁邊，趁著上菜的空擋時，直接在餐巾紙上把文章裡面的幾個關鍵構造講給我聽，瞬間一切豁然開朗，短短的十幾分鐘讓我抓到了這篇文章的重點。讀文章也許不是什麼了不起的事情，如果只是要抓到這樣的程度，可能花個一兩個小時就夠了。讓我佩服的是，J純粹只是因為對於知識的好奇，就這樣去看了一篇和他的研究毫無相關的東西。這樣的行為可能說來簡單，但是要這樣實踐卻不是件簡單的事情。一直到現在一年下來，類似這樣的事情非常頻繁的發生，而且不只是J，很多其他的學長姊也是這樣，在這樣的環境之下做研究，視野和過去的環境是完全不能相比的。&lt;/p&gt;
+
+&lt;h3 id=&quot;改變最多的是什麼&quot;&gt;改變最多的是什麼？&lt;/h3&gt;
+
+&lt;p&gt;這趟回台灣在中研院還有元智大學總共給了三場演講，最後一場在中研院的時候，以前的指導老師KM問了我，在這一年中到底是做了什麼樣的改變，他覺得我的演講比之前好很多。聽到這個問題的當下，心中其實五味雜陳，一方面是想起之前他時常說我演講報告得不好，一方面是受寵若驚，而同時我其實並沒有特別感受到自己的演講方式有改變太多，甚至可以說我一直以來很自豪的就是我報告的能力還不錯(除了最近覺得語言有點混亂，中文和英文都講得不太好…)。&lt;/p&gt;
+
+&lt;p&gt;不過話說回來，KM點出了我一直以來很大的缺點：在high-level的直覺和數學細節之間的切換不順暢。對於理論CS來說，最重要也是最吸引我的就是對於定理的抽象理解，透過不斷的詮釋理解，吸取出定理的精華，融入直覺做出推理。然而這一切的根本都還是一行一行的數學推導，只要有一個環節出錯，在美好的故事都沒有用，結果一翻兩瞪眼。因為這個領域的本質是這樣，於是一個好的演講通常必須同時兼顧high-level的直覺，以及所使用到的關鍵數學細節。然而只有這兩個是不夠的，畢竟聽眾不見得對於演講的題目了解這麼多，因此在high-level和細節之間的切換就顯得非常重要，只要一閃神，就很容易讓許多觀眾迷失在式子與符號海之中。可想而知，過去的我大概就是這樣常常讓聽眾迷失卻不自知吧？&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Novermber, 2017</title>
+   <link href="http://cnchou.github.io/2017/11/17/style/"/>
+   <updated>2017-11-17T00:00:00-05:00</updated>
+   <id>http://cnchou.github.io/2017/11/17/style</id>
+   <content type="html">&lt;p&gt;&lt;a class=&quot;gallery img-center&quot; href=&quot;/images/Diary/IMG_1303.jpg&quot;&gt;&lt;img src=&quot;/images/Diary/IMG_1303.jpg&quot; width=&quot;100%&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;一轉眼已經來到劍橋三個半月了，Ph.D.的第一個學期也即將邁入尾聲，隨著衣服越穿越多，似乎也開始漸漸抓到生活還有做研究的步調。在如此耗腦力的環境之下，了解自己在什麼時候該做什麼事情決定了做事效率，一旦盲目地工作，很有可能最後仍然是一場空。&lt;/p&gt;
+
+&lt;p&gt;現在的生活主要圍繞在三個大方向上面：研究、學習、休息。研究是個需要高度集中力，以及讓思緒自由奔馳的狀態，因此除了需要精神好之外，也很需要一個放鬆自在的環境。也因此當我在想研究的時候，很喜歡四處的移動，通常是從房間開始，播一些輕鬆的音樂，然後好好整理一下之前想過的方向，然後試圖找些可以突破的點，一旦在一個方向卡住一段時間後，就會慢慢的移動到辦公室，或是找個喜歡的咖啡店(尤其是最近愛上了熱巧克力店&lt;a href=&quot;https://www.burdickchocolate.com&quot;&gt;L.A. Burdick&lt;/a&gt;)。最重要的是要邊走邊寫，時常一些盲點都是在邊走邊想的時候釐清的，然後一到下個地方後，就可以把之前卡住的地方寫清楚，然後往下一個方向前進。&lt;/p&gt;
+
+&lt;p&gt;除了研究之外，持續不斷的學習也是身為一個Ph.D.學生(甚至是in general的學術工作者)不可以忽視的一件事情。這學期雖然修了兩門課，但是如果只有把修課該做的事情做完其實是很不夠的。尤其是這邊修課的感覺(至少以理論CS來說)是非常地強調自主性的，老師不會去管你的出席或是預習複習狀況，作業量也沒有想像中的大，不一定需要把上課教的東西完全搞懂還是可以把作業寫出來。這樣的好處是可以讓學生自由的選擇自己有興趣的方向好好的深入學習，而壞處就是學生真的必須要去認真思考自己想要在這門課獲得什麼，不然很容易一下子時間就過去了，然後發現自己什麼也沒有學到。而在課堂之外，學習深度與廣度的增強也是需要依靠每天一點一滴的累積的。看看身邊的senior Ph.D. students，總覺得他們懂的東西好多，不見得是跟他們修過的課或是做過的研究相關，能夠做到這樣的關鍵就是持續一點一滴學習的累積。這有可能是透過聽演講獲得的，也有可能是靠讀paper還有看書學到的。不管是哪種方法，在課堂還有研究之外的學習才是一個人的內功，決定了他可以走得多遠。在體會到這個觀念之後，我開始慢慢規劃讓自己有個固定可以看書或是看paper的時間，目前終於發現在每天的一大早是個很好的時機。也就是在七點多起床到八點多吃飯之間的這一小時，讀一些平常很想看的書(例如代數幾何)還有paper。通常這個時間是個腦袋還沒有很靈活，但是可以正常運作的時間，拿來學習可是最剛好不過的了。&lt;/p&gt;
+
+&lt;p&gt;在研究還有認真學習之外，生活的平衡也是維持健康的身心不可或缺的一部份。這學期做了大量的課外活動，試圖在研究學習還有生活之中找到平衡。有時候覺得自己相較於同學朋友之下有點太混了，不過說實在跟剛開學時很拼的時期比起來，我感覺做事的效率還有成果沒有差太多。”適當”的放鬆對我來說的確可以讓我在該認真的時候更能夠專注，把事情有效率地做好，同時也更享受在劍橋舒服的生活。&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>雨後讀不下書的夜晚</title>
+   <link href="http://cnchou.github.io/2017/09/20/random/"/>
+   <updated>2017-09-20T00:00:00-04:00</updated>
+   <id>http://cnchou.github.io/2017/09/20/random</id>
+   <content type="html">&lt;p&gt;連續下了幾天雨的劍橋，就跟梅雨季的台北差不多令人鬱悶，開學的第三週，齒輪漸漸進入了軌道。五年的Ph.D.看起來很長，但是看看身邊的學長學姊們，似乎看見了一年後、兩年後、三年後的自己，不久後也要站到他們的位子上了。&lt;/p&gt;
+
+&lt;p&gt;讀書和學習最大的壓力始終是來自自己，第一個月還沒過完已經開始有點胃痛了，也不知道是因為最近太常自己做菜為，衛生沒有做好。還是給自己的目標訂太高，太在意和別人的差距，太急著想要有點明顯的進步。明明知道不要給自己太多壓力，五年慢慢的來，享受這一切過程，但是每當和別人討論時無法清楚地理解，沒辦法提出好的問題，都還是會很不甘心，覺得自己要更好。&lt;/p&gt;
+
+&lt;p&gt;看來還是不懂得接受失敗吧！&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>上海特訓班</title>
+   <link href="http://cnchou.github.io/2017/07/07/shanghei/"/>
+   <updated>2017-07-07T00:00:00-04:00</updated>
+   <id>http://cnchou.github.io/2017/07/07/shanghei</id>
+   <content type="html">&lt;p&gt;去年上海財經大學成立了&lt;a href=&quot;http://itcs.shufe.edu.cn&quot;&gt;理論計算機科學研究中心&lt;/a&gt;，由&lt;a href=&quot;http://itcs.shufe.edu.cn/pinyan/&quot;&gt;陸品燕&lt;/a&gt;老師領導，目前已經有五位全職的老師/研究員，再加上每年暑假期間絡繹不絕的訪客，這裡儼然成了東方理論計算機的新星。&lt;/p&gt;
+
+&lt;p&gt;去年暑假我就和鐘老師來這邊拜訪了兩個禮拜，事隔一年，在將要去美國攻讀Ph.D.之際，再次重遊。雖然和這邊的學生老師交流沒有預期的多，但是和同行的鍾豪還有鐘老師將近兩週來的密切相處，還是讓我在研究還有思想體系上有了些成長。&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h3 id=&quot;做研究最重要的是什麼&quot;&gt;做研究最重要的是什麼？&lt;/h3&gt;
+&lt;p&gt;做研究最重要的是什麼？這是一個沒有標準答案、因人而異的問題。解決高懸多年的難題、發明新的數學工具、提出新的應用等等，無論是上述哪一個，只要做得好，都可以成為一個好的研究人員。&lt;/p&gt;
+
+&lt;p&gt;這樣聽起來好像很廢話，是個有說跟沒說一樣的恆真句，那麼既然知道這個道理，為什麼拿把研究做好的人還是少數呢？以這個角度作切入點的話，我會說，做研究最重要的就是“眼光”。&lt;/p&gt;
+
+&lt;p&gt;解決讓人類卡住多年的數學難題需要有好的眼光找到對的證明道路，將已知的工具找到好的應用需要絕佳的慧眼，甚至提出一個有意義的open problem也是需要精闢的見解。研究員走在人類知識的邊界，除了熟稔過去累積的工具當作前進的武器，往往最關鍵是找出下一步開墾的方向。&lt;/p&gt;
+
+&lt;p&gt;然而眼光這個涵蓋許多不同概念的抽象事物，該如何培養？這似乎不像熟悉工具或語言有個明確的目標，並且有容易的方法簡介自己是否掌握。一個有眼光的人，就像先知一樣，每次講出來的東西都讓你覺得好像不怎麼難，但是他就是比你先想到。&lt;/p&gt;
+
+&lt;p&gt;身為一個還在摸索理論研究的小嬰兒，我並無法對於養成眼光有任何具體策略，也沒有這樣的資格。不過從自我期許的角度來看，我能夠做的，就是在學習還有研究之餘，更加地注意這方面的事情。把定理證明出來後，不急著開心慶祝，而先想想為什麼這樣試就成功了？有什麼不一樣的概念偷偷用進去了？用到的關鍵方法可否延伸的其他的地方？可以如何解讀這個證明在整個project中扮演的角色？&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>與Bell's inequality的約會</title>
+   <link href="http://cnchou.github.io/2017/06/12/apei/"/>
+   <updated>2017-06-12T00:00:00-04:00</updated>
+   <id>http://cnchou.github.io/2017/06/12/apei</id>
+   <content type="html">&lt;p&gt;這週末趁著去上海前的空擋，到台南四天三夜拜訪親朋好友，七月底去唸博士班之後，見面將變得不這麼容易了，雖然這幾年縱使在台灣也是聚少離多就是了。&lt;/p&gt;
+
+&lt;p&gt;阿霈是我在高中時的摯友，我們倆當時都熱愛物理，雖然喜歡的方面可能不太一樣(我比較偏向喜歡物理中數學的漂亮)。還記得那時候阿霈就是個對理解東西很固執的人，在台灣高中教育的氛圍下，大部分人講求用最快速的方式把知識記起來考高分，但是阿霈總是會很鑽牛角尖的想要徹底理解清楚。當時還覺得他有點奇怪，現在反倒是很羨慕他很早就有著批判學習的精神。&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;果不其然，阿霈是我們班上第一個攻讀博士的人，還記得第一次知道是在大四的時候，我才剛下定決心要在空下來當兵的這一年來申請美國博班。沒想到阿霈直接快了我一步，一念完大學就直攻博士了。而我也很驚訝高興地發現他研究的領域竟然和我的領域有一絲絲的關係，大概就像咖啡和茶一樣都多多少少有一些咖啡因(數學)吧！？&lt;/p&gt;
+
+&lt;p&gt;之前錯過了幾場他的演講，只有在去年的一個辦在中研院的會議中聽過他講解海報，這次來到台南，終於有機會坐下來好好聽他解釋他的研究了，真是令人興奮！以下是我聽完後簡單整理的一些筆記。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Consider arbitrary conditional probability distribution $\{\bbP[a_1,\dots,a_k\vert x_1,\dots,x_k]\}$, we can &lt;em&gt;categorize&lt;/em&gt; them into the following sets:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Local set: There exists hidden variable $\lambda$ such that for any $a_i,x_i$, $\bbP[a_1,\dots,a_k\vert x_1,\dots,x_k]=\sum_{\lambda}\bbP[\lambda]\cdot\prod_i\bbP[a_i\vert x_i,\lambda]$&lt;/li&gt;
+  &lt;li&gt;Quantum set: There exists a quantum state $\vert \sigma\rangle$ and a measurement $M$ such that the conditional distribution is the distribution after using $M$ to measure $\vert \sigma\rangle$&lt;/li&gt;
+  &lt;li&gt;No-signaling set: The marginal probabilities are all the same. That is, for any $i$ and $x_1,\dots,x_k,x_1’,\dots,x_{i-1}’,x_{i+1}’,\dots,x_k’$,
+\begin{equation}
+\sum_{a_j,j\neq i}\bbP[a_1,\dots,a_k\vert x_1,\dots,x_i,\dots,x_k]=\sum_{a_j,j\neq i}\bbP[a_1,\dots,a_k\vert x_1’,\dots,x_i’,\dots,x_k’].
+\end{equation}&lt;/li&gt;
+  &lt;li&gt;Signaling set: Others.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Bell’s inequality provides a condition to identify local set. Concretely, its a half-space in the probability simplex that contains the local set.&lt;/p&gt;
+
+&lt;p&gt;The goal no-locality is to find some characterization of the quantum set.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;基本上阿霈的研究是圍繞在Bell’s inequality上，我用比較數學還有計算理論的角度來理解的話，Bell’s inequality就是提供了一個必要條件來判斷不同物件之間的關聯性(conditional probability)，是不是local的。也就是說如果一個機率關係滿足Bell’s inequality的話，那麼物件的關係就是local的。&lt;/p&gt;
+
+&lt;p&gt;那為什麼local是重要的呢？主要的原因是來自於很多物理學家(包括愛因斯坦)相信物體之間的關係應該要是local的，不該有奇怪的事情發生。然而當量子力學出現之後，出現了可以不local的關係，例如著名的EPR悖論，說明了兩個糾纏的電子，之間的互動關係是&lt;em&gt;non-local&lt;/em&gt;的！&lt;/p&gt;
+
+&lt;p&gt;因此，姑且不論物理學家對於量子力學的爭論，只少量子力學提供了一個途徑讓我們有機會碰觸到原本古典無法有的物體關係，也就是non-locality。對我來說，這就是一個separation說明了有東西是古典力學無法達到，而量子可以做到的。換句話說，這也許在暗示我們量子可以做到一些古典做不到的事情！&lt;/p&gt;
+
+&lt;p&gt;現在終於知道阿霈在做的研究的一些皮毛，不知道什麼時候有機會把我的研究介紹給他呢？&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>寫於柯潔戰敗後</title>
+   <link href="http://cnchou.github.io/2017/05/28/go/"/>
+   <updated>2017-05-28T00:00:00-04:00</updated>
+   <id>http://cnchou.github.io/2017/05/28/go</id>
+   <content type="html">&lt;p&gt;如同眾人意料中一般，20年前&lt;a href=&quot;https://en.wikipedia.org/wiki/Deep_Blue_(chess_computer)&quot;&gt;深藍(Deep Blue)&lt;/a&gt;擊敗人類西洋棋王&lt;a href=&quot;https://en.wikipedia.org/wiki/Garry_Kasparov&quot;&gt;Garry Kasparov&lt;/a&gt;，這一天，AlphaGo擊敗了人類圍棋第一的柯潔。從兒時的故事，到親眼隔著螢幕看到淚灑黑白之間，心中雖然不意外，但仍然震驚於這一天如此快的到來。&lt;/p&gt;
+
+&lt;p&gt;從小的時候就受爸媽影響開始學圍棋，雖然自己下不出來，但是看到高手過招，還是能夠欣賞每一步的奧妙(這也是$\P\neq\NP$的一個例證吧！？)。還記得約莫在升上國中左右的時期，電腦圍棋開始漸漸普及，在家連個網路就可以和來自世界(其實也就只是中日台韓)的網際對弈，也因此越來越不去棋院了。有時候一時之間在網路上沒有配對到對手，又棋癮發作，就會點開電腦自動下棋模式，然後狠狠的把電爆對手。還記得國中的我可以讓當時網路上最厲害的程式兩三子，仍然輕鬆獲勝。&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;升上高中後開始離圍棋漸行漸遠，一直到進大學後，選社團時一度考慮圍棋社，才重新灌了電腦圍棋軟體，在既熟悉又陌生的棋盤上，憑著感覺下了幾場，心中的那種悸動，就像是留學多年的遊子，回到家鄉吃到鹹酥雞的感受吧。&lt;/p&gt;
+
+&lt;p&gt;這時候，我已經可以明顯感受到電腦圍棋的實力突飛猛進的成長了。從以前電腦每下幾子，我就會心中暗自竊笑它的愚蠢，到當時整個局面被電腦從頭到尾的掌握，在棋力的差距中。我看到了時間的消逝。&lt;/p&gt;
+
+&lt;h3 id=&quot;圍棋的未來人類的未來ai的未來&quot;&gt;圍棋的未來？人類的未來？AI的未來？&lt;/h3&gt;
+&lt;p&gt;從AlphaGo去年開始橫掃圍棋界之後，在許多湊熱鬧的聲音之間，幾個問題開始被人們更認真的看待了：圍棋的未來該何去何從？在AI不斷蓬勃發展之下，人類的未來將是如何？&lt;/p&gt;
+
+&lt;p&gt;當然，這些問題不是這短時間突然冒出來的，過去已經有許許多多文章、影片等仔細探討這些既哲學又近在眼前的議題。其中我特別喜歡的是Netflix推出的影集：&lt;a href=&quot;https://en.wikipedia.org/wiki/Black_Mirror&quot;&gt;黑鏡(Black Mirror)&lt;/a&gt;。然而就像俗話說溫水煮青蛙，通常是要遇到一些重大事件，人們才會突然意識到，當年以為的未來，竟然已經成為現在。&lt;/p&gt;
+
+&lt;p&gt;身為一個既非圍棋高手，亦非人工智慧專家的我，在網路上有這麼多專業評論的情況之下，從這兩個角度出發，也是只是獻醜。所以接下來就讓我將從我”未來”的專業：理論計算機(theoretical computer science)的方向，對於什麼都有可能發生的未來，提出一些看法。&lt;/p&gt;
+
+&lt;p&gt;雖然是想要從數學、理論的角度出發，但是我還是想要引用李開復的話作為開頭&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;人類未來的希望，不是在客觀任務導向的工作上，抱著任何不被機器擊敗和取代的奢望，而是如何在情感、靈性、真善美、愛之中，找到人類存在的意義。 – 李開復&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;每當人工智慧又有重大突破時，在對高科技又往前一步的開心之餘，往往人們最擔心的就是原本一定要由人類來做的工作會不會在未來被機器取代？在問這個問題之前，需要先思考一下“取代“是什麼意思，而我認為有兩個層面：機械層面和心智層面。&lt;/p&gt;
+
+&lt;h3 id=&quot;機械層面&quot;&gt;機械層面&lt;/h3&gt;
+&lt;p&gt;機械層面是指各種操作性質的工作，其實在工業化的時期，就已經不少這樣的工作被機器取代，例如最經典的紡織工人。然而當時的取代風潮是比較”單一性的“，也就是說被取帶的工作內容通常是非常單一化的操作，而不是像超商店員那樣需要會泡珍珠奶茶還有製作霜淇淋。因此人們設計出相對應特製的機器，便可以直接取代掉原本的工人。&lt;/p&gt;
+
+&lt;p&gt;然而人類其實在這一點和機器非常不同，從宏觀的角度來看，人類是一種非常全能(universal)的生物，我們擁有能夠處理細微事物的雙手、可以輕鬆做出各種角度的關節、並且具有非常良好的平衡感還有協調性。這些生物的特質，讓一個人可以做的事情非常的多(此時甚至還沒有討論到心智能力！)，這也大概是為什麼在製造全能機器的時候，總是以人類為模板，因為人類實在是太厲害了。&lt;/p&gt;
+
+&lt;p&gt;至於人類在機械層面是否會很快地被電腦取代，這因為超出我的專業，所以我也不敢作出太強烈的預測。不過必須搞清楚的是，AlphaGo這一類型人工智慧的突破，並不是在機械層面，因此如果將電腦在圍棋上的勝利就直接推廣到任何人類工作上面，是一件誤導人的說法。&lt;/p&gt;
+
+&lt;h3 id=&quot;心智層面&quot;&gt;心智層面&lt;/h3&gt;
+&lt;p&gt;在這邊心智指的是人工智慧中偏向“軟體”、“演算法”的部分，例如AlphaGo還有自動駕駛的程式等等。這幾年來深度學習(Deep Learning)的使用成本大幅降低，並且廣泛地被應用的各種領域，在很多項目中創下了新的紀錄，這次AlphaGo戰勝人類棋王就是一個很好的例子。&lt;/p&gt;
+
+&lt;p&gt;然而電腦是否可以在一個項目上表現的優越，是有幾個根本的面向需要不斷探討的：這個問題是否真的可以在現今既有的模型下被很好的處理？如果可以的話，是否可以很有效率的處理？如果可以的話，是否可以推廣到其他類似的事情上？&lt;/p&gt;
+
+&lt;p&gt;近年來多數的人工智慧突破，主要是在前兩個問題上面處理得很好，能夠針對問題找出好的模型，並且有效率地解決問題，甚至超越人類原本可以做到的程度。如果僅只是針對單一事情表現得好，那其實一般人也不比太擔心電腦將取代人類的末日預言。真正會讓電腦科學家興奮、讓一般人民擔憂工作的情況是，出現一套非常有效率可以解決非常多問題的程式。換句話說，就像是AlphaGo不但會下圍棋、象棋、西洋棋，甚至可以稱霸各種線上遊戲！&lt;/p&gt;
+
+&lt;p&gt;這樣的世界會不會到來？如果真的發生會怎麼樣？其實不少電影已經做過類似的想像了。例如魔鬼終結者中的天網或是機械公敵中的Viki，都是在描述存在萬能人工智慧的世界。&lt;/p&gt;
+
+&lt;p&gt;不過電影或多或少誇張些，而且即使那一天會到來，在那之前的世界就已經是值得讓我們先好好思考的了。超商的店員、小吃店的廚師、公司的小主管、工程師…&lt;/p&gt;
+
+&lt;h3 id=&quot;我們希望人工智慧帶來什麼&quot;&gt;我們希望人工智慧帶來什麼？&lt;/h3&gt;
+&lt;p&gt;面對這樣的未來，我覺得在人們瘋狂用最新的人工智慧技術實現各種東西的同時，最該想的一件事情就是：我們希望人工智慧帶來什麼？是更精準的廣告投放？是在各種遊戲中屠殺各路好手的程式？是取代底層工人甚至是中階人才的機器人？這樣做是為了什麼？為了讓所有人類有更好的生活水平？帶來更高的科技生活？還是只是滿足上層人們？&lt;/p&gt;
+
+&lt;p&gt;這些當然都是沒有標準答案，而且許多是要發生了我們才能夠知道該如何回答。但這並不代表我們該輕易饒過自己，回答這些問題是對自己也是對人類的未來做交代，讓世人可以有心理準備面對變化迅速的未來。&lt;/p&gt;
+
+&lt;p&gt;雖然我未來不是往人工智慧這一塊走，不過我還是對於這些問題有一些自己的想法。就和許多圍棋高手對於這次AlphaGo的最終評論一樣，AlphaGo的出現不僅僅只是”完成了一項任務“，而是幫助我們這些凡人更能窺探為其奧妙的世界。也許這也對其他的領域可以有類似的影響。或許作家可以得到新的靈感或寫作技巧，或許科學家可以往從未是個的方向做實驗、經濟學家可以設計出更完善的模型和制度等等。我對人工智慧的期許是”帶著人類向前進“，而非取代人們本來就做得很好的事情。&lt;/p&gt;
+
+&lt;p&gt;在看到AlphaGo擊敗科潔之後，你期待人工智慧帶來什麼呢？&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>5/14 - 5/21, 2017</title>
+   <link href="http://cnchou.github.io/2017/05/20/learning/"/>
+   <updated>2017-05-20T00:00:00-04:00</updated>
+   <id>http://cnchou.github.io/2017/05/20/learning</id>
+   <content type="html">&lt;p&gt;最近的學習是在五花八門的混亂，還有鑽牛角尖的細節中來回交替。因為下定決心想要在九月開學前好好把一些基礎學好，於是列了一大票學習清單。一兩個月下來，每個好像都讀了一些，細節也學到了不少，但是又好像都沒有把整個經脈打通，這感覺有點像一個棒球選手把內野、外野、投手、捕手的基礎的摸一遍了，但是還是沒有能力上場打球。每天看著精彩的球賽不斷上演，卻只能在板凳繼續打轉。&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;跟$n$個人討論學習的方式，雖然不確定會不會有$\Omega(n)$種不同的撇步，但是肯定不會是只有$O(1)$種。而且最終一定還是老話一句：「要找到是和自己的習慣」，那我適合的習慣會是什麼？要怎麼找到呢？&lt;/p&gt;
+
+&lt;p&gt;其實也來來回回試過不少的方式，通常效果也都不差，總是能夠留下些什麼。當一整天都在看同一篇paper的時候，可以在回家的路上把每個參數的意義默默地串聯在一起；當用&lt;a href=&quot;https://en.wikipedia.org/wiki/Depth-first_search&quot;&gt;深度優先搜尋(DFS)&lt;/a&gt;去瞭解一個觀念的時候，會在中餐時刻滔滔不絕得跟朋友講述好幾個只懂名字的名詞之間的愛恨情仇；當下定決心好好整理出某個工具的整體脈絡和精髓，並且拉人來聽我報seminar後，才發現一個禮拜怎麼可以過得這麼快。&lt;/p&gt;
+
+&lt;p&gt;這些不同的學習方式，就跟每次去泰式餐廳一樣，選了打拋豬肉就覺得好可惜沒有吃到椒麻雞，點了椒麻雞卻又羨慕隔壁吃的檸檬魚。看來是沒有一個方法可以向菲爾普斯在各個項目都拿第一，&lt;a href=&quot;https://en.wikipedia.org/wiki/Turing_machine&quot;&gt;圖靈機(Turing machine)&lt;/a&gt;還是會敗在&lt;a href=&quot;https://en.wikipedia.org/wiki/Halting_problem&quot;&gt;停機問題(Halting problem)&lt;/a&gt;之下。也許如同&lt;a href=&quot;http://people.csail.mit.edu/rrw/&quot;&gt;Ryan Williams&lt;/a&gt;說&lt;a href=&quot;https://en.wikipedia.org/wiki/Circuit_complexity&quot;&gt;non-uniform computation model&lt;/a&gt;像是一堆蒼蠅腦，我能做的大概也只有遇到一個要學的東西時，找到一個最適合的學習方法了吧！&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>鴻門宴</title>
+   <link href="http://cnchou.github.io/2017/05/10/dinner/"/>
+   <updated>2017-05-10T00:00:00-04:00</updated>
+   <id>http://cnchou.github.io/2017/05/10/dinner</id>
+   <content type="html">&lt;p&gt;今晚有一頓免費的日式料理大餐，滿心期待的踏入捷運，坐在位子上聽著熟悉的貝多芬第四號鋼琴奏鳴曲，大小聲精細的轉變依然令人不自覺搖擺身體。忽然一陣念頭襲來：為什麼這麼突然要請客呢？該不會是場鴻門宴吧！？&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;沒錯，說難聽點這就是場鴻門宴。&lt;/p&gt;
+
+&lt;p&gt;不過今天不是要來談發生了什麼事，這頓日式料理大餐的目的是什麼，有誰的權益受損，有誰被買票了。我想要思考的議題是：目的、手段、氣氛的三角關係。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;讓我們先來設想幾種情況。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;情況一：&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;某大老闆想要說服幾間小學推廣某項運動，並且承諾會全額贊助場地興建的費用，不過推廣方式必須依照大老闆的意思。學校的老師們原本對於這項運動的推廣已經訂下不少計畫，卻在一次突然的請客聚餐中聽到大老闆的不同想法。雖然不同的做法不是無法改變，不過事出突然，而且在宴席上大老闆非常堅持要當場做出決定，於是就在一片掌聲中通過了大老闆提的新方案。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;情況二：&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;在前瞻計畫的某項建設分包案中，某知名企業想要一手壟斷，於是私底下多次宴請計畫的重要委員，也不特別明講希望委員們到時候在決定時多給力一點，只是砸錢單方面的打人情牌，嘴上不掛威脅利誘。最終大企業雖然沒有如願包下全部的工程，但是仍然以不低的金額標下其中幾項重點建設。&lt;/p&gt;
+
+&lt;p&gt;在這兩個例子中，有什麼差別？&lt;/p&gt;
+
+&lt;p&gt;情況一基本上立意良善，而且出錢出力，只是在最後關頭為了幾個想法的堅持，成了事卻失了人心。情況二則是一開始就別有居心，冒著風險但給人面子，最終沒有一百分 還是有個七八十。到底哪個情況比較”好”，見仁見智，也決定於目的是什麼。&lt;/p&gt;
+
+&lt;p&gt;只不過還是會感到遺憾，願本立意良善的一件事情，卻因為氣氛砸了鍋，在硬與軟之間，什麼才是恰當的平衡？&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>等效不等式 (Isoperimetric Inequality)</title>
+   <link href="http://cnchou.github.io/2017/04/23/guassian-isoperimetric/"/>
+   <updated>2017-04-23T00:00:00-04:00</updated>
+   <id>http://cnchou.github.io/2017/04/23/guassian-isoperimetric</id>
+   <content type="html">&lt;p&gt;\begin{equation}
+\int_{\mathbb{R}^n}\card{u}^{\frac{n}{n-1}}\leq n^{-1}\omega_n^{-1/n}\int_{\mathbb{R}^n}\card{\nabla u}.
+\end{equation}&lt;/p&gt;
+
+&lt;div class=&quot;w3-center w3-padding-16&quot;&gt;
+&amp;nbsp;&amp;nbsp;球&lt;br /&gt;
+&amp;nbsp;&amp;nbsp;在歐式空間中&lt;br /&gt;
+&amp;nbsp;如同他圓滾的外觀&lt;br /&gt;
+竭盡所能的向外擴張&lt;br /&gt;
+&amp;nbsp;用力嘲笑正立方體&lt;br /&gt;
+&amp;nbsp;&amp;nbsp;不懂利用有限的&lt;br /&gt;
+&amp;nbsp;&amp;nbsp;空間&lt;br /&gt;
+&lt;/div&gt;
+
+&lt;p&gt;\begin{equation}
+\gamma_s(\partial A)\geq\phi\circ\Phi^{-1}(\gamma(A)).
+\end{equation}&lt;/p&gt;
+
+&lt;div class=&quot;w3-center w3-padding-16&quot;&gt;
+&amp;nbsp;在&amp;nbsp;高&amp;nbsp;斯&amp;nbsp;世&amp;nbsp;界&lt;br /&gt;
+&amp;nbsp;半&amp;nbsp;空&amp;nbsp;間&amp;nbsp;是&amp;nbsp;座&lt;br /&gt;
+&amp;nbsp;無&amp;nbsp;止&amp;nbsp;境&amp;nbsp;高&amp;nbsp;牆&lt;br /&gt;
+&amp;nbsp;任&amp;nbsp;何&amp;nbsp;戳&amp;nbsp;打&amp;nbsp;槌&lt;br /&gt;
+&amp;nbsp;仍&amp;nbsp;矗&amp;nbsp;立&amp;nbsp;挺&amp;nbsp;拔&lt;br /&gt;
+&lt;/div&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>2017 Ph.D. 申請心得</title>
+   <link href="http://cnchou.github.io/2017/03/26/apply/"/>
+   <updated>2017-03-26T00:00:00-04:00</updated>
+   <id>http://cnchou.github.io/2017/03/26/apply</id>
+   <content type="html">&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#申請相關資訊&quot; id=&quot;markdown-toc-申請相關資訊&quot;&gt;申請相關資訊&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#申請結果&quot; id=&quot;markdown-toc-申請結果&quot;&gt;申請結果&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#背景&quot; id=&quot;markdown-toc-背景&quot;&gt;背景&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#申請必備資料&quot; id=&quot;markdown-toc-申請必備資料&quot;&gt;申請必備資料&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#準備過程&quot; id=&quot;markdown-toc-準備過程&quot;&gt;準備過程&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#申請資料的準備&quot; id=&quot;markdown-toc-申請資料的準備&quot;&gt;申請資料的準備&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#教育部公費留學&quot; id=&quot;markdown-toc-教育部公費留學&quot;&gt;教育部公費留學&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#等待放榜&quot; id=&quot;markdown-toc-等待放榜&quot;&gt;等待放榜&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#visit-day&quot; id=&quot;markdown-toc-visit-day&quot;&gt;Visit Day&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#對未來想申請理論cs的學弟妹的話&quot; id=&quot;markdown-toc-對未來想申請理論cs的學弟妹的話&quot;&gt;對未來想申請理論CS的學弟妹的話&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#數學的成熟度與研究的專業度&quot; id=&quot;markdown-toc-數學的成熟度與研究的專業度&quot;&gt;數學的成熟度與研究的專業度&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#後記&quot; id=&quot;markdown-toc-後記&quot;&gt;後記&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a class=&quot;gallery&quot; href=&quot;/images/Harvard/IMG_9785.jpg&quot;&gt;&lt;img src=&quot;/images/Harvard/IMG_9785.jpg&quot; width=&quot;100%&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;從大三開始漸漸有了想要出國留學念博士的想法，經過一兩年在各個實驗室還有不同領域的歷練後，在大四的寒假下定決心要申請theoretical CS (TCS)相關的博士，並且目標鎖定在Harvard。從去年(2016)九月開始，與幾個同屆要申請的好友，還有許多學長、老師、家人的幫助之下，終於完成申請，並且熬過了痛苦的等待放榜的冬天，最終要如願在今年(2017)秋天到Harvard念博士囉！
+&lt;!--more--&gt;&lt;/p&gt;
+
+&lt;p&gt;首先放一些基本的申請資訊，最後面再講講我目前對於申請學校還有念博士這條路的看法。&lt;/p&gt;
+
+&lt;h2 id=&quot;申請相關資訊&quot;&gt;申請相關資訊&lt;/h2&gt;
+&lt;h3 id=&quot;申請結果&quot;&gt;申請結果&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Admission:
+    &lt;ul&gt;
+      &lt;li&gt;UT Austin CS Ph.D. (1/29)&lt;/li&gt;
+      &lt;li&gt;Princeton CS Ph.D. (2/4)&lt;/li&gt;
+      &lt;li&gt;Harvard SEAS(CS) Ph.D. (2/9)&lt;/li&gt;
+      &lt;li&gt;UCSD CSE Ph.D. (2/16)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Rejection:
+    &lt;ul&gt;
+      &lt;li&gt;Stanford CS Ph.D. (2/4)&lt;/li&gt;
+      &lt;li&gt;UW CSE Ph.D. (2/4)&lt;/li&gt;
+      &lt;li&gt;GaTech CS Ph.D. (ACO program) (2/20)&lt;/li&gt;
+      &lt;li&gt;MIT EECS Ph.D. (2/24 on website, 3/31 via email)&lt;/li&gt;
+      &lt;li&gt;UCB EECS Ph.D. (3/3)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Waitlist:
+    &lt;ul&gt;
+      &lt;li&gt;Cornell CS Ph.D. (2/6)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Decision: Harvard&lt;/p&gt;
+
+&lt;h3 id=&quot;背景&quot;&gt;背景&lt;/h3&gt;
+&lt;p&gt;簡單介紹一下我的背景，我是2016年台大資工系大學部第二名畢業，輔系數學，領域是理論CS(Theoretical CS, TCS)，主要的興趣是在lower bound尤其是hardness of approximation。由於運氣很好在都抽到替代役入伍前一個禮拜發現符合資格可以當補充兵，於是除了十一月人間蒸發12天之外，其他時間是在中研院資訊所當RA。以下簡單列一下在CV上出現的一些條目。(大家可能會比較有興趣的是我在申請的時候沒有publication也沒有submission)&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Academic experience
+    &lt;ul&gt;
+      &lt;li&gt;台大資工+輔系數學(我數學課其實修很多，只是沒有被算在雙主修的學分)&lt;/li&gt;
+      &lt;li&gt;中研院數學所暑期課程-密碼學&lt;/li&gt;
+      &lt;li&gt;中研院數學所暑期課程-訊號處理與資料分析&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Research experience
+    &lt;ul&gt;
+      &lt;li&gt;現任中研院資訊所專任研究助理&lt;/li&gt;
+      &lt;li&gt;電機系專題研究三個學期&lt;/li&gt;
+      &lt;li&gt;中研院資訊所暑期實習生+一年的專題研究&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;TA
+    &lt;ul&gt;
+      &lt;li&gt;資工系大學部必修-資料結構&lt;/li&gt;
+      &lt;li&gt;資工系大學部必修-自動機&lt;/li&gt;
+      &lt;li&gt;中研院數學所暑期課程-密碼學&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Awards and Scholarship
+    &lt;ul&gt;
+      &lt;li&gt;教育部公費留學數學科&lt;/li&gt;
+      &lt;li&gt;五次書卷獎(前五學期)&lt;/li&gt;
+      &lt;li&gt;三個校內獎助學金&lt;/li&gt;
+      &lt;li&gt;某個創業競賽優勝&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;還有一個比較值得一提的是，我在大四那年參加台大一個&lt;em&gt;主動學習者計畫&lt;/em&gt;，期間弄了一個TCS的部落格，然後還寫了一本中文的書。這個經歷收我的四間學校中有三間學校的老師非常emphasize，在他們寄給我的第一封信中都有特別提到，而且從信的內容可以看出來他們有真的點進去認真看過(有個Princeton的老師說他現在搜尋randomness extractors前幾個跑出來的結果中有一個就是我的XD)。當初參加這個計畫還有寫這本書本來只是興趣而且對於我自己的學習蠻有幫助，沒想到也在申請的時候有產生一些正面的影響。&lt;/p&gt;
+
+&lt;h3 id=&quot;申請必備資料&quot;&gt;申請必備資料&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;TOEFL: 103 (R:28/L:27/S:22/W:26)&lt;/li&gt;
+  &lt;li&gt;GRE: 322 (Q:170/V:152/AWA:3.0)&lt;/li&gt;
+  &lt;li&gt;SGRE(Math): 870 (89%)&lt;/li&gt;
+  &lt;li&gt;SOP: 1100-1200 words (有趣的是，唯二有限制一千字以內的兩間學校都收我了)&lt;/li&gt;
+  &lt;li&gt;LoR:
+    &lt;ul&gt;
+      &lt;li&gt;中研院資訊所副研究員：一年大學部研究經驗，有一個即將投稿的研究&lt;/li&gt;
+      &lt;li&gt;台大電機助理教授：一年半大學部專題研究，有兩個研究經驗，不過都沒有投稿&lt;/li&gt;
+      &lt;li&gt;台大資工助理教授：修過兩門進階的課(上課人數都&amp;lt;=5所以跟老師互動很多)，且當過一門大學部必修的助教&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;準備過程&quot;&gt;準備過程&lt;/h2&gt;
+&lt;p&gt;基本上我覺得可以把準備過程分為兩個部分，一個是申請資料還有考試的準備，這部分我大概是在死線前三個月開始弄，另外一個則是自我的認識還有養成，這個則是我大學四年都在做的事情，也是我覺得比較重要的部分。這邊先以比較standard的前者為主，第二部分會放在最後面給有興趣的人看。&lt;/p&gt;
+
+&lt;h3 id=&quot;申請資料的準備&quot;&gt;申請資料的準備&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;英文&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;英文的部分，我個人的態度是只多花時間在真的對未來有幫助的方面，如果只是純粹對考試是用的東西，我會盡可能不要浪費時間在上面。而且我覺得很重要的是，知道這些英文考試對你還有申請的意義是什麼，然後再開始準備。像我擺明了就是成績夠就好，考太高我還覺得浪費太多時間，所以我就盡可能只佔用閒雜的時間特別準備單字還有題目，然後寫一些題目發現大概可以過就不再繼續下去了。&lt;/p&gt;
+
+&lt;p&gt;看我的成績應該也可以知道我英文很普通，畢竟我從來沒有在英語系國家待過，高中英文也沒有特別突出。不過跟我同樣背景和能力的人相比，我覺得我的優點是在於我上大學後很強迫自己多找機會用英文，例如說只要可以用英文寫的作業我全部都用英文寫，其中包括了許多資工系還有數學系的project。而我也會比較偏好英文授課的課程(雖然很遺憾的我遇到的英文授課中有幾個實在教的很悲劇)，然後大四的時候有弄過短期的英文口說讀書會(每週一個早上六點起來和幾個朋友輪流用英文present一些主題還有討論問題)，也在中研院弄的讀書會全英文present還有討論。所以雖然我的英文稱不上好，但是算是很可以溝通。於是我其實除了背GRE單字還有考前一兩個禮拜寫考古題之外就沒有花太多額外的準備時間了。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;SGRE - Math&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;為了要申請GaTech的ACO program，所以特地去考了SGRE的數學項目，最後考得很爛而且GaTech也沒上，所以大概可以當一個很好的負面教材吧。首先先說說我對這個考試的感想，蠻令我意外的是，跟那些general的題目比起來，我覺得SGRE數學還算有一定程度的鑑別力，題目難易程度的分布很均勻，雖然也是有水題但不會像，GRE的Q那樣讓人無言。雖然難題少了一點，但是因為他是用時間還有題目數量來換難度，所以個人覺得這比較是個測試熟練度和直覺的考試。&lt;/p&gt;
+
+&lt;p&gt;從考完的角度來看，我覺得最重要的是設定好你的目標，也就是只能錯幾題內還有如果時間不夠要放棄哪些類型的題目。像我就沒有設定好，當初想說錯十題內就好，後來才發現應該要設定個三題內比較實際。而且我一開始整個太悠閒，最後有四題還是五題直接空著來不及寫…&lt;/p&gt;
+
+&lt;p&gt;關於準備方面，看看強者我朋友的例子(大學幾乎沒修過數學系開的課)，直接以題目為導向來準備，一堆東西他根本原本不會，現在應該也是不會，不過他硬是考得比我這個修了十幾個數學課的人還高(不過還是要幫自己說說話，我修的大部分都是選修，所以對於分析還有幾何相關的必修是張白紙)。所以說難聽點，其實某種程度SGRE也像是個智力測驗吧@@我的心態則是，考前一個禮拜再開始準備(強者我朋友比我多一個禮拜)，於是最後一個禮拜開始每天寫五六小時的題目，然後盡可能地檢討不會還有錯的題目。&lt;/p&gt;
+
+&lt;p&gt;現在想想比較好的準備方式大概有兩種：第一就是像強者我同學那樣很暴力的在最後階段(視個人學習能力看長短)填鴨學習，第二就是大學的時候乖乖把那些必修課學一學，這樣基本上應該一個禮拜就夠了。因為我發現我最後沒把握還有跳過的就都還是那些我原本就不會的，也就是說根本沒有什麼準備到…不過話說回來，SGRE到底扮演什麼角色也沒人知道，因為我最後只有寄成績給GaTech。個人的猜測是，如果你沒有修太多數學系的課證明你的數學底子，那麼SGRE也許是一個證明數學能力的方式吧。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;推薦信&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;推薦信算是申請中最重要的項目之一吧！而基本上我覺得也是最單純的一個，基本原則就是找一個你覺得他對你夠瞭解，而且是個負責的人吧。此外，其實學生可以做的也不多，我覺得也不用太刻意要做什麼，就是好好的積極投入在研究或是學習上，累積一定的時間之後，就差不多是那樣了。比較要小心的應該是有些會雷人的老師，我是運氣很好沒遇到，身邊是聽過幾個例子很悲慘，有的是老師答應要寫，結果最後沒送，有的是指導老師拖很久，然後應該是沒有很認真的寫。&lt;/p&gt;
+
+&lt;p&gt;我個人的觀察是，一個老師平常做研究還有待學生的態度，應該會跟他寫推薦信的認真度呈正相關。也就是說，如果其實從平常的合作大約就可以揣摩出教授會不會認真寫你的推薦信了。因此，如果你感覺到教授怪怪的，也聽過許多閒言閒語，是可以認真考慮換實驗室，不然也不要太期待推薦信的品質了。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;SOP&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;我準備SOP的方式基本上就是follow一個準則：「假想你是admission committee你會想看到什麼」。當然你畢竟不是，所以就要透過參考過去學長的SOP、請別人幫你看SOP、看別人的SOP等等來讓你有更好的sense去approximate教授想要看的東西。我覺得特別意外有不錯幫助的是看別人(一起申請的朋友)的SOP，正所謂旁觀者清，在看別人SOP的時候，通常比較會看出一些癥結點，無論是結構上還是內容上，而這些問題其實也很有可能出現在自己的文章中。但是因為每個人都對自己的SOP太overfit了，所以時常會沒注意到自己犯了什麼毛病，而透過看跟自己差不多程度的SOP時，在一來一回的過程可以一起成長。&lt;/p&gt;
+
+&lt;p&gt;而另外一個我的一個心得是關於細節與high-level的權衡。我個人認為，一個好的SOP，必須兩者都有，然後各自在適合的地方出現。如果整篇SOP都太細節，那麼很容易讓人看得很累，而且也比較抓不到最重要的部分在哪。而如果整篇SOP都太high-level，那有會顯得很淺薄，根本就像是加長版的CV。我個人的選擇是，在描述未來想要做的方向時是比較high-level一點的，畢竟其實老師們也不會期望你現在說一個方向，然後真的就五年往這個方向，他們最多就是看你對於這個領域的大方向有沒有sense。而對於自己的研究經驗，我就花非常多的工夫把細節寫好。&lt;/p&gt;
+
+&lt;p&gt;這邊說的細節並不是說像是寫paper一樣，而是講你做研究的過程，還有展現出你的熱忱。從我後來visit day的經驗是，除非你做的研究題目直接和老師的興趣有關，或是是一個整個領域well-known的題目，不然其實教授他們都不太會有印象你做了什麼。但是他們會提到的是，你用什麼方式來展現你的熱誠還有研究能力。&lt;/p&gt;
+
+&lt;p&gt;另外一個點是關於參考別人的SOP還有和別人討論SOP。我的心得是，大概找5篇左右的SOP來看就好，然後最好都是和自己領域幾乎一樣，或是至少大方向的性質相同。然後討論怎麼寫SOP的人也差不多在3-5人(這是指同屆要申請的)就好，畢竟人多嘴雜，其實大家都夠厲害，所以重要的反而是一起準備的人是不是真的願意用心一起看一起討論。而給老師還有學長看也是非常重要的一部份，而這也是要非常珍惜的機會，因為學長和老師沒辦法像一起準備的同學一樣花這麼多時間在你身上，所以你必須好好把握每次機會。我後期請教老師的時候，除了把SOP丟給他之外，我會先整理出我現在覺得困惑或是矛盾的地方，然後條列成問題，讓他可以很方便地回答。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;寄信&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;寄信也許是在申請時最讓人困擾的事情之一，是一個感覺大家都在寄，但是又不太需要的東西。我當時也是問了幾個學長和老師，然後一直沒有什麼定論，而且這跟領域也很有關係，所以後來我在申請死線前都沒有寄任何信。不過後來在等放榜的時候，我想說Harvard如果我沒寄信結果最後沒有上，我一定會覺得很遺憾，所以就寄信給了我最想跟的教授，結果他半天之內就回信了，然後最後也很順利地成為他的學生。而另外我中研院的老師是有主動跟我說如果我有興趣的教授他剛好認識的話，我可以寫信過去然後cc他，他會特別在把我的推薦信寄一份過去，於是我就寄給了一個Cornell的老師，不過石沈大海，讓我很sad。不過後來在visit day的時候聽到八卦說可能要離開Cornell，因為在那邊待的不開心之類的，所以就有釋懷一點。&lt;/p&gt;
+
+&lt;p&gt;現在我的看法會是，如果你跟某個教授的研究方向很合，而且你也可以真的具體展現一些經歷讓他會感興趣的話，那是真的可以寄信看看。不過最好還是先跟同樣領域的學長還有指導老師打聽一下，這樣的行為在你的領域合不合適。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;面試&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;CS基本上面試很少(有些學校可能例外，像是CMU好像面蠻多的，不過我沒有申請)，而且基本上都只是一個check，所以有老師約說Skype聊聊，就放輕鬆，然後可以多準備一些研究方向上的問題吧。&lt;/p&gt;
+
+&lt;p&gt;不過在這邊還是簡單補充一些我和教授聊天的內容吧。差不多在一月中的時候收到教授直接回我當初寄給他的信，問我有沒有空Skype一下。因為擔心網速不夠，於是我跑到一個平常會開直播的學長家，後來的確很順利地在網路方面沒有出問題。當時教授沒有特別說約幾點，只有給一個時段，於是我就很緊張的在學長的房間等待，然後教授就突然打Skype過來了XD&lt;/p&gt;
+
+&lt;p&gt;一開始閒聊一下，主要是聊之前我線上旁聽他的一門課，還有我的一些近況。後來他就直接問我有沒有什麼想要問他。還好我有先想過一下，於是就針對我對他目前研究的方向上有興趣的部分問了一些，然後他就很興奮的分享螢幕直接講解給我聽。因為之前有聽過他的課，也讀過不少paper，所以大約聽八成懂，中間他隨性考我一個小問題，還好有答對。後來我有點問太多專業問題，他就問我有沒有除了學術以外關於Harvard的問題，我才回過神來趕緊問了幾個例如咖啡之類的東西。&lt;/p&gt;
+
+&lt;p&gt;總共大約快五十分鐘，基本上是個蠻舒適愉快的聊天過程，也沒有原本想的可怕，所以建議遇到類似這樣的面試，其實不需要太過緊張擔心，也不需要臨時抱佛腳，平常心面對，把你原本就想知道想要討論的事情拿出來討論就好了。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;其他&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;大部分的申請系統都還可以讓我們放一些補充資料上去，我雖然沒有正式的paper，但是有一些還算可以看的draft，所以當初就一直在掙扎要不要放上去。最後我只有放Princeton和Harvard，因為原本覺得前者一定不會上，然後後者想說不放最後沒上會很後悔。結果最後這兩間都上了！不過後來是沒有特別問說放draft在我的申請中到底扮演了什麼樣的角色，不過就結果論而言，放了似乎不是件壞事。&lt;/p&gt;
+
+&lt;h3 id=&quot;教育部公費留學&quot;&gt;教育部公費留學&lt;/h3&gt;
+&lt;p&gt;因為家庭因素，所以在大四那年去考了公費留學，也很幸運的錄取(數學科)，不過最終因為Harvard已經有提供全額獎金，於是放棄掉公費留學(這之間又發生一些曲折離奇的故事…)。以下簡短分享關於公費的經驗，還有一些給學弟妹的建議。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;到底要不要申請公費？&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;需不需要公費留學獎學金跟你的科系還有目標的學校很有關，像是我是CS然後又是讀博士，基本上根本不需要公費，當初獲獎後告訴兩位指導老師，他們都用很奇怪的眼神看著我，問我幹嘛要申請(我申請主要的原因是想讓家裡放心)。後來證明他們是對的，每間學校都有提供足夠的獎學金，而且基本上私立學校都不會讓你同時拿，或是說拿了也要用來付學費，這樣變成超級不划算。&lt;/p&gt;
+
+&lt;p&gt;最可怕的是，某些奇怪的學校規定還會不讓你放棄公費！沒錯，我就是在說Harvard，他們的行政人員竟然打算強迫我和台灣政府簽下賣身契然後把賺到的錢拿給根本不缺錢的學校。於是這讓我多花了將近兩個禮拜的時間，兩三天打一次電話跟行政人員吵架，同時寄信向Harvard的教授們求助，最後在4/15決定學校的死線前三天才收到更新的Financial offer，還多花了一千多塊用FedEx寄過去…&lt;/p&gt;
+
+&lt;p&gt;不過也是有例外的，UT Austin說可以讓我同時拿他們的獎學金和公費，因為他們認定只要錢不經過他們的手，就沒差。於是最後害我的選擇變成是一旦去了UT Austin我就瞬間多三四百萬…&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;如何準備的？&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;以下的內容非常根據我的個人經驗還有領域，所以大家看看就好，相關的人想要知道更多可以私底下聯絡。&lt;/p&gt;
+
+&lt;p&gt;基本上數學科考的東西超級基本，所以我準備的方向大概就是，考前幾個禮拜把考古題寫一下，然後多練習寫中文字因為要考作文。我必須承認我其實第一階段沒有考很好，勉勉強強過去的，畢竟那些很瑣碎的微積分技巧還有在那邊算線性方程的解，實在無法跟年輕小伙子比呀！所以對於想要考高分來拉開距離的人來說，除了考古題之外，可能還要找一些以前的作業或是期中考題之類的來練手感，畢竟考試只能拿這種無聊的計算來測試。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;面試&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;面試應該是比較重要的，而主要可以分成兩個部分：基本的未來求學規劃和簡單的能力測試。&lt;/p&gt;
+
+&lt;p&gt;第一部分我覺得重點是知道自己的目標方向是什麼，然後想好一套說詞可以短時間告訴聽眾。尤其是我是做理論CS的，那些面試官要嘛是數學系教授，不然就是教育部官員，基本上沒有人很清楚知道我想做什麼。不過這看起來是壞處，其實也是個優勢，可以讓我講的很厲害很有前途，至少那些教育部官員很買帳。&lt;/p&gt;
+
+&lt;p&gt;至於能力測試，我被問了很基礎的問題：「state and prove 微積分基本定理」。這一聽就知道是要看看你數學的sense，所以我就刻意用比較基礎還有intuitive的方式來講，然後中途還試著要讓教育部官員知道我在幹嘛。雖然我相信他們應該是沒有懂啦，不過至少他們很津津有味地看我比手畫腳。&lt;/p&gt;
+
+&lt;p&gt;最後我的面試分數是85分，聽說就是比普通(80分)再好一點點的分數，看來面試好像也很難拉分。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;關於公費的雜談&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;有人說公費留學是你人生中第一個簽下的長約，要很審慎地看待。現在我的感覺是這其實是一個很彈性的東西。其實教育部的人就跟我們想像中的公務人員差不多，基本上就是來打卡上班，大部分對於教育或出國留學的理念等等都不太了解，也好像沒有很想要了解。所以一些原本以為很硬的規定，其實並不見得是這麼死。當然這是我個人biased的觀察，僅供參考。&lt;/p&gt;
+
+&lt;p&gt;還有一個讓我覺得很瞎的事情，就是在Harvard終於願意讓我放棄公費之後，我打去教育部請教怎麼放棄，那邊的大媽竟然也沒有跟我做身份確認，就直接說可以了。雖然說我和教育部只是簽了約還沒拿錢，不過看到他們這麼輕率地處理一個價值12萬美金的東西，讓我實在很汗顏。而且我最近還收到信提醒我要去簽約，看來他們根本沒有真的幫我放棄掉…&lt;/p&gt;
+
+&lt;h2 id=&quot;等待放榜&quot;&gt;等待放榜&lt;/h2&gt;
+&lt;p&gt;大概從聖誕節過完之後，到2/18收到Harvard正式錄取的消息之前，我幾乎是輪迴在一兩天睡不好半夜驚醒，然後再一兩天因為太累所以睡得很好。而且心情極度焦慮，很難靜下來做很多事情。主要焦慮的來源就是一種不確定感，不知道自己的申請條件到底在哪個水平，加上看到thegradcafe上面的一些不知道是真是假的消息。雖然之間有出去一日遊幾次，然後試著做一些比較不用動腦的事情來分心，現在回想起來，那段期間真的浪費的不少時間。&lt;/p&gt;
+
+&lt;p&gt;從現在的角度來看，我有些建議給以後再等放榜的學弟妹：&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;焦慮是正常的，大概我所有聽過的人都說在這段期間很忐忑，因次也不用想要強迫自己不焦慮。最重要的是不要過度焦慮，然後把緊張的情緒盡量轉為正面的能量。舉例來說，可以多去運動，或是出去一日遊等等，這些事情對於調劑身心還是會有一些些幫助，而且等結果都出來後，無論有沒有上學校，大概又要開始非常忙碌了，所以如果能在這中間一兩個月空下來的時間做這些事情，是還蠻一舉兩得的。&lt;/li&gt;
+  &lt;li&gt;可以找些時間想想上了或沒上怎麼辦。
+    &lt;ul&gt;
+      &lt;li&gt;上了的話，你首先要面對的就是visit day，這個在下個段落會在特別強調，但是基本上你要對於自己想要做的事情有更多的了解，也要對於相關領域的發展有些概念，最重要的是你要想清楚你選學校的標準有哪些。&lt;/li&gt;
+      &lt;li&gt;至於沒上的部分，當然就是要思考下一個年度該怎麼辦，你在這半年內有辦法讓自己的申請條件看起來變得很不一樣嗎？而心情的調適也是很重要，提早做好最壞的打算，可以幫助你在真的發生後快速地站起來。&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;不要太早開始刷thegradcafe，那上面太多莫名其妙在很早的時候都到AD的單一消息，而且其實大部分學校沒有面試也還算正常，所以能不要影響自己的心情就不要看(至少CS是這樣)。就我身邊大部分聽到的AD都是一群一群發，而且是在一月底二月初，所以我建議等那時候再開始看。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;visit-day&quot;&gt;Visit Day&lt;/h2&gt;
+&lt;p&gt;Visit day讓我對之後博班的規劃有了不一樣的想法，特別是關於學習還有做研究的balance，是經過和很多學長還有老師聊天後慢慢改觀的。簡單來說，現在覺得還是要以做研究為主，學習是比較個人還有要自己找時間完成的，主軸還是要在研究上面。&lt;/p&gt;
+
+&lt;p&gt;我有另外把參加visit day的心得還有遊記放在部落格裡，歡迎點閱。&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;/2017/03/08/Princeton-University&quot;&gt;Princeton&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/2017/03/17/UCSD/&quot;&gt;UCSD&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/2017/03/21/UT-Austin/&quot;&gt;UT Austin&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/2017/03/25/Harvard-University/&quot;&gt;Harvard&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;對未來想申請理論cs的學弟妹的話&quot;&gt;對未來想申請理論CS的學弟妹的話&lt;/h2&gt;
+&lt;p&gt;理論CS是一個在台灣看起來很不起眼的領域，但是其實在整個CS的領域中，還算佔了蠻重要的一席之地，畢竟一個頂尖的領域，除了heuristics之外，還是需要嚴謹的數學和科學方法才有可能走的長遠。舉例來說，美國絕大多數的CS Ph.D.都會要求至少修一門理論課，而且理論組通常都是前兩三大的組。也就是說雖然在台灣環境和資源很少，看起來很不熱門，不過在國外還算是有市場(就業就不一定了，不過visit完後聽起來是沒有學界還是不少可以進業界)。因此我會蠻鼓勵對CS有興趣又很喜歡數學還有理論的人，可以趁早嘗試接觸看看理論CS，而不一定要一窩蜂地擠去所謂當紅的領域。&lt;/p&gt;
+
+&lt;p&gt;小小推銷完之後，還是回到正題講講申請理論CS的Ph.D.的一些建議。和其他領域很不同的是，理論CS申請時看有沒有paper的比重比較輕一些，尤其是對於大學生來說，基本上如果可以透過SOP、推薦信還有一些輔助的資料讓教授看出你對作理論的研究有sense也有經驗，那麼應該是可以多多少少彌補沒有發表的缺憾。&lt;/p&gt;
+
+&lt;p&gt;除此之外，最重要的還是長期的累積。理論CS通常不像是某些領域可以很快的完成一個研究，有時候光是要了解一個研究的整個背景和脈絡，就需要非常多的閱讀和討論，因此這也是往往令人非常挫折和感受不到成就感的部分。不過這就回到了心態的調適，該如何在身邊的同學朋友發了好多篇paper的時候還耐著性子讀一些全台灣可能只有你會的東西、該如何在很多人不理解你研究的價值中繼續保有熱情。這些相信都會是在台灣做理論CS多多少少會遇到的狀況，所以遇到了並不用太氣餒，要知道有人曾經跟你一樣走過這段路。&lt;/p&gt;
+
+&lt;p&gt;基本上，當下定決心要走理論CS這條路，未來的目標就是往學術界前進了，所以把眼光拉長一點是可以讓自己更客觀理性的認知當下的處境。例如我現在就會給自己設定博士的前兩年先好好鑽一個方向，研究深入一點，把相關的背景、工具等等都內化，不急著要馬上就有產出，希望這樣可以讓自己不要因為眼前的競爭而失去了大方向。&lt;/p&gt;
+
+&lt;h3 id=&quot;數學的成熟度與研究的專業度&quot;&gt;數學的成熟度與研究的專業度&lt;/h3&gt;
+&lt;p&gt;從學生的觀點來看，大概都會覺得申請時候最重要的就是有沒有好的研究成果/paper數量，或是GPA還有英文考試考得好不好。但是如果申請的是Ph.D.，對於教授來說這些可能並不是最重要的。以下針對理論CS這個領域的Ph.D.申請，加上根據我和一些老師(國內國外都有)聊天的心得，分析我覺得很重要的兩個要素：數學的成熟度與研究的專業度。&lt;/p&gt;
+
+&lt;p&gt;講到數學成熟度你會想到什麼？是像奧林匹亞競賽那樣？還是要修一堆數學的課然後拿高分？對我來說這是一個更深層的東西，如果要用一句話來說，那就是一種「能夠在抽象的想法與嚴謹的數學表達中來去自如的能力」。也就是如何從看似複雜的數學公式/證明中抽取出抽象的high-level概念，以及將抽象的想法具體的用數學語言精準的刻畫。&lt;/p&gt;
+
+&lt;p&gt;舉個可能比較多人可以感受的例子來試著解釋我想要說的概念，不過在這之前我必須先承認我的數學成熟度仍然非常不夠，以下只是我粗淺認知，歡迎大家多多指教。KKT conditions是一個(滿足某些regular condition的)optimization program最佳解的充要條件，書本和課堂上都會把那幾個條件(gradient為0, complementary slackness, feasibility)列出來，並且提供完整的證明。&lt;/p&gt;
+
+&lt;p&gt;當第一次接觸到這個定理時，我們可以用怎麼樣的角度來看它？以下分成三個層次：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;第一層次：操作型
+    &lt;ul&gt;
+      &lt;li&gt;什麼樣的情況可以使用這個定理？&lt;/li&gt;
+      &lt;li&gt;這個定理要如何被正確的使用？&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;第二層次：解釋型
+    &lt;ul&gt;
+      &lt;li&gt;如何陳述這個定理？&lt;/li&gt;
+      &lt;li&gt;這個定理的重要性是什麼？&lt;/li&gt;
+      &lt;li&gt;有這個定理我們可以幹麻？&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;第三層是：內化型
+    &lt;ul&gt;
+      &lt;li&gt;這幾個條件背後/幾何上的意義是什麼？&lt;/li&gt;
+      &lt;li&gt;當某個條件不滿足的時候，對應回來的high-level概念是什麼造成不是最佳解？&lt;/li&gt;
+      &lt;li&gt;可不可以用簡單常見的例子(e.g., basis pursuit)來解釋這個定理？&lt;/li&gt;
+      &lt;li&gt;對於舉出的簡單例子，曾經學過的演算法和KKT conditions的關係是如何？&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;在學校的學習，尤其是工學院和電資學院，常常都只有集中在第一個層次，說難聽點就是會考試就好。但是如果真的是想要做研究的話，後面兩個層次是不能少的。而這些都不是在一時片刻就可以迅速搞定，通常會經過和自己不斷的對話，以及和別人的討論慢慢塑造而成。當你開始習慣用這樣的態度學習每一個你覺得重要的東西時，那麼我就會說你已經在開始慢慢培養你的數學成熟度了。&lt;/p&gt;
+
+&lt;p&gt;至於研究的專業度，這邊我想強調的不是研究做得多好或是paper有多少，而是做研究的習慣還有態度。其實這是我一直沒有注意到，是一個幫我寫推薦信的老師跟我聊天時，他特別跟我說我才意識到的。以下用條列的方式舉幾個例子：&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;自己辨識自己寫的東西是否(接近)正確的能力&lt;/li&gt;
+  &lt;li&gt;嚴謹清楚地把自己的想法寫下並且和其他人交流溝通&lt;/li&gt;
+  &lt;li&gt;對於研究(對學生來說也許是作業)品質的要求&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;就像那位老師跟我說的，大部分頂尖的人都是很聰明的，所以做研究通常不是在比誰比較聰明，反而比較像是在看個性(也許兩者有很大的正相關？)。而雖然兩個看起來都像是天生的，不過很明顯的後者應該是比較容易後天養成的吧！？所以我也很鼓勵學弟妹(包括勉勵自己)，在求學的過程不斷的培養好的習慣，並且在正確的地方對自己嚴格。&lt;/p&gt;
+
+&lt;h2 id=&quot;後記&quot;&gt;後記&lt;/h2&gt;
+&lt;p&gt;我還蠻晚才下定決心要走理論CS這個領域，在這之前摸索了很多其他不同的領域，雖然也因此讓我覺得起步慢了有點吃虧，不過看過很多東西後，更可以讓我堅信自己喜歡和適合的是什麼。&lt;/p&gt;
+
+&lt;p&gt;理論CS在台灣是個還蠻小的領域，也因此相關的資源和資訊蠻不足的。在期待有更多的年輕後輩加入之際，也很歡迎有興趣的人來討論任何相關的問題，我會非常樂意可以幫得上忙！&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Visit Day @ Harvard University</title>
+   <link href="http://cnchou.github.io/2017/03/25/Harvard-University/"/>
+   <updated>2017-03-25T00:00:00-04:00</updated>
+   <id>http://cnchou.github.io/2017/03/25/Harvard-University</id>
+   <content type="html">&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#第一天-323&quot; id=&quot;markdown-toc-第一天-323&quot;&gt;第一天 (3/23)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#第二天-324&quot; id=&quot;markdown-toc-第二天-324&quot;&gt;第二天 (3/24)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#參訪心得&quot; id=&quot;markdown-toc-參訪心得&quot;&gt;參訪心得&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#和prospective學生的互動&quot; id=&quot;markdown-toc-和prospective學生的互動&quot;&gt;和prospective學生的互動&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#研究和學習的balance&quot; id=&quot;markdown-toc-研究和學習的balance&quot;&gt;研究和學習的balance&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a class=&quot;gallery&quot; href=&quot;/images/Harvard/IMG_9794.jpg&quot;&gt;&lt;img src=&quot;/images/Harvard/IMG_9794.jpg&quot; width=&quot;500px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Harvard基本上是我一直以來的top choice，首先收我的&lt;a href=&quot;http://www.boazbarak.org&quot;&gt;Boaz Barak&lt;/a&gt;是我最想跟的教授，然後這邊也還有另外幾個我感興趣的老師像是&lt;a href=&quot;http://madhu.seas.harvard.edu&quot;&gt;Madu Sudan&lt;/a&gt;和&lt;a href=&quot;http://people.seas.harvard.edu/~salil/&quot;&gt;Salil Vadhan&lt;/a&gt;，加上離MIT很近，可以和那邊互動也是一個大加分。在visit day之前，我的想法是如果Harvard沒有讓我覺得有扣分的地方的話，那就是會選Harvard了。&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;Harvard的系所架構跟一般的比較不同，最上層是個叫做FAS的東西，包含整個Harvard，下面的一個GSAS中的SEAS(School of Engineering and Applied Science)是CS和另外五個系所處的學院。這次visit day是SEAS主辦，於是會遇到一些來自不同系所的人，但是也有些活動是CS自己弄的，另外也還有理論CS自己的小圈圈活動。&lt;/p&gt;
+
+&lt;h3 id=&quot;第一天-323&quot;&gt;第一天 (3/23)&lt;/h3&gt;
+&lt;p&gt;&lt;a class=&quot;gallery&quot; href=&quot;/images/Harvard/IMG_9773.jpg&quot;&gt;&lt;img src=&quot;/images/Harvard/IMG_9773.jpg&quot; class=&quot;img-left&quot; align=&quot;left&quot; /&gt;&lt;/a&gt;
+這一天沒有SEAS的正式活動，只有幾個和教授meeting的時間然後理論CS晚上在教授Madu家有個pizza party。&lt;/p&gt;
+
+&lt;p&gt;早上先去和一個EE的學長去買一些Harvard的紀念品，然後中午去旁聽Madu的coding theory，剛好這禮拜再講polar code，之前在上information theory的時候有學過，所以聽起來沒什麼障礙。比較有感覺的心得是，對於polarization的分析，Madu給了蠻好的high-level直覺解釋，搭配很清楚的parameter說明，是之前學的時候沒有遇到的。他上課的present方式蠻有階層而且結構清楚，是我蠻喜歡的理解事情的方法。&lt;/p&gt;
+
+&lt;p&gt;下課後和EE的學長買個餐車來吃，十塊錢吃蠻撐的。接下來和Madu有個meeting，他實在是個很親切的人，而且言談之中可以感受到他有認真看過我的資料，不像之前的教授(除了Princeton收我的Gillat和Austin收我的Dana)都先對我沒特別多的了解。他先講了一些他目前感興趣的一個想法，不過他還沒有具體concrete好的formulation，另外再講一個比較明確正在做的題目，跟communication complexity的lower bound有關，之後會有點想要試試看。&lt;/p&gt;
+
+&lt;p&gt;接下來是theory的在學生向大家輪流present他們在做的題目，五個裡面大概只有一個比較沒有感覺一點。有兩個是和我想要做的方想很接近，所以晚上還有在寄信跟他們約時間聊聊。&lt;/p&gt;
+
+&lt;p&gt;&lt;a class=&quot;gallery&quot; href=&quot;/images/Harvard/IMG_9812.jpg&quot;&gt;&lt;img src=&quot;/images/Harvard/IMG_9812.jpg&quot; class=&quot;img-right&quot; align=&quot;right&quot; /&gt;&lt;/a&gt;
+晚上是在Madu家的理論CS小派對，是一個比較放鬆一點的場合和教授還有學生交流。除了一些比較社交的對話之外，聽到了一個學長提到最近一個關於SOS的危機，就是Ryan O’Donnell發表了一篇關於在跑SOS演算法時，coefficients會exponentially成長的例子，也就是說不是所有的degree d的SOS演算法都可以在原本宣稱的$n^{O(d)}$時間內結束。後來Prasad等人還有在弄出更general的結果，對我來說蠻震驚的，學長說隔天有空的話可以大概解釋給我聽。&lt;/p&gt;
+
+&lt;h3 id=&quot;第二天-324&quot;&gt;第二天 (3/24)&lt;/h3&gt;
+&lt;p&gt;早上就快八點起來，然後慢慢移動到系館。早餐的豐盛度介於Princeton和UCSD中間，跟一個theory的學生聊一下然後就去聽general的介紹。Harvard這邊的系所結構比較複雜，基本上我們是GSAS這個學院下的SEAS系，然後SEAS(school of engineering and applied science)又有六個領域。基本上phd是修十門課然後當一學期的助教，第二年結束前有資格考。住宿第一年可以選宿舍，之後就自己找或是也有一些housing可以選。SEAS的系館其實有點小，大概比austin的CS系館還小，不過有一棟新的在蓋，大概三年後好。&lt;/p&gt;
+
+&lt;p&gt;&lt;a class=&quot;gallery&quot; href=&quot;/images/Harvard/IMG_9794.jpg&quot;&gt;&lt;img src=&quot;/images/Harvard/IMG_9794.jpg&quot; class=&quot;img-left&quot; align=&quot;left&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;General的介紹後是各自領域的小介紹，CS這邊就是有老師和學生好多組輪流四分鐘的簡報自己的研究，蠻有趣的。後來則是current student panel，大家問問題還算踴躍，不過真正有趣的內容也沒太多，後來就是憋尿等吃中餐。&lt;/p&gt;
+
+&lt;p&gt;中餐是拿餐盒然後和教授還有學生一起吃，結果我旁邊坐了一個長老級的教授&lt;a href=&quot;http://lewis.seas.harvard.edu&quot;&gt;Harry Lewis&lt;/a&gt;，他蠻親切的，還聊到當年他讀Ph.D.的時候有結婚，然後在最後一年的時候生小孩等等。回去查一下後，還發現他曾經寫過一本關於棒球的書耶！&lt;/p&gt;
+
+&lt;p&gt;中餐後先去找Boaz的學生聊一下，然後就去聽financial aid的panel，打聽一下關於公費的事情。結果很無奈的是他們非常強硬的只讓我總共拿三千美金(原本是三年總共十二萬)，而且我跟他們說其他學校有讓我全拿或是部分拿，結果其中一個小姐就嗆說叫我去念UT Austin呀，真是超級不爽的，害我後來心情超差。&lt;/p&gt;
+
+&lt;p&gt;於是就帶著很不爽的心情去跟下一個教授&lt;a href=&quot;http://people.seas.harvard.edu/~minilek/&quot;&gt;Jelani Nelson&lt;/a&gt;聊天，他問我how are you的時候我就直接回說bad，然後講了一下狀況，他是很想幫忙，不過我是跟他說基本上不可能，因為學校對於這些規則很硬。後來就和他繼續聊一下他的研究，剛好他前一天晚上在arxiv上的一篇&lt;a href=&quot;https://arxiv.org/abs/1703.08139&quot;&gt;文章&lt;/a&gt;有個部分蠻像是我會有興趣的，其中提到的KRW conjecture(去年的CCC有&lt;a href=&quot;http://drops.dagstuhl.de/opus/volltexte/2016/5841/&quot;&gt;一篇&lt;/a&gt;重要的突破)蠻有意思的，之後會想要多深入瞭解一下。&lt;/p&gt;
+
+&lt;p&gt;最後一個meet的教授是Salil，寒暄一下後，他說我應該對他的研究算蠻了解的，所以我就問他一些問題，然後發現他也有幾個方向是我蠻有興趣的，像是關於two-party的differential privacy，那邊還有一些ope的問題。&lt;/p&gt;
+
+&lt;p&gt;和Salil聊完後，到theory學生的辦公室喝杯咖啡，然後就和一個印度的新生一起去逛一下紀念品店，接著是最後的晚餐。旁邊剛好坐的是昨天晚上聊到SOS的學長，所以他就把他提到的Ryan的那個例子弄給我看，蠻有趣的，應該是對的，很好奇Boaz對這個的看法。&lt;/p&gt;
+
+&lt;p&gt;然後活動就結束了，這一連串的visit也就這樣結束了。&lt;/p&gt;
+
+&lt;h2 id=&quot;參訪心得&quot;&gt;參訪心得&lt;/h2&gt;
+&lt;h3 id=&quot;和prospective學生的互動&quot;&gt;和prospective學生的互動&lt;/h3&gt;
+&lt;p&gt;&lt;a class=&quot;gallery&quot; href=&quot;/images/Harvard/IMG_9819.jpg&quot;&gt;&lt;img src=&quot;/images/Harvard/IMG_9819.jpg&quot; class=&quot;img-right&quot; align=&quot;right&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Harvard大概是我和prospective學生互動最多的一個visit day，大概是因為室友也是做理論的，然後自己也開始慢慢比較會用英文和人互動了吧。主要和三個prospective學生互動最多，不過我猜最後他們可能都不會選Harvard，因為兩個比較偏演算法的其實去別的學校比較適合，另外一個則是我的室友，他是覺得理性上要選UCB，因為他最近在做的東西Harvard沒人在做，但是visit完後他覺得很想來Harvard，不過通常這樣說就是去UCB吧！&lt;/p&gt;
+
+&lt;p&gt;從我室友身上真的學到蠻多東西的，他現在有蠻多厲害的研究，據他的說法是幾乎都是自幹來的，所以他也說他其實不排斥在Ph.D.繼續自幹，他比較在意的是可不可以在畢業後拿到好的推薦信。聽他這樣一說，加上這半年來看到的一些事情，覺得現實的確就是這樣沒錯，大部分的合作要嘛就是你carry別人，不然就是別人carry你。要達到完美的分工是可遇不可求的，或是至少說你不能預設說每個合作都是要很完美的，基本上一開始要有心理準備最終還是很看個人能力的。&lt;/p&gt;
+
+&lt;h3 id=&quot;研究和學習的balance&quot;&gt;研究和學習的balance&lt;/h3&gt;
+&lt;p&gt;我一直以來都是個蠻注重學習的人，而且說實在會往學術的方向走，很大一部份的原因是因為我很喜歡學新東西，而走理論的學術是一個相對來說最可以有充分的時間和環境(至少我目前是這樣覺得啦)。於是我從大學以來，都時常在研究還有學習上的時間分配掙扎，而我即使在研究繁忙的階段，都還是仍然試圖維持有三成的時間在學習新東西。而在這次visit之前，我原本對於自己Ph.D.的時間分配是打算在前一兩年多花時間在學習上，要佔超過五成，研究比較算是次要。&lt;/p&gt;
+
+&lt;p&gt;不過在這一趟visit結束後，我的想法有些改變了，至少我目前覺得即使是在低年級，還是要多花一些時間和精力在研究上。現在我會覺得學習新東西比較算是”興趣”和”作業”，是屬於自己本身就該找時間自我成長的。而研究則是Ph.D.生的本質和義務，這五年的學習和之後post doc或是當教授最大的差別就是在於有advisor可以學習做研究的能力。&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Visit Day @ UT Austin</title>
+   <link href="http://cnchou.github.io/2017/03/21/UT-Austin/"/>
+   <updated>2017-03-21T00:00:00-04:00</updated>
+   <id>http://cnchou.github.io/2017/03/21/UT-Austin</id>
+   <content type="html">&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#參訪流水帳&quot; id=&quot;markdown-toc-參訪流水帳&quot;&gt;參訪流水帳&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#第一天&quot; id=&quot;markdown-toc-第一天&quot;&gt;第一天&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#第二天&quot; id=&quot;markdown-toc-第二天&quot;&gt;第二天&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#參訪心得&quot; id=&quot;markdown-toc-參訪心得&quot;&gt;參訪心得&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a class=&quot;gallery&quot; href=&quot;/images/UT/IMG_9739.jpg&quot;&gt;&lt;img src=&quot;/images/UT/IMG_9739.jpg&quot; width=&quot;500px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;UC Austin是這次參訪的四間學校中最炎熱的一間，幾乎跟台灣有得比。這邊理論CS的老師總共有九位，而且各自做的領域蠻diverse，其中&lt;a href=&quot;http://www.cs.utexas.edu/~danama/&quot;&gt;Dana Moshkovitz&lt;/a&gt;是我最有興趣也是當初最先聯絡我的老師，而且她的老公&lt;a href=&quot;http://www.scottaaronson.com&quot;&gt;Scott Aaronson&lt;/a&gt;更是理論CS界的奇葩，是個什麼都做什麼都厲害的人，因此就老師層面而言，UT Austin和Harvard是我主要考慮的兩間。&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h2 id=&quot;參訪流水帳&quot;&gt;參訪流水帳&lt;/h2&gt;
+&lt;p&gt;由於錯過了228的正式visit day，所以這次是特別和老師安排在我的其他行程的中間。而非常可惜的是，由於前一個禮拜是spring break，所以超過一半的老師和學生都不在。於是這次拜訪其實只會見到三個老師，還有其中一個是透過Skype。&lt;/p&gt;
+
+&lt;h3 id=&quot;第一天&quot;&gt;第一天&lt;/h3&gt;
+&lt;p&gt;從San Diego的飛機在晚間抵達Austin，在機場吃個晚餐後，就使用Austin特有的RideAustin去老師Dana Moshkovitz的家。老師和她老公是上個學期才從MIT轉來UT Austin，所以房子是新的，一進去沒有那種奇怪的美國味，讓我非常開心。而我住的客房實在是令人讚嘆，有一個雙人床和書桌，挑高的屋頂還有獨立衛浴，根本是把旅官和airbnb的優點全部集在一起了。後來聽老師說因為他們家訪客還蠻多，所以特別搞了這樣的房間，而且這個房間的第一個住戶竟然是Boaz Barak，真巧ＸＤ&lt;/p&gt;
+
+&lt;p&gt;把行李整理一下後，就到樓下和老師聊天。老師現在有個剛滿四歲的女兒，肚子則懷著一個男孩再過幾個禮拜就要出生了。他這幾年主要在做的領域都是和PCP還有UGC等等有關的研究，也是我很想在博班期間嘗試鑽研的方向，於是就和她聊了一下子。由於我還算有些底子，所以比較可以討論一些深入一點的話題，像是就聊了Boaz之前給我看的一篇2-to-1 game的paper。那篇主要是用subspace test的方式想要證明2-to-1 game的hardness，不過Dana的想法是說為什麼不直接面對unique game就好ＸＤ然後他也大概跟我解釋一下用subspace game背後的一些intuition，大概是在說subspace是在Gaussian noise下能夠切最大surface的集合之類的，不過我沒有完全理解就是了。他也提了一下他對於UGC的看法，他個人感覺比Boaz悲觀一些，覺得還有很多大家不會的東西，尤其是hardness這邊吧。&lt;/p&gt;
+
+&lt;h3 id=&quot;第二天&quot;&gt;第二天&lt;/h3&gt;
+&lt;p&gt;&lt;a class=&quot;gallery&quot; href=&quot;/images/UT/IMG_9728.jpg&quot;&gt;&lt;img src=&quot;/images/UT/IMG_9728.jpg&quot; class=&quot;img-right&quot; align=&quot;right&quot; /&gt;&lt;/a&gt;
+今天八點多起來，沒特別有時差的感覺，然後下樓吃保母Sophie做的早餐，烤土司加奶油和果醬，然後九點多打算先去學校晃晃順便喝杯咖啡。老師家到學校很近，走路十分鐘不到，我就直接走去系館。一大早才九點十點就超熱的，跟台灣差不多，一問之下好像快要90度。UT Austin的CS系館裡面就有一家cafe，而且lobby和周圍有非常多的位子，於是點了杯冰拿鐵，然後坐在戶外休息還有查一下東西準備接下來的meeting。&lt;/p&gt;
+
+&lt;p&gt;第一個meeting是跟&lt;a href=&quot;https://www.cs.utexas.edu/~diz/&quot;&gt;David Zuckerman&lt;/a&gt;，之前讀過他的一篇最新很厲害關於2-source extractors的paper(合作的那個學生現在到IAS做postdoc)，因為我對他研究還算知道一些基礎，所以聊沒多久就很難再聊了，畢竟時間很尷尬也不可能討論太細節，而基礎的我都知道。所以後來就問幾個general問題，還有聊了一些他最近做的一些新題目，例如explicitly construct tree code(雖然後來馬上從Dana那邊聽到tree code的小八卦ＸＤ)。&lt;/p&gt;
+
+&lt;p&gt;&lt;a class=&quot;gallery&quot; href=&quot;/images/UT/IMG_9729.jpg&quot;&gt;&lt;img src=&quot;/images/UT/IMG_9729.jpg&quot; class=&quot;img-left&quot; align=&quot;left&quot; /&gt;&lt;/a&gt;
+聊完後就去跟這邊的Ph.D.生吃中餐，不過很多人現在都不在，所以只有四個跟我去吃，年級都比較小的。因為昨天聽老師說這邊的taco不錯，所以就跟他們說我想吃taco，於是他們就載我去其中一個學生家附近好吃的taco truck。路上就簡單問一些問題，然後閒聊一下，主要後來是他們在聊，我的英文實在跟得很勉強。不過因為只有我一個prospective student，所以致少重心還是在我身上，他們比較會主動問我一些問題。那家taco是真的蠻好吃，尤其是有個牛舌口味的，超讚。&lt;/p&gt;
+
+&lt;p&gt;回系館後，我就先再去找Dana討論了一下，有白板所以他講的比較具體一些，提了一個SOS還沒match已知random instance的例子，說也許是個不錯的starting point。只能說這個方向是真的很難，他們這些專家其實也都卡很多年，不會像其他方向比較有機會有穩定的產出。不過我是想說往比較難比較深的題目做的好處是可以看到比較深和廣的東西，藉此多學習，反正理論CS的好處就是其實很多學生一次不會只跟一個教授，高年級一點後還是可以做一些不同的題目。&lt;/p&gt;
+
+&lt;p&gt;&lt;a class=&quot;gallery&quot; href=&quot;/images/UT/IMG_9734.jpg&quot;&gt;&lt;img src=&quot;/images/UT/IMG_9734.jpg&quot; class=&quot;img-right&quot; align=&quot;right&quot; /&gt;&lt;/a&gt;
+後來要去跟Dana的一個學生meet，結果他說要忙TA的東西，所以想要晚一點，於是就先跟另外一個做演算法的學生聊。這個學生是個英國人，大學部在Oxford，講話速度超快，還好後來就比較習慣。先聽他說一些他在做的題目，後來就問一些比較general的問題。&lt;/p&gt;
+
+&lt;p&gt;接下來的meeting隔了快一小時，所以就在學校晃一下，到老師推薦的一個草坪，可以看到Austin這邊一個很像白宮的東西，那邊蠻多人坐在草皮上休息看書睡覺聊天，我也坐了一下。&lt;/p&gt;
+
+&lt;p&gt;三點半和一個做演算法的&lt;a href=&quot;http://www.cs.utexas.edu/~ecprice/&quot;&gt;Eric Prince&lt;/a&gt;聊，他是那種一堆奧林匹亞的，而且講話很快，東西懂很多，天才型的。他就把他在做的研究都大致上講一遍，有些跟得上有些略懂而已，總之如果來這應該也可以試試看跟他做一些題目。他的第一個研究又是和GAN有關的(目前三所學校都聽到有老師在說)，比較厲害的是他們有些很具體的理論證明結果，而現在也有一些在更加優化的方向。第二個研究則是sketching和sampling的separation，也就是他和那個英國學長做的題目，目前他們是在看counting triangle的數量。第三個研究則是learning polynomial，這我就比較沒有感覺一些。&lt;/p&gt;
+
+&lt;p&gt;&lt;a class=&quot;gallery&quot; href=&quot;/images/UT/IMG_9741.jpg&quot;&gt;&lt;img src=&quot;/images/UT/IMG_9741.jpg&quot; class=&quot;img-left&quot; align=&quot;left&quot; /&gt;&lt;/a&gt;
+後來還是找不到Dana的學生，所以就跑去老師推薦的一家咖啡廳，點了杯冰滴，然後看看paper還有看書。跟老師是約他下課接女兒之後，然後我們就去吃一家BBQ。原本預期要花個二十塊以上，結果比想像中便宜一些，食物也是真的還蠻不錯。&lt;/p&gt;
+
+&lt;h2 id=&quot;參訪心得&quot;&gt;參訪心得&lt;/h2&gt;
+&lt;p&gt;沒有參加到正式的visit有好處也有些壞處，好處是可以看到一些平常不會注意到的事情，例如老師有個很調皮的女兒，但壞處就是見到比較少的人。不過如果真的沒辦法參加正式的visit，根據這次的經驗，我會蠻建議還是想辦法聯絡老師去unofficial的visit，很多東西真的是要去了才知道的，而Ph.D.又是佔了人生精華中的五年，這可是要認真把所有可能的選擇都仔細考慮過後。&lt;/p&gt;
+
+&lt;p&gt;這次拜訪完UT Austin後，其實是比原本覺得好一點點，主要是在老師的層面。像是Dana就是很好聊的人，而且和另外一個首選的教授(Harvard的Boaz)比起來講話速度比較慢一些，邏輯也比較不會跳太快。而像是David就和想像的差不多，是個和藹可親，很好相處的人。Eric雖然講話和思考速度很快，但是組織性還不錯，至少讓我可以理解的程度還算不錯。再加上Dana在做的領域是我目前最想要做的，所以參訪完後的感覺是把UT Austin排在和Princeton差不多的位子。&lt;/p&gt;
+
+&lt;p&gt;不過UT Austin很大的一個缺點是在於，學生素質平均來說還是比較弱一點，然後在做跟我想做的方向的人比較少(至少我遇到的)，而且Dana現在有的兩個比較強的學生其實都在MIT。而同屆的學生，跟學長打聽後好像要做complexity的不多，而且我還在拜訪後隔天收到信說我是這屆收的學生中比較優秀的要給我加薪，某種程度就像是在說其他學生不太強，畢竟我在今年theoretical CS申請的學生中，基本上是在前15之外吧。&lt;/p&gt;
+
+&lt;p&gt;另外一個有點影響的因素是老師的女兒(還有即將出生的兒子)，雖然看她這幾年還是有穩定發質量不錯的paper，但是看到他平常晚上要花這麼多時間和精力照顧小孩(可能還會睡不好必須隔天補眠)，就會令人擔心他之後帶學生的時間和品質，畢竟我個人比較不是那麼自幹型的人，還蠻希望可以和指導教授有穩定持續的互動。&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Visit Day @ UCSD</title>
+   <link href="http://cnchou.github.io/2017/03/17/UCSD/"/>
+   <updated>2017-03-17T00:00:00-04:00</updated>
+   <id>http://cnchou.github.io/2017/03/17/UCSD</id>
+   <content type="html">&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#參訪流水帳&quot; id=&quot;markdown-toc-參訪流水帳&quot;&gt;參訪流水帳&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#第一天&quot; id=&quot;markdown-toc-第一天&quot;&gt;第一天&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#第二天&quot; id=&quot;markdown-toc-第二天&quot;&gt;第二天&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#第三天&quot; id=&quot;markdown-toc-第三天&quot;&gt;第三天&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#參訪心得&quot; id=&quot;markdown-toc-參訪心得&quot;&gt;參訪心得&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#和phd生的互動&quot; id=&quot;markdown-toc-和phd生的互動&quot;&gt;和Ph.D.生的互動&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#總結&quot; id=&quot;markdown-toc-總結&quot;&gt;總結&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a class=&quot;gallery&quot; href=&quot;/images/UCSD/IMG_9634.jpg&quot;&gt;&lt;img src=&quot;/images/UCSD/IMG_9634.jpg&quot; width=&quot;400px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;UC San Diego(UCSD)位於美國西南角靠太平洋和墨西哥的溫暖地區，擁有龐大且diverse的理論CS團隊，和數學系也有緊密的合作關係，雖然學校排名看起來普通，但是據他們所說，這幾年整個學校有往前衝刺的跡象。&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h2 id=&quot;參訪流水帳&quot;&gt;參訪流水帳&lt;/h2&gt;
+&lt;h3 id=&quot;第一天&quot;&gt;第一天&lt;/h3&gt;
+&lt;p&gt;San Diego完全是個跟紐約不同的世界，除了天氣之外，景色也很不同，樹木都是綠的，建築物風格也很不同，屋頂大多是磚塊色，然後土黃的身體。而且可以明顯感覺到這邊南美的人很多，像是載我的司機應該就是，他講話我幾乎都要聽第二遍才懂，所以他後來也懶得跟我聊了。&lt;/p&gt;
+
+&lt;p&gt;旅館沒有網路上看的奢華，但是也蠻不錯，住的是四人房，和一個北大的共用。東西放一放後我就出去覓食了。繞了一小圈，最後去附近的一個咖啡店，點了起司雞肉三明治還有espresso，都還蠻不錯，三明治有到那個價錢的水準，料很多也很好吃，可惜之後沒有機會，不然還會想再去。&lt;/p&gt;
+
+&lt;p&gt;&lt;a class=&quot;gallery&quot; href=&quot;/images/UCSD/IMG_9628.jpg&quot;&gt;&lt;img src=&quot;/images/UCSD/IMG_9628.jpg&quot; class=&quot;img-left&quot; align=&quot;left&quot; /&gt;&lt;/a&gt;
+離開咖啡店到集合之前先去海邊繞了一趟，看到可愛的海豹還有很多海鷗，海豹曬太陽還有扭動的樣子真的很療癒，旁邊也有很多小朋友在玩耍，不過好像沒有人敢碰他們就是了。&lt;/p&gt;
+
+&lt;p&gt;六點大家從旅館大廳集合出發，發現人意外的很少，後來問一問也才知道UCSD的CS每年Ph.D.生大概就二三十個而已，錄取的大概就是兩到三倍的數量。基本上真強者好像不太會申請UCSD，在Princeton遇到的所有理論CS學生都沒有出現在這裡，聊天時也很少遇到同時有上很前面學校的。&lt;/p&gt;
+
+&lt;p&gt;吃飯不小心坐到整桌新生都是中國人，所以整個就比之前在Princeton自在很多，不知道是因為大家都一樣沒那麼超級會聊，還是自己有進步了。因為今天沒有分group坐，所以遇到很多來自不同領域的學長學姊，能夠聽聽不同領域的人的東西也蠻有趣的。&lt;/p&gt;
+
+&lt;p&gt;&lt;a class=&quot;gallery&quot; href=&quot;/images/UCSD/IMG_9610.jpg&quot;&gt;&lt;img src=&quot;/images/UCSD/IMG_9610.jpg&quot; class=&quot;img-right&quot; align=&quot;right&quot; /&gt;&lt;/a&gt;
+吃完後八點半左右回旅館，然後在大廳和幾個中國人聊天，感想基本上就是覺得姚班真的是怪物訓練機，連北大很厲害的學生也是完全不能比。而且他們都想蠻多的，不見得是自己想做什麼，但是把很多可能性都考慮得很清楚，聊一聊還蠻有趣的。&lt;/p&gt;
+
+&lt;h3 id=&quot;第二天&quot;&gt;第二天&lt;/h3&gt;
+&lt;p&gt;UCSD的行程總共有一天半，都是要早上八點在旅館lobby集合然後搭遊覽車去系館吃早餐。今天是邊吃早餐邊聽系所的整體介紹，大致上讓我的感覺是圍繞在這邊曾經有哪些很猛的研究，還有San Diego是個多棒的城市，不過都沒什麼提到理論的研究ＸＤ結束後就開始1-1的行程。這邊的visit讓我覺得比Princeton好的一點是會安排和這邊Ph.D.生一對一的聊天，這實在是個蠻不錯的機會讓我們對學校還有老師有不同角度的了解。&lt;/p&gt;
+
+&lt;p&gt;&lt;a class=&quot;gallery&quot; href=&quot;/images/UCSD/IMG_9641.jpg&quot;&gt;&lt;img src=&quot;/images/UCSD/IMG_9641.jpg&quot; class=&quot;img-left&quot; align=&quot;left&quot; /&gt;&lt;/a&gt;
+首先先跟一個來自上海交大的Ph.D.生聊，用中文還是爽快多，他就用白板跟我介紹他在做的題目還有方向，可以看得出來他對自己的領域很熟而且也做得很好。基本上他做的是很底層的boolean function analysis，處理一些很根本open的conjecture，像是noise stability還有decision tree深度跟 circuit lower bound之類的關係，算是建立一些重要的數學工具。而他也做得很不錯，第二年就上STOC還是FOCS，現在好像有七篇paper了。聽他說和他老闆Shachar Lovett的互動還蠻不錯的，讓我對UCSD有了很好的第一印象。&lt;/p&gt;
+
+&lt;p&gt;後來就跟&lt;a href=&quot;http://cseweb.ucsd.edu/~slovett/home.html&quot;&gt;Shachar Lovett&lt;/a&gt;聊天，果然比較有經驗後，現在就比較不會緊張，於是就東扯西聊了一番。主要先聊了一下boolean function analysis這塊，他是說現在基本上大家會的都還是跳脫不出switching lemma的範疇，頂多是一些延伸而已，但是這樣的技術能做到的無法達到optimal，所以大家都在努力找新方向，因此基本上這個方向是蠻重要也很open但是超級難。後來也聊了一下additive combinatorics，對他來說這就是個數學工具幫助我們處理一些不具有代數結構，但是有很類似的東西，特別是關於randomness和structure的關係。不過都是些很high-level的閒聊，所以還是要實際學了才能更深刻的感受吧！這次回台灣後就要好好開始跟課還有看看那些survey papers了。&lt;/p&gt;
+
+&lt;p&gt;下一個老師是&lt;a href=&quot;https://cseweb.ucsd.edu/~paturi/&quot;&gt;Mohan Paturi&lt;/a&gt;，是這邊比較長老級的，後來聽有些學生說他已經半退休的狀態。感覺他聽到我有Princeton的offer之後就沒有很認真的跟我聊，大概覺得我不會過來吧。跟他聊的內容就比較沒有令我比較印象深刻的東西，我們兩個都很急著要去吃中餐吧。&lt;/p&gt;
+
+&lt;p&gt;中午吃還不錯的faculty club，不過聽說平常學校的食物很難吃…&lt;/p&gt;
+
+&lt;p&gt;下午又是一連串的1-1行程，和一些學生聊之外還有跟一個ML的老師聊到。這個ML老師雖然知道我一定不會跟她還是很親切地跟我聊很多，然後提到了GAN(Generative Adversarial Network)，好像現在做偏理論一點點的ML人都蠻注意這一塊的。她蠻有意思的把crypto和ML做了連結，說她覺得這兩個領域都像是說給你一些目標然後要去達成，過程中modeling很重要。然後她覺得complexity就比較不是這樣，所以她比較沒有感覺。我算是部分同意部分反對吧，必較complexity很重要的一部分也是在model計算這件事情，只不過可以發展比較完全了一點點，所以很多人可以直接在處理好的定義下做事情吧。&lt;/p&gt;
+
+&lt;p&gt;&lt;a class=&quot;gallery&quot; href=&quot;/images/UCSD/IMG_9656.jpg&quot;&gt;&lt;img src=&quot;/images/UCSD/IMG_9656.jpg&quot; class=&quot;img-right&quot; align=&quot;right&quot; /&gt;&lt;/a&gt;
+晚上到一個海邊的餐廳，也是在學校裡頭，餐廳有個露天區域，就可以直接看到一望無際的海，很多人衝浪，實在很愜意。後來又跟那個中國學長聊，希望之後如果沒有選這邊也還有機會來拜訪。&lt;/p&gt;
+
+&lt;h3 id=&quot;第三天&quot;&gt;第三天&lt;/h3&gt;
+&lt;p&gt;今天也是七點半起床，然後八點check out，九點左右到系館。不知道為什麼早上一直很想睡覺，而且早餐的咖啡很難喝，所以在第一個meeting前又去系館門口買了杯卡布奇諾，結果更難喝⋯&lt;/p&gt;
+
+&lt;p&gt;第一個教授是特別從UCB回來和新生meeting的&lt;a href=&quot;http://cseweb.ucsd.edu/%7Erussell/&quot;&gt;Russell Impagliazzo&lt;/a&gt;，是我一開始對UCSD印象最深也最感興趣的教授。之前看一些演講影片對他的印象就是個科學怪人，講話很跳然後有很多不一樣的想法，前一天和學生聊也是聽到他們會把Russell當成oracle來用。結果他遲到了快十分鐘。走路一搖一擺的很可愛，手中拿著一本書和汽水，匆匆忙忙地跟我說抱歉，他還差點找不到辦公室的鑰匙。他的辦公室超亂，到處都是paper還有汽水罐，一屁股坐下來後就直接問我對什麼有興趣，於是就開始亂聊了起來。因為我個人對於他在fine-grained complexity那邊的研究比較沒那麼感興趣，所以主要問他關於derandomization還有circuit lower bound之類的東西，不過他似乎最近做比較少這邊，主要是覺得這塊大家都有點卡住了吧。所以他就提了一些最近和學生在做一個circuit lower bound和learning關係的研究。主要的想法是跟PRG扯上關係，不過他一副不太願意跟我說細節的樣子，大概因為是個ongoing work吧。&lt;/p&gt;
+
+&lt;p&gt;&lt;a class=&quot;gallery&quot; href=&quot;/images/UCSD/IMG_9636.jpg&quot;&gt;&lt;img src=&quot;/images/UCSD/IMG_9636.jpg&quot; class=&quot;img-left&quot; align=&quot;left&quot; /&gt;&lt;/a&gt;
+下一個教授是&lt;a href=&quot;http://cseweb.ucsd.edu/~daniele/&quot;&gt;Daniele Micciancio&lt;/a&gt;，是一個口音有點重但是蠻親切的中年老師，主要的領域是在lattice，光是他念lattice的方式就很有韻味。因為彥霖跟他做得很相關，所以有先和他討論一些可以問的問題，例如說他是怎麼思考high-dimensional的lattice，還有smoothing parameter的發展等等。不過Daniel的回答實在讓我們這些平凡人很吐血，他就說一開始當然會不習慣，但是做久就沒問題了，沒有什麼特別的訣竅…比較有趣的是他說用在lattice的harmonic analysis最當初是數學家寫了一個相關的paper，超短，很難懂，也是隔了一陣子才被CS的人發現拿來用。於是他當初看到有關，就想說學一學，然後就變專家了…後來發現他是Salil在MIT應數的博班同學，難怪把數學都講的跟玩具一樣簡單…不過聊完後也讓我感覺到，基本的數學學習能力也是在博班要學習很重要的一部分，畢竟你不可能在五年把所有該學的數學都學完，甚至之後還要自己發明數學，因此能夠有自我開發學習的能力很重要，需要學習不靠老師和學校也可以自己學起來。&lt;/p&gt;
+
+&lt;p&gt;最後meet的一個老師是數學系的&lt;a href=&quot;http://www.math.ucsd.edu/~sbuss/&quot;&gt;Sam Buss&lt;/a&gt;，是個和藹可親的老人。好像比較資深的老師對於這種場合都很有自己一套的進行方式，他就先問問我做過什麼對什麼有興趣，然後說說他的，還有介紹一下數學系和理論CS這邊的合作狀況。他基本上是在做proof complexity，是個我真的幾乎不懂的領域，只有之前因為修過model theory所以對於什麼first order logic和incompleteness theorem有ㄧ點概念。Proof complexity這邊主要想要的是從proof system的角度來試圖證明$P\neq NP$。一個最遠大的目標就是證明所有complete且sound的proof system都無法在polynomially many step證明一個NP-complete的問題，例如3-SAT。然而現在人們會做得非常侷限，基本上目前有的separation只有在一種叫做resolution的proof system，想法很簡單，就是把$k$-SAT的clauses們倆倆合併直到不能為止。不用花太多公夫可以證明resolution是complete且sound然後對於$\NP$有個exponential upper bound，而也有人找到一個exponential lower bound for $k$-SAT根據鴿籠原理。不過這樣的結果距離真正有用還差非常遠就是了…&lt;/p&gt;
+
+&lt;p&gt;中午是到一家學校裡面的餐廳，在十五樓，原本應該要可以看到海，不過霧太大，所以都看不到。吃飯的時候有另外一個學長跟我講他的研究，也是那個我比較有興趣的教授的學生。他做的主要是additive combinatorics裡面和pseudorandomness有關的研究。基本的問題像是考慮在$\mathbf{GF}(2^n)$中random的集合中會不會有包含夠大的subspace，或是多少的subspace等等。這邊的想法就是說subspace是在$\mathbf{GF}(2^n)$比較有&lt;strong&gt;結構&lt;/strong&gt;的東西，而他們關注的就是在怎樣的random之下可以有足夠可以利用的結構。不過他是沒有跟我講太多實際上的連結，之後回台灣再來好好看那兩篇TCS和additive combinatorics之間關係的survey。&lt;/p&gt;
+
+&lt;p&gt;&lt;a class=&quot;gallery&quot; href=&quot;/images/UCSD/IMG_0919.jpg&quot;&gt;&lt;img src=&quot;/images/UCSD/IMG_0919.jpg&quot; class=&quot;img-right&quot; align=&quot;right&quot; /&gt;&lt;/a&gt;
+吃完後休息一下後來就有巴士載我們到飛機場，車上和一個印度學生聊，發現他是個猛哥，前面的學校好像只有Princeton沒有(也不知道是不是沒有申請)，最後要去MIT，不過他的領域是系統，跟我很不一樣。兩個人聊天還是比較容易些，所以跟他閒聊了不少，總之我們都覺得還是學習環境和強度以及適合的老師比較重要，而不是這邊很愛強調的天氣吧ＸＤ而他也有提到蠻有趣的一點，他說印度那邊的大學生，有個神秘的習慣就是會大量寄信去找國外的教授一起做研究，像他當初就是這樣跟一個MIT的教授，然後蠻合的來所以之後想要繼續合作。這樣的好壞也許見仁見智，但是感覺上致少是給自己多一些機會。&lt;/p&gt;
+
+&lt;h2 id=&quot;參訪心得&quot;&gt;參訪心得&lt;/h2&gt;
+&lt;p&gt;整體來說的感覺是，UCSD的theory group比Princeton diverse一點，尤其是和數學系的老師(特別是combinatorics和logic)合作密切，而且有個聊得很合說中文的學長還是有差一些。而且透過1-1和學生的聊天，還是可以更瞭解學校還有老師，於是我在第二天晚上就馬上寄信給下一間學校要求要和學生聊天了。這邊不錯的值得跟的老師大概就是Shachar了吧，另外幾個是很適合當作聊天用的，不過其中有個學生跟我偷偷說如果他是我會選Princeton XD。他的理由是覺得Princeton那邊厲害的postdoc比較多，他覺得Ph.D.生可以跟postdoc學到很多東西，是和跟老師學不到的。聽完後覺得蠻有道理的，不過這大概是當其他條件都差不多的時候才要考量的吧。&lt;/p&gt;
+
+&lt;h3 id=&quot;和phd生的互動&quot;&gt;和Ph.D.生的互動&lt;/h3&gt;
+&lt;p&gt;這次因為和比較多學生聊到，有幾個點讓我特別想要提一下。&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;老師在研究中的定位
+我發現在這邊Russell和Mohan他們group的學生有點把老師當成是oracle來用，idea主要都是來自老師們。像是他們舉了個例子說之前有一篇還不錯的結果，就是Russell在group meeting的時候把idea拆成幾個小部分，分配給四個不同的人，然後大家就各自擊破了。這樣看似不錯，但是感覺長遠來看不是太好的事情，畢竟還是要有獨立把研究方向弄出來還有對整體方向掌握的能力。例如我在聊天時問道parallelism在fine-grained complexity裡面的角色目前是如何，那個學長就只有跟我說之前Russel有個東西很類似，但是他講不出個所以然。相較那個中國學長，還有在Princeton遇到的那些，絕大多數都是有和老師一對一合作的經驗，感覺他們對於題目相關的領域整個掌握度就比較高。
+*&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;總結&quot;&gt;總結&lt;/h3&gt;
+&lt;p&gt;這次UCSD的visit下來，感受到這邊雖然比較diverse一點，然後厲害的學生還是不少，但是感覺比較沒有主要的方向就是了，整個風格看起來比較隨性。此外這邊真的讓我覺得想跟的老師大概就只有一個(Shachar)，所以跟Princeton比起來還是有段距離。不過這兩間學校下來，實在對於一些大方向的東西有多一些的瞭解認識，也更知道自己有哪些地方需要補強。&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Visit Day @ Princeton University</title>
+   <link href="http://cnchou.github.io/2017/03/08/Princeton-University/"/>
+   <updated>2017-03-08T00:00:00-05:00</updated>
+   <id>http://cnchou.github.io/2017/03/08/Princeton-University</id>
+   <content type="html">&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#參訪流水帳&quot; id=&quot;markdown-toc-參訪流水帳&quot;&gt;參訪流水帳&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#第一天&quot; id=&quot;markdown-toc-第一天&quot;&gt;第一天&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#第二天&quot; id=&quot;markdown-toc-第二天&quot;&gt;第二天&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#第三天&quot; id=&quot;markdown-toc-第三天&quot;&gt;第三天&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#參訪心得&quot; id=&quot;markdown-toc-參訪心得&quot;&gt;參訪心得&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#研究內容&quot; id=&quot;markdown-toc-研究內容&quot;&gt;研究內容&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#與prospective學生的互動&quot; id=&quot;markdown-toc-與prospective學生的互動&quot;&gt;與Prospective學生的互動&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#全英文環境的衝擊&quot; id=&quot;markdown-toc-全英文環境的衝擊&quot;&gt;全英文環境的衝擊&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#總結&quot; id=&quot;markdown-toc-總結&quot;&gt;總結&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a class=&quot;gallery&quot; href=&quot;/images/Princeton/IMG_0811.jpg&quot;&gt;&lt;img src=&quot;/images/Princeton/IMG_0811.jpg&quot; width=&quot;500px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Princeton是理論CS特別是complexity theory的傳統強校，而且離高等研究院(IAS)距離十分鐘的車程，再加上位於兩座大城：紐約和費城中間的優雅寧靜區域，是個適合做理論研究地方。&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h2 id=&quot;參訪流水帳&quot;&gt;參訪流水帳&lt;/h2&gt;
+&lt;p&gt;Princeton是這次Ph.D.參訪之旅的第一站，也是來到美國後第二天的行程，就在還沒有很適應全英文的環境下，加上有點調過頭的時差，就在恍恍惚惚中從New Jersey的Bloomfield搭著姑丈的車子到了Princeton，一個充滿古都氣氛的小鎮。&lt;/p&gt;
+
+&lt;h3 id=&quot;第一天&quot;&gt;第一天&lt;/h3&gt;
+&lt;p&gt;&lt;a class=&quot;gallery&quot; href=&quot;/images/Princeton/IMG_9514.jpg&quot;&gt;&lt;img src=&quot;/images/Princeton/IMG_9514.jpg&quot; class=&quot;img-right&quot; align=&quot;right&quot; /&gt;&lt;/a&gt;
+第一天的行程只有晚上的聚餐，所以下午很愜意的在四點左右到了Princeton。在校園旁邊的Nassau Inn check-in之後，拿到了一個漂亮的package，很興奮地打開後，看到了
+校園就如傳聞中般的漂亮，空氣很好，房子也不高，整個讓人有著很舒服放鬆的感覺。今天天氣其實還不算冷，大約十度上下，所以我穿得還有點太多，有些人就直接穿短袖在路上走，也有不少慢跑的人。&lt;/p&gt;
+
+&lt;p&gt;因為建築物都太美了，所以最後乾脆就不拍了，不然根本拍不完。而且Princeton這邊最令人印象深刻的還是還是整個氣氛，讓人很舒服自在，這是無法用圖片或文字記錄下來的。&lt;/p&gt;
+
+&lt;p&gt;&lt;a class=&quot;gallery&quot; href=&quot;/images/Princeton/IMG_9520.jpg&quot;&gt;&lt;img src=&quot;/images/Princeton/IMG_9520.jpg&quot; class=&quot;img-left&quot; align=&quot;left&quot; /&gt;&lt;/a&gt;
+回房間整理一下後就要去跟大家見面了，又是有點小緊張，之後大概還要再緊張很多次吧！一開始是在旅館的一個房間照領域分桌坐，Theory的有兩桌，看過去有超過十個prospective students，比想像中多很多。人種蠻均勻的，有不少印度人，也有幾個華人(望過去有一半是ABC吧)，另外也還有以色列人，歐美人等，也很不意外的只有我一個台灣人。基本上我的英文是最差的，光是要follow大家講的內容就有點吃力，說的時候也完全放慢很多倍速，不過他們是不會怎樣啦，頂多比較少問我問題，然後我比較難插上話而已。&lt;/p&gt;
+
+&lt;p&gt;後來幾個年輕的老師出現，跟大家打招呼，然後就一起出發去吃飯的地方。路上和兩個中國學生聊，雖然我還是用英文，不過跟幾個英文跟自己差不多破的人聊天還是比較親切的感覺。後來吃飯大家隨便分三桌坐，我做的這桌有四個印度人，一個ABC，一個以色列人，還有一個應該是美國人吧，其中兩個是就學的學生。運氣很不好因為我們這桌坐比較滿，所以教授都跑到別桌，我們這桌就只有兩個學生跟我們講講這邊的狀況，後來也都是某個Berkeley來的印度裔美國人東扯西聊一堆我不太熟悉的話題，我能聽懂就不錯了。吃的食物就是標準美式食物，一些炸的東西等等。後來陸續一些教授出現，看到平常在影片中還有paper上面看到的教授在眼前晃來晃去還真的是蠻令人激動的，更有種終於要來美國讀博士的感覺了。&lt;/p&gt;
+
+&lt;p&gt;八點多就一起去聽安排的一個演講，是某個教授(不是Theory的)分享他之前在白宮當科技顧問二十個月的經歷和心得，是還蠻有趣的，但是基本上也只能聽到一些無傷大雅的小八卦，所以後來有點無聊，我還打瞌睡了一下。九點半多終於結束，就趕快回房間休息了。&lt;/p&gt;
+
+&lt;h3 id=&quot;第二天&quot;&gt;第二天&lt;/h3&gt;
+&lt;p&gt;&lt;a class=&quot;gallery&quot; href=&quot;/images/Princeton/IMG_0815.jpg&quot;&gt;&lt;img src=&quot;/images/Princeton/IMG_0815.jpg&quot; class=&quot;img-right&quot; align=&quot;right&quot; /&gt;&lt;/a&gt;
+時差還是沒有完全調好，半夜兩點多有醒來一次，後來就睡到七點多。起床整理一下後，八點十五出門去系館吃早餐。一出旅館就有好幾個也是要過去的人，就一起走，然後跟一個很高的MIT學生聊了一下。這次visit day來的prospective students幾乎都是名校畢業的，MIT/Stanford/Berkeley/清華姚班一堆，隨便問幾乎都是前幾名學校上一半以上，爾且他們大多也都只申請前面幾所學校，所以之後的visit day應該就會遇到不同一群的人吧！然後發現非theory的master似乎還是比較多(姚班例外，他們根本就可以當研究生來看了)，theory的則大概一半一半。吃飯聽老師們聊天，他們說到即使有什麼數學競賽，沒有研究經驗他們也不太會收，而他們好像也不太會期待大學生有很多研究成果，像是我說到台大很多大二大三開始做研究他們也有點驚訝。像是一些美國top的學校像是Stanford/MIT還有以色列的大學部做研究的風氣好像普通，聽學生說好像他們比較著重在學習。&lt;/p&gt;
+
+&lt;p&gt;早餐是一堆美式食物，實在是很高糖分和高鹽份。結束後全部人到一個演講廳，先聽系主任介紹學校、系所、program，然後聽四個不同領域的教授小演講。很久沒有聽理論以外的CS演講，也是蠻有趣。十一點結束後就是各個領域的group meeting。theory group還是在同一個小演講廳，來了八個教授輪流五到十分鐘的簡單介紹自己的研究興趣，很theory風格的都是用白板介紹。每個教授講的方法很不一樣，比較多的是用一個簡單的題目來motivate研究的方向，有些就比較high-level，光是看教授怎麼快速present自己的研究興趣就可以感受到他們的厲害還有自己可以學習的地方。結束後就是午餐，跟早餐同一個地方，食物也就是那些類型的。同桌的有三個教授和三個學生，主要就兩個MIT的傢伙跟老師們聊天，我偶爾講幾句，後來有個旁邊一個Stanford的印度女生聊一下。一點吃完就開始一連串的1-1 meeting，每個教授的時間是二十分鐘。&lt;/p&gt;
+
+&lt;p&gt;第一個老師是Zeev Dvir，是做偏coding theory，特別是locally decodable code。聊到後來有點乾，而且其實他之前就講過自己的研究，所以有些時間是兩個人一起發呆。&lt;/p&gt;
+
+&lt;p&gt;第二個教授是Mark Braverman，講了很多我有興趣不過之前不知道的東西，主要是communication complexity和circuit lower bound之間的關係。他個人的想法是覺得大家實在對boolean circuit的了解太少，很少有結構性的東西被提出(大概就只有switching lemma和它的延伸版)，也許從communication complexity的角度來看會有些不同的機會。之後如果選Princeton會蠻想做做看這個方向。&lt;/p&gt;
+
+&lt;p&gt;第三個則是老教授Bernard Chazelle，和我的研究有點關係，不過他一副就是純聊天，而且感覺很熟練這種meeting，所以就都只有一些high-level得閒聊，他還說他覺得最好吃的中國菜是在台灣吃到的XD&lt;/p&gt;
+
+&lt;p&gt;第四個教授就是當初寫信給我的新教授Gillat Kol，跟她簡單講一下我的研究內容，然後聊聊Princeton還有聊要選Princeton還是Harvard。後來是個break，到tea room和這邊的學生聊天，不過主要也是聽他們聊，問幾個問題而已。後來他們要玩桌遊，結果是一個很吃英文的遊戲(codeword，一堆英文的單字卡，然後一個人一回合講一個單字跟一個數字，要大家猜出是哪幾張單字卡對應到這個單字)，我根本悲劇，像個智障一樣在旁邊…&lt;/p&gt;
+
+&lt;p&gt;四點再去跟最後一個老師meet，是做密碼學的Mark Zhandry，果然之前有接觸過還是有差，比較可以具體知道他在做的東西，他現在的focus是在iO還有multilinear map的安全性modeling跟證明，另外也有做一些quantum money。他是個蠻實在的一個老師，有機會的話也會想要跟他做做看，後來就跟那個老師邊聊邊走去晚餐的bar。&lt;/p&gt;
+
+&lt;p&gt;bar的食物也差不多，有個烤蝦子很好吃，不過很鹹，pizza也不錯。主要跟大陸人聊聊，其他的外國人實在差不進去，我真的就是個台灣來的小宅男吧。不過現在就覺得也沒有什麼好在意，就是不同的習慣，以後別人看你也是看實力，社交技巧也只是輔助，而且夠厲害之後，自然就會有人會想跟你聊天，以後待久了也慢慢會熟悉，所以現在也比較不會因為這樣的小事情困擾太久。&lt;/p&gt;
+
+&lt;p&gt;&lt;a class=&quot;gallery&quot; href=&quot;/images/Princeton/IMG_0780.jpg&quot;&gt;&lt;img src=&quot;/images/Princeton/IMG_0780.jpg&quot; class=&quot;img-right&quot; align=&quot;right&quot; /&gt;&lt;/a&gt;
+待了一個多小時後我就先回旅館了，休息一下，想說趁天黑前去逛逛校園，去找棒球場。不過球場比地圖上看起來的還遠，走到的時候已經天黑了，根本什麼都看不到＠＠倒是旁邊的美式足球場，燈火通明，根本沒有人在打球，實在超浪費的，美國人的style好像就是這樣，蠻奢侈的讓生活很舒服。而另外讓我蠻驚訝的是，這邊的車子都會讓路人，而且連續三次都是這樣，只要我在路口一副要過的樣子，車子就會停下來等我過，有點受寵若驚。&lt;/p&gt;
+
+&lt;h3 id=&quot;第三天&quot;&gt;第三天&lt;/h3&gt;
+&lt;p&gt;&lt;a class=&quot;gallery&quot; href=&quot;/images/Princeton/IMG_0806.jpg&quot;&gt;&lt;img src=&quot;/images/Princeton/IMG_0806.jpg&quot; class=&quot;img-left&quot; align=&quot;left&quot; /&gt;&lt;/a&gt;
+這一天已經沒有正式行程了，所以就很悠閒的體驗一下在Princeton的早晨，早上六點多就醒來了，繼續躺了一下到七點左右出門散步，往前幾天沒走過的方向。冬天的早晨十分舒適，不會到太冷，又有太陽。一路上人不多，偶爾有些路跑或騎腳踏車的人，還有一些要去上班的車。一路上彥霖用facebook和我討論一些問題，所以走走停停，後來坐在一個大草皮/公園/高爾夫球場旁的建築物前的長椅休息看風景。這邊什麼東西都很遼闊，很放鬆，眼睛也很舒服，難怪近視的人少。&lt;/p&gt;
+
+&lt;p&gt;&lt;a class=&quot;gallery&quot; href=&quot;/images/Princeton/IMG_0812.jpg&quot;&gt;&lt;img src=&quot;/images/Princeton/IMG_0812.jpg&quot; class=&quot;img-right&quot; align=&quot;right&quot; /&gt;&lt;/a&gt;
+做了一陣子後穿越大草皮/公園/高爾夫球場，經過一堆鵝旁邊，原本還怕他們會攻擊人，後來是多慮了。回到旅館附近也八點了，人開始多了一些。到主要的那條大街Nassau St.上的一家麵包店買了一個Pecan roll（灑滿核桃的甜甜麵包）和一杯espresso，然後走到附近的一個可以坐的地方吃。espresso意外的不錯，Pecon roll則跟想像的差距不大，後來吃了一半就回旅館了。&lt;/p&gt;
+
+&lt;p&gt;九點多離開旅館，把行李箱寄放，然後去附近走走。先去書店待了一陣子，買了一本書：Birth of a Theorem（之前看一個法國數學家2010年Fields medal得主Cédric Villani寫的，關於他做數學研究的探險歷程），還有三張明信片，後來就去找地方坐。好不容易打定主意去一家評價不錯但有點貴的cafe，結果爆滿，於是就改去附近的公立圖書館，免費桌子還很大。下午一點半多的時候姑丈和大表姐開車來接我，之前我先走路去郵局買個郵票然後把明信片寄出去，然後就離開這座美麗的小鎮，希望之後還有機會再來。&lt;/p&gt;
+
+&lt;h2 id=&quot;參訪心得&quot;&gt;參訪心得&lt;/h2&gt;
+
+&lt;h3 id=&quot;研究內容&quot;&gt;研究內容&lt;/h3&gt;
+&lt;p&gt;Princeton CS這幾年開始要漸漸增加理論組的faculty人數，像是今年就多了三個教授，聽說目標是總共要多五到十個教授(目前有九個教授)。如果再加上IAS的的faculty，Princeton可謂TCS陣容最龐大的學校。這次總共和五個教授1-1 meeting，感覺上他們比較多的人是主力在communication complexity、information theory、coding theory上，特別是locally decodable蠻多教授有提到，前幾年STOC一篇best paper也是這邊博二學生和Zeev Dvir做的。此外，也有幾個教授做一些其他TCS的東西例如natural algorithm(不過感覺Bernard已經進入退休模式了…)、crypto(Mark Zhandray做一些蠻硬的數學，想要去定義還有證明multilinear map/iO的攻擊和安全)、algorithmic game theory(新來的Matt Weinberg在做，也有和其他教授合作，不過這塊我就不太懂)。&lt;/p&gt;
+
+&lt;p&gt;關於比較傳統的complexity theory，這次的感覺是教授們普遍認為很需要新的點子和數學工具，其實現有的招數都還是跳脫不出那些polynomial-based的工具，這大概也是有些人想要往communication complexity的方向找點子的原因之一。反倒是其他幾個領域例如crypto、game theory和theoretical ML看起來比較promising。大概是能用的東西還沒有被開發完全，有些地方是連分析的modeling層面都還沒有共識，所以還蠻多新的方向可以做。&lt;/p&gt;
+
+&lt;p&gt;這此比較可惜的是沒有問太多現在的博士生他們和教授互動的方式，不過大致上聽起來這邊的合作是比較緊密一些，各自教授間也常有兩兩合作，&lt;/p&gt;
+
+&lt;h3 id=&quot;與prospective學生的互動&quot;&gt;與Prospective學生的互動&lt;/h3&gt;
+&lt;p&gt;這次參訪Princeton遇到一票很猛的姚班學生，還有很多美國名校的碩士生。跟一些人聊研究的感想是，他們大多數都還是先從一個非常具體的問題開始，而且他們的指導老師也對那個題目有一定程度的了解和想法。而且其實和其他學生合作的情況也算常見。不過這些也都是建立在他們的基本能力夠好之上。像是MIT的CS學士其實數學的必修課程不深，所以理論的學生要嘛會雙主修數學，不然就是會多念個碩士。&lt;/p&gt;
+
+&lt;p&gt;而姚班是比較特別，他們其實前一兩年就已經有非常好的底子，甚至有些是高中就把大學前兩年的基礎課都學的差不多，所以很快就可以做研究。此外他們也有一些出國交流的機會，讓研究經驗更豐富。像是有兩個姚班今年大四的，剛上一篇STOC就是去UMich跟到超強老師，六個月就做出結果了。&lt;/p&gt;
+
+&lt;p&gt;所以根據這次的經驗，我會覺得研究和學習的分配是沒有絕對怎樣比較好，真的還是看個人的style，不過還是要適度的balance，或是起碼研究要有一定的經驗累積。
+而關於研究本身，至少就大學部的專題研究來說，讓我感覺重點是在於了解做研究的整個感覺。對於理論CS來說，就是有survey相關研究的能力、清楚的定義問題、對於提出合適的問題有點sense以及對整個領域的philosophy有足夠的了解(至少瞭解到可以和教授溝通)。反而關於研究的本身，我認為第一個研究並不見得是要真的自己非常感興趣的(畢竟其實興趣也會轉變)，比較重要的是能夠讓學生從老師身上有效率的學習到做研究的過程，還有把研究累積的經驗。&lt;/p&gt;
+
+&lt;p&gt;而paper導向是好是壞，目前就感覺見仁見智，當然有paper是會多少幫助申請，但是沒有還是很有機會(像是我)。放長遠一點來看的話，最重要的我倒覺得是在做研究的過程中找到自己喜歡還有未來想要做的，不然其實時間過很快，到了Ph.D.差不多就該選一個方向好好鑽研下去。就這方面我是覺得還蠻慶幸我在臺大還有中研院的時候，除了自己的研究之外，也有涉獵很多不同的領域，至少就對下一步會比較有想法一點，跟教授們聊天的時候也比較有sense他們在幹什麼。&lt;/p&gt;
+
+&lt;h3 id=&quot;全英文環境的衝擊&quot;&gt;全英文環境的衝擊&lt;/h3&gt;
+&lt;p&gt;這次二十天的visit travel是我有印象以來(或是說開始會英文以來)第一次到英語系的國家，所以去之前實在很panic，尤其是一想到在Austin要住在老師家就會腎上腺素爆發。雖然之前在台灣有不少和說英文的國人接觸的經驗，但畢竟是主場，隨便亂說別人還算會有耐心地去聽。到了美國後，一直很擔心的就是英文表達不清楚會遭人歧視(就像去上海的時候，說話偶爾會被另眼看待)。還好目前來看百分之九十九的場合下都還算可以，頂多有時候買東西吃的時候點A被誤認為是B。&lt;/p&gt;
+
+&lt;p&gt;不過在這邊還是感覺智商下降不少，吸收能力變慢而且反應力也變差。不過後來我再跟教授聊天的時候就試著放慢自己的速度，至少這樣講出來的東西比較有sense一點，而大多情況之下教授還是會等我一下，不過也不知道他們心裡怎麼想啦…很明顯可以感受出來即使在國內我的英文程度看起來還夠用，但是目前來講，英文還會是對於我未來的研究還有學習的一個阻礙，所以第一年除了好好學習和做研究之外，英文也是要趕快上手的一個項目。&lt;/p&gt;
+
+&lt;h3 id=&quot;總結&quot;&gt;總結&lt;/h3&gt;
+&lt;p&gt;這次Princeton的參訪算是這趟旅程一個舒服的開端吧，無論是天氣還是和學生教授的互動。雖然如預期般的插不太進去別人的聊天，和教授聊天也沒辦法全部發揮，不過現在比較不會像之前太過度放不下了。一方面是亂想也沒用，另一方面則是其實最重要的還是自己的能力。就像一個教授說的，其實在理論CS，大家都蠻nice的，但是最終評斷一個學者優不優秀還是看你做了什麼。&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>搬家</title>
+   <link href="http://cnchou.github.io/2017/03/01/moving/"/>
+   <updated>2017-03-01T00:00:00-05:00</updated>
+   <id>http://cnchou.github.io/2017/03/01/moving</id>
+   <content type="html">&lt;p&gt;搬家了，是有記憶以來第四次搬家，雖然這個家是住最短的一個，但是實際參與了搬家的過程，卻反而感觸特別深刻。
+&lt;!--more--&gt;&lt;/p&gt;
+
+&lt;p&gt;坐在房東的沙發上，看著空蕩蕩的房子，眼中浮現著原本位子該有的東西：在一群混亂電線中的液晶電視、壓在電風扇下的圍棋盤、永遠堆滿東西的小餐桌。想起在每個角落曾經發生的事情：每天早上必定和媽媽一起泡咖啡、全家圍在電視機旁邊吃飯邊看影集、喜歡把我和弟弟拉到洗衣機旁說大聲說悄悄話的媽媽。雖然對房子沒什麼情感，但是在這邊發生的事情，卻將永遠記在我心中。&lt;/p&gt;
+
+&lt;p&gt;很久沒有這樣一個人在晚上靜靜的，再過幾天就要去一個好像透過了電影新聞而熟悉的地方，使用鱉腳的語言，雖然真的很興奮，但是其實緊張的程度是不相上下的。不久之後就要正式的搬過去，至少五年起跳，和別人說來好像輕鬆寫意，但是就像爸爸說的，一眨眼後也就要三十歲了。&lt;/p&gt;
+
+&lt;p&gt;說穿了搬家就像是把時間離散化，提醒人們一個階段的過去，在打包與拆箱的交錯之間，縱使對過往有些眷戀，但是想想目的是什麼？就是朝向一個更好的生活罷了。&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Test Math</title>
+   <link href="http://cnchou.github.io/2017/02/04/test-math/"/>
+   <updated>2017-02-04T00:00:00-05:00</updated>
+   <id>http://cnchou.github.io/2017/02/04/test-math</id>
+   <content type="html">&lt;p&gt;This post aims to test the math environment on this website.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;Let’s test some inline math $x$, $y$, $x_1$, $y_1$.&lt;/p&gt;
+
+&lt;p&gt;Now a inline math with special character:&lt;/p&gt;
+
+&lt;p&gt;Test a display math:
+&lt;script type=&quot;math/tex&quot;&gt;|\psi_1\rangle = a|0\rangle + b|1\rangle&lt;/script&gt;
+Is it O.K.1?&lt;/p&gt;
+
+&lt;p&gt;Test a display math with equation number:
+\begin{equation}
+   |\psi_1\rangle = a|0\rangle + b|1\rangle
+\end{equation}
+Is it O.K.2?&lt;/p&gt;
+
+&lt;p&gt;Test a display math with equation number:
+&lt;script type=&quot;math/tex&quot;&gt;% &lt;![CDATA[
+\begin{align}
+    |\psi_1\rangle &amp;= a|0\rangle + b|1\rangle \\
+    |\psi_2\rangle &amp;= c|0\rangle + d|1\rangle
+  \end{align} %]]&gt;&lt;/script&gt;
+Is it O.K.3?&lt;/p&gt;
+
+&lt;p&gt;And test a display math without equaltion number:&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
+\begin{align*}
+    |\psi_1\rangle &amp;= a|0\rangle + b|1\rangle \\
+    |\psi_2\rangle &amp;= c|0\rangle + d|1\rangle
+  \end{align*} %]]&gt;&lt;/script&gt;
+
+&lt;p&gt;Is it O.K.4?&lt;/p&gt;
+
+&lt;p&gt;Test a display math with equation number:&lt;/p&gt;
+
+&lt;p&gt;\begin{align}
+    |\psi_1\rangle &amp;amp;= a|0\rangle + b|1\rangle \\&lt;br /&gt;
+    |\psi_2\rangle &amp;amp;= c|0\rangle + d|1\rangle
+\end{align}&lt;/p&gt;
+
+&lt;p&gt;Is it O.K.5?&lt;/p&gt;
+
+&lt;p&gt;And test a display math without equaltion number:
+\begin{align*}
+    |\psi_1\rangle &amp;amp;= a|0\rangle + b|1\rangle \\&lt;br /&gt;
+    |\psi_2\rangle &amp;amp;= c|0\rangle + d|1\rangle
+\end{align*}
+Is it O.K.6?&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>主動學習者計畫 - 期末心得</title>
+   <link href="http://cnchou.github.io/2016/06/08/final/"/>
+   <updated>2016-06-08T00:00:00-04:00</updated>
+   <id>http://cnchou.github.io/2016/06/08/final</id>
+   <content type="html">&lt;p&gt;&lt;a class=&quot;gallery&quot; href=&quot;/images/Active Learner/IMG_0608.jpg&quot;&gt;&lt;img src=&quot;/images/Active Learner/IMG_0608.jpg&quot; width=&quot;500px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;隨著梅雨季的到來，為期八個月的主動者學習計畫也將要劃下句點，規劃了三個多月的期末專文及心得總結：《探索計算的極限》也終於如期完成，看著這些一點一滴累積下來的成果，心中實在是既感動又興奮。
+&lt;!--more--&gt;&lt;/p&gt;
+
+&lt;p&gt;這次出書的計畫說真的就是三個多月前的一個突然的小念頭，當時在期初分享會時看到其他夥伴們很努力地將所學用淺顯的方式分享給一般的閱聽者，讓我開始檢討自己原本執行計畫的方法，並且決定除了撰寫專業的筆記之外，同時秉持著分享的精神，把「計算理論」的一些基本概念與技術，用平易近人且完整的寫作模式，集結成系列文章，讓之後潛在有興趣的讀者可以在資源匱乏的情況之下，能夠有中文的專書可以學習。&lt;/p&gt;
+
+&lt;p&gt;最初規劃分成兩大部分：「基礎觀念」、「專題介紹」，如今把第一部分大致完成，並且放入書中。在撰寫的過程中，才發現要把這些自認為很熟絡的內容，從頭站在沒有專業背景的角度呈現出來，是一件不容易的事情。透過了每週一次和朋友的讀稿餐會，慢慢的讓文章變得親切通順，雖然仍然有許多要改善的地方，但是回頭看看最一開始寫出來的版本，實在進步了不少。&lt;/p&gt;
+
+&lt;p&gt;而在最後兩個禮拜校稿以及送印的過程，也學習到了從來沒有接觸過的美術專業領域。多虧了就讀師大美術系的好友鼎力協助，我們兩人從無到有完成了一本書從文章撰寫、封面設計、內頁編排等等的過程。在拿到成書的當下，大概是這一年下來最興奮的時刻了吧！&lt;/p&gt;
+
+&lt;p&gt;現在回首主動者學習計畫的一切過程，從申請書的撰寫、面試、初期地嘗試還有最終的期末書籍，可以看到還有許多美中不足的地方可以改進，然而這些成果都是一年前的我完全無法想像的。就如同計畫名稱：《探索計算與自學的極限》，在挑戰自我極限的過程中，許多可以改善的地方才漸漸顯露出來，讓我可以再繼續持續進步，我想這就是成長中一來一往的過程吧！必須先跨出未知的那一步，才有機會看到更多潛在進步的可能，並且努力挑戰突破。如今計畫的終結，是下一個目標的開端，主動的學習和自我的挑戰是一生追求的課題，繼續挑戰極限吧！&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>第二十二週回顧</title>
+   <link href="http://cnchou.github.io/2016/05/08/week22/"/>
+   <updated>2016-05-08T00:00:00-04:00</updated>
+   <id>http://cnchou.github.io/2016/05/08/week22</id>
+   <content type="html">&lt;p&gt;最近自主學習的進度來到了隨機抽出器(Randomness extractor)，實在非常的神秘，在這邊簡單記錄一下目前看完的心得。
+&lt;!--more--&gt;&lt;/p&gt;
+
+&lt;p&gt;隨機性在演算法的設計中扮演很重要的一個角色，許多問題因為使用了隨機性，而變成可以在非常快的時間內執行完，例如多項式相等測驗、質數測試等等。然而真正的隨機性並不見得是可以像在數學的世界中這樣予取予求，有時候我們只能接觸到一些接近隨機的來源，而非理想中完美的隨機性，那這時候該怎麼辦呢？&lt;/p&gt;
+
+&lt;p&gt;的來源，而非理想中完美的隨機性，那這時候該怎麼辦呢？&lt;/p&gt;
+
+&lt;p&gt;隨機抽取器這時候就派上用場了！面對一些比較不純淨的隨機來源，隨機抽取器可以幫我們把這些有點雜亂的輸入，做類似淨化的動作，把裡面完美的部分努力地抽取出來，提供演算法使用。隨機抽取器就好比是一個鍊金術士，可以把原本參著泥土的金砂，萃取出99%的金子，大大的增加原本的價值。而最神奇的地方是，有時候隨機抽取器不見得可以表現得非常好，會損失不少原本帶有的隨機性。然而，此時一旦加上了一點點的完美隨機性後，透過這些完美的小傢伙，隨機抽取器竟然可以變得生龍活虎，把幾乎所有的隨機性都抽取出來了！這就像是你在煉金的時候，把一塊純金丟在昏濁的金砂中，竟然可以提升煉金的效率和品質，夠神奇吧！&lt;/p&gt;
+
+&lt;p&gt;這樣的結果不但在理論上有非常好的分析，並且和許多其他偽隨機的構造有緊密的連結，同時也可以被方便的應用實際的演算法中，實在是個很厲害的研究領域。&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h2 id=&quot;本週總結&quot;&gt;本週總結&lt;/h2&gt;
+
+&lt;p&gt;預期目標：&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Computational Complexity: Communication complexity&lt;/li&gt;
+  &lt;li&gt;Pseudorandomness: 6-3&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;執行成果：&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Computational complexity: 100%&lt;/li&gt;
+  &lt;li&gt;Pseudorandomness: 100%&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>第二十一週回顧</title>
+   <link href="http://cnchou.github.io/2016/04/24/week21/"/>
+   <updated>2016-04-24T00:00:00-04:00</updated>
+   <id>http://cnchou.github.io/2016/04/24/week21</id>
+   <content type="html">&lt;p&gt;最近除了正常的讀書做研究之外，大部分的時間都花在寫文章上面，而在數次的閱稿餐會中，讓來自不同背景的朋友看看我寫的文章，才發現原本我覺得很平易近人的內容，其實大家的感受都差很多。最明顯的例子就是介紹一個新觀念的方法，我在介紹一個新的東西時，會很習慣從比較高觀點，或是抽象的角度做宏觀的解釋。有時候自己掌握的不太好，就會變得有些虛無縹緲，讓人抓不到重點，在幾篇設定為大方向介紹的文章中就很明顯地出現這種情況。於是這時候幫我試讀的朋友就會很痛苦，紛紛向我抱怨沒辦法抓到我想要表達的重點，看過去覺得講的內容頭頭是道，但是看完後卻覺得沒有實際接受到什麼內容。
+&lt;!--more--&gt;&lt;/p&gt;
+
+&lt;p&gt;聽到這樣的回饋心中的感覺是既難過又開心，難過的是自己沒有如原本預期的的把知識用親切的方式傳達出去，開心的是有人提早發現，讓我可以即時改進修正。雖然這是預期中會發生的事情，但是沒想到的是在我有刻意要避免讓人難懂，並且多舉例的情況之下，還是讓不少程度還不錯的朋友仍然吸收困難。讓我不禁很佩服寫教科書的那些學者，平時我們偶爾會抱怨教科書寫得讓人不太好理解，但是大多數的時候，最終都還是可以順利搞懂。這次換自己要把所學傳遞給別人的時候，即使是些很基礎的東西，卻發覺要轉換成容易吸收的文字竟然比自己讀懂還困難。這樣到底是不是意味著其實我之前根本沒有搞很懂過呢？&lt;/p&gt;
+
+&lt;p&gt;這大概也是自主學習計畫中意想不到的收穫吧！從自己嘗試寫文章的過程中，發現真正的學習是要能夠很精準的把所學轉換成讓人能夠接受的語言，而不是閉門造車，自己以為自己有懂就好。此外，走過了一次這樣的過程後，之後我在看書的時候，更會開始注意作者是怎麼樣子呈現一個概念。例如之前借了一本關於計算理論的英文科普書，翻了幾頁覺得很簡單沒有什麼特別，於是塵封了一陣子。最近再度翻起來看，突然覺得很有意思。看到一些我也曾經試著在文章中介紹的觀念出現在書本中，作者用不同的方法詮釋，把我寫得很死板僵硬的東西變得活靈活現。讓我體會到寫東西有時候不是量多量少的問題，而是在於一個溝通的過程，這個過程是否是讓人舒服的，是否是有真正傳達到什麼東西，這才是最後會流傳很久的。&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h2 id=&quot;本週總結&quot;&gt;本週總結&lt;/h2&gt;
+
+&lt;p&gt;預期目標：&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Computational Complexity: MAEXP lower bound; rigidity;&lt;/li&gt;
+  &lt;li&gt;Pseudorandomness: 6-3&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;執行成果：&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Computational complexity: 100%&lt;/li&gt;
+  &lt;li&gt;Pseudorandomness: 100%&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>第二十週回顧</title>
+   <link href="http://cnchou.github.io/2016/04/18/week20/"/>
+   <updated>2016-04-18T00:00:00-04:00</updated>
+   <id>http://cnchou.github.io/2016/04/18/week20</id>
+   <content type="html">&lt;p&gt;雖然最近被研究還有寫文章佔據了大部分的時間，不過靠著番茄工作法(Pomodoro Technique)的幫助，讓我可以在很大塊的忙碌時間中，抽取出小塊小塊的零碎時間，來完成其他的事情。這對於自主學習計畫的進度，或是修課的複習、功課等等，都有看起來雖小，但是重要的關鍵影響。
+&lt;!--more--&gt;&lt;/p&gt;
+
+&lt;p&gt;不過我發現個人的情緒還是一個很難掌握的東西，即使有了外在的工具協助，做事情的興頭上的時候，還是會很不受控制，造成原本的計畫無法順利完成。雖然有時候這樣的爆發會帶來一些意想不到的收穫，例如研究上的一些小突破，但是這樣對於進度的規劃長久下來還是會造成不小的傷害，畢竟如果長期沒辦法把所有安排的事情做完，慢慢就會累積成不好的習慣，開始忽視原本預定要做好的事情。&lt;/p&gt;
+
+&lt;p&gt;於是我就在想是不是要在規劃進度的時候就不要太有野心，安排少一點的內容，讓即使發生了突發狀況，例如：作業不小心花太多時間，都還是可以有很大的機會完成。但是想想又覺得這樣往後退也不是辦法，畢竟想要做的事情還是在那裡，把進度捨棄，就等同於放棄完成那些目標，這真的是我想要的嗎？&lt;/p&gt;
+
+&lt;p&gt;時間分配管理真的是一生的課題，也是永遠沒有最佳解答的大哉問。有時候真的會很想要逃避，不敢面對自己的黑暗面，選擇忽視曾經累積下來的失敗和錯誤。但是到了一個程度後，總是必須正面接觸，想辦法改進解決。最近一個很大的問題就是在讀書的時候會挑當下喜歡的事情做，沒辦法強迫自己把進度上一些比較繁冗的事情快速搞定，既然我已經找出問題了，要解決還是要靠自己，是展現意志力的時候了！&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h2 id=&quot;本週總結&quot;&gt;本週總結&lt;/h2&gt;
+
+&lt;p&gt;預期目標：&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Computational Complexity: The frontiers of circuits lower bounds&lt;/li&gt;
+  &lt;li&gt;Pseudorandomness: 6-2&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;執行成果：&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Computational complexity: 100%&lt;/li&gt;
+  &lt;li&gt;Pseudorandomness: 100%&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>第十九週回顧</title>
+   <link href="http://cnchou.github.io/2016/04/08/week19/"/>
+   <updated>2016-04-08T00:00:00-04:00</updated>
+   <id>http://cnchou.github.io/2016/04/08/week19</id>
+   <content type="html">&lt;p&gt;這禮拜開始嘗試用一個電腦的App（&lt;a href=&quot;https://pomodoneapp.com&quot;&gt;Pomodone&lt;/a&gt;）來監測我的時間分配，然後發現的確出現不少的問題。首先是時間分配非常不均勻，我花了超過三分之一的時間在圖論上面，因為這門課每個禮拜都有五到六題的作業，而且最近的題目困難到連我要把解答看懂都要花很久的時間（因為大部分的題目都是十幾年前人家的一篇論文…）。於是這樣弄下來，我平均一個禮拜不算上課大概都還花了十五個小時在上面。
+&lt;!--more--&gt;&lt;/p&gt;
+
+&lt;p&gt;而另外一個問題就是像上禮拜發現的一樣，我會很執著的把一件事情做完才去做別的事情。例如在寫這次計劃的期末呈現專題文章時，我有時候就會一連花個兩三個小時不間斷的寫作。但是通常這樣子寫作的方式，超過一個小時之後，效率就會稍微下降，特別是在撰寫比較專業的部分，有時候我自己也還要整理思考一下，那時效率變得特別的低。如果我要做的事情不多，這樣子分配時間也許還過得去。但是因為我很貪心，想要完成太多事情，一旦這樣子一次做完一件事情，會變得有點奢侈，浪費了時間的邊際效應。&lt;/p&gt;
+
+&lt;p&gt;透過Pomodone的幫助，讓我抓出了時間分配的癥結點，再來就是要嘗試解決問題了！下週開始，面對困難的圖論習題，要更果決的早點放棄自己想，趕快查別人是怎麼做的。在做研究或是寫作的時候，也要透過Pomodone提醒我已經花太多時間，可以適時地做些調整和休息。既然想要做的事情很多，就必須做出更大的努力！&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h2 id=&quot;本週總結&quot;&gt;本週總結&lt;/h2&gt;
+
+&lt;p&gt;預期目標：&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Computational Complexity: Natural Proofs&lt;/li&gt;
+  &lt;li&gt;Pseudorandomness: 6-1&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;執行成果：&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Computational complexity: 100%&lt;/li&gt;
+  &lt;li&gt;Pseudorandomness: 60%&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>第十八週回顧</title>
+   <link href="http://cnchou.github.io/2016/03/31/week18/"/>
+   <updated>2016-03-31T00:00:00-04:00</updated>
+   <id>http://cnchou.github.io/2016/03/31/week18</id>
+   <content type="html">&lt;p&gt;這是一個非常飽滿的禮拜，禮拜一大部分的時間都在處理研究還有跟老師討論，禮拜二則是花了一半的時間準備讀書會要報告的講義，禮拜三則是從早到晚滿滿的行程，禮拜四下午進行了這學期第一個期中考，一直到了禮拜五才終於有喘息的空間。
+&lt;!--more--&gt;&lt;/p&gt;
+
+&lt;p&gt;幸好自主學習計畫剛好在本週輪到了複習的緩衝時間，所以在週末可以讓我即時地把上禮拜落後的進度趕快補上。不過在未來的幾個月，相信許多事情只會變得更多更重，該如何在時間的夾縫中求生存變成非常關鍵的議題。我發現這學期我做事情的方式有點切成太大塊，會花一整個晚上在做講義、寫作業，或是花一個下午打文章、弄研究。因此沒辦法完成太多的事情，而且也時常會因為邊際效應遞減，造成效率沒有很好。這讓我想起之前在線上課程看到的「番茄工作法(Pomodoro Technique)」，大致上的概念就是利用外在的工具，例如計時器，來控制自己做事情的時間區塊大小。透過外界的幫忙，讓自己可以在固定的一段時間就切換工作的內容，當轉換一件事情的時候，可以讓效率提高到亢奮的高點。一旦疲累但是不自知的時候，外界的工具會直接干擾提醒你檢視自己目前的工作效率，此時就可以問問看自己，是否該休息一下或是換個事情做了！&lt;/p&gt;
+
+&lt;p&gt;這學期是影響我未來幾年很關鍵的一段時間，要同時兼顧學習、研究、雜事還有健康等等，透過自主學習計畫每個禮拜的反思回顧，我可以即時的注意到自己時間規劃還有做事效率上面的問題，並且馬上調整改進。真沒想到原本純粹是學習導向的計畫，竟然也有意料之外的功效！&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h2 id=&quot;本週總結&quot;&gt;本週總結&lt;/h2&gt;
+
+&lt;p&gt;預期目標：&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Computational Complexity: Review&lt;/li&gt;
+  &lt;li&gt;Pseudorandomness: Review&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;執行成果：&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Computational complexity: 100%&lt;/li&gt;
+  &lt;li&gt;Pseudorandomness: 100%&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>第十七週回顧</title>
+   <link href="http://cnchou.github.io/2016/03/26/week17/"/>
+   <updated>2016-03-26T00:00:00-04:00</updated>
+   <id>http://cnchou.github.io/2016/03/26/week17</id>
+   <content type="html">&lt;p&gt;這禮拜是個忙亂的一週，兩個作業的死線把讀書的計畫稍微打亂了。再加上週末回台中看棒球校隊打大專盃複賽，更加壓縮了原本的自由時段，所以這禮拜的自主學習計畫就只有完成了一半。
+&lt;!--more--&gt;&lt;/p&gt;
+
+&lt;p&gt;學期之間真的是既可以學到很多東西，又會把時間擠得很滿，沒有休閒的日子。最近無論是在圖論、代數導論的課程中，都學了很多之前從來沒有聽過的東西。尤其是圖論介紹的Ramsey Theory最讓我驚艷。Ramsey Theory處理的是類似於證明：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;$1,2,\dots,2n$之中任取$n+1$個數字，必定有兩個數字互質。&lt;/li&gt;
+  &lt;li&gt;六個人之中一定有三個人互相認識或是三個人互相都不認識。&lt;/li&gt;
+  &lt;li&gt;平面上任意九個三點不共線的點，必定存在一個凸的五邊形。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;隨著問題越來越複雜，我們根本無法找到確切的Ramsey數，只能有非常鬆的估計。在做習題還有看定理證明的過程當中，時常會被前人美麗的巧思給感動，但是看到結果還是距離真實非常遙遠，心裡就會非常惆悵，覺得人類怎麼這麼弱。從離散數學大師Erdős所舉的例子中，我們大約可以感受到人類能力的渺小：如果現在來了一群武力遠遠勝過我們的外星人，他叫我們算出$R(5,5)$（某個Ramsey數），如果把所有人還有電腦叫來一起算，我們還有機會弄出來。但是如果他們是要我們算$R(6,6)$（下一個Ramsey數），那我們倒不如直接想該怎麼打敗外星人了！&lt;/p&gt;
+
+&lt;p&gt;下個禮拜也是個非常有挑戰性的一週，在禮拜三晚上要在讀書會報告輪到我負責的段落，禮拜四有個期中考，禮拜五又有個看起來很難的作業要交。希望能夠一件一件慢慢完成！&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h2 id=&quot;本週總結&quot;&gt;本週總結&lt;/h2&gt;
+
+&lt;p&gt;預期目標：&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Computational Complexity: Razborov’s monotone lower bound&lt;/li&gt;
+  &lt;li&gt;Pseudorandomness: 5-4&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;執行成果：&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Computational complexity: 100%&lt;/li&gt;
+  &lt;li&gt;Pseudorandomness: 0%&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>第十六週回顧</title>
+   <link href="http://cnchou.github.io/2016/03/15/week16/"/>
+   <updated>2016-03-15T00:00:00-04:00</updated>
+   <id>http://cnchou.github.io/2016/03/15/week16</id>
+   <content type="html">&lt;p&gt;隨著新學期的開始，除了原本的自主學習計畫之外，又多出了幾個新的主題想要涉獵，有些是之前有簡短看過一點的，有些則是完全陌生的領域。最後我決定除了原本進行的這兩個課程之外，再另外加上兩個自學的支線，一個是UC Berkeley的Luca Trevisan教授在這學期開的Graph Partitioning, Expanders and Spectral Methods，另一個則是UIUC的Yihong Wu教授開的Information-theoretic methods in high-dimensional statistics。
+&lt;!--more--&gt;&lt;/p&gt;
+
+&lt;p&gt;第一個主題是我之前就略有接觸，在上學期末有參加一個在交大舉行的Spectral Graph Theory Workshop聽過幾個相關的演講。後來也很榮幸跟Luca Trevisan教授討論過研究，當時聽他說這學期會開和Spectral Graph Theory相關的課程，會把詳細的課程講義都放在網路上，難得對於這塊研究領域有專門整合理論和應用的課，我當然絕對不能錯過，於是從一個多月前就開始閱讀她的課堂講義，目前把前八份都讀完了。但是畢竟只是讀過還是有時候會跳過細節，並不見得能夠深入真的了解關鍵的地方，於是參考這次自主學習計畫的經驗，打算也要開始試著記錄一些學習後的筆記，有空也會放到部落格上面。&lt;/p&gt;
+
+&lt;p&gt;第二個主題則是參加我的專題指導老師王奕翔教授招集的讀書會，我們要看的這門課是今年第一次開設，主題也是偏向整合最近消息理論和高維度統計這些領域混合在一起的研究，連開課老師都表示不知道最後的課程進度會走到哪裡，是一個非常前端的學習資源，期待可以好好把握，學到很多東西！&lt;/p&gt;
+
+&lt;p&gt;於是從下週開始我就會把這兩個新的學習支線偷偷加入自主學習計畫的進度中，雖然負擔會大一些，但是最近已經開始慢慢有感覺到自己時間安排方面的成長，如果可以繼續維持下去，一定沒有問題的！&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h2 id=&quot;本週總結&quot;&gt;本週總結&lt;/h2&gt;
+
+&lt;p&gt;預期目標：&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Computational Complexity: $\AC{0}$ and switching lemma&lt;/li&gt;
+  &lt;li&gt;Pseudorandomness: 5-3&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;執行成果：&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Computational complexity: 60%&lt;/li&gt;
+  &lt;li&gt;Pseudorandomness: 100%&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>第十五週回顧</title>
+   <link href="http://cnchou.github.io/2016/03/07/week15/"/>
+   <updated>2016-03-07T00:00:00-05:00</updated>
+   <id>http://cnchou.github.io/2016/03/07/week15</id>
+   <content type="html">&lt;p&gt;&lt;a class=&quot;gallery&quot; href=&quot;/images/Active Learner/IMG_0307-1.jpg&quot;&gt;&lt;img src=&quot;/images/Active Learner/IMG_0307-1.jpg&quot; width=&quot;300px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;這禮拜開始著手規劃撰寫計算理論相關的中文科普文章，約到了三位背景不太相似的朋友要在禮拜日幫我審閱試寫的四篇文章。希望可以先將目標的對象還有寫作風格確定下來，瞭解一下適合的文章內容、長度等。此外，我也簡單列出了可能的寫作大綱，目前計畫分成兩大部分，第一部份是基礎背景的介紹，讓原本對於資訊理論不熟的人，可以認識基本的概念和定義，這樣在第二部分的專題介紹中會更能抓住核心的蓋念。
+&lt;!--more--&gt;&lt;/p&gt;
+
+&lt;p&gt;禮拜日的初稿見面會是在新生南路巷子內的小飯廳舉行，總共一個半小時，三位朋友將我的四篇文章看完後提出了很多寶貴的建議。首先是確認讀者的定位。原本我很貪心的想要讓很多來自不同背景的人可以看懂，所以會在一些簡單的地方著墨太多，然後又不小心在其他地方邏輯跳太快，造成讀者的混淆。最後我們認為可以將這個系列文定位成和科學人雜誌上的文章類似，一開始鎖定的客群就是對數理有興趣的人。也因此雖然會顧及大家程度上的不同，但是對於基礎的數學觀念會是為必備知識。畢竟非誠勿擾，希望能夠將計算理論介紹給真正有心也有興趣要認識的人！&lt;/p&gt;
+
+&lt;p&gt;再來就是對我的寫作風格提出了不少的建議方向，像是在舉例的過程可以適當的和數學定義做的交叉對照，才不會讓讀者看的迷迷糊糊；另外更需要多加一些示意圖，幫助釐清觀念，也方便想像和記憶。&lt;/p&gt;
+
+&lt;p&gt;很開心能夠有三位這麼棒的朋友協助我做這一件以前從來沒有嘗試過的事情，在和其他人討論溝通的過程當中往往可以看到許多自己沒有注意到的盲點。下個禮拜我會把這次討論會得到的建議放進目前的文章中，然後再努力完成接下來幾篇的初稿。順利的話應該可以在月底前開始連載！&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h2 id=&quot;本週總結&quot;&gt;本週總結&lt;/h2&gt;
+
+&lt;p&gt;預期目標：&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Computational Complexity: Relativization and its limits; Baker-Gill-Solvay;Boolean circuits, simple circuit lower bound, uniformity vs. non-uniformity (Karp-Lipton)&lt;/li&gt;
+  &lt;li&gt;Pseudorandomness: 5-2&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;執行成果：&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Computational complexity: 100%&lt;/li&gt;
+  &lt;li&gt;Pseudorandomness: 100%&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>第十四週回顧</title>
+   <link href="http://cnchou.github.io/2016/02/28/week14/"/>
+   <updated>2016-02-28T00:00:00-05:00</updated>
+   <id>http://cnchou.github.io/2016/02/28/week14</id>
+   <content type="html">&lt;p&gt;這禮拜是期待已久的開學週，在台大的最後一個學期，修課數量明顯的減少，從以往大約5-7門的主科到這次只有三門，不過這三門都是我很熱愛而且扎實的課(有兩門課每週都有作業！)。此外還很幸運地選上咖啡學和音樂欣賞，看來這學期將會有充實的知識饗宴，又有豐富的感官享受！
+&lt;!--more--&gt;&lt;/p&gt;
+
+&lt;p&gt;而本週的自主學習計畫也很順利的在預計的時間內完成，新的這一個階段開始閱讀MIT一門進階計算理論課的課程講義。這些講義是當初修課學生輪流根據老師上課的內容編輯而成的，MIT不愧是世界第一學府，雖然「只是」學生們做出來的講義，內容水準之高實在令人讚嘆，讀起來非常簡潔有力，重點和篇幅的分配很得當，讓我在學習專業內容之餘，也可以學習到那些厲害的學生是怎麼樣子把剛學會的知識編輯成容易懂的文章。&lt;/p&gt;
+
+&lt;p&gt;除此之外，禮拜五的晚上是自主學習計畫的第一次期中聚會。看到其他夥伴們這兩個月來學習和成長，很開心在自己打拼的過程中可以認識一群同樣對於學習有著熱情的朋友。大家也聊了許多經營專頁、部落格或網站的經驗，看來對於專業性還有大眾性之間的拿捏是每個人共同面對的重要問題之一。而我也在這次聚會後思考許多，決定要在接下來的兩三個月著手撰寫中文版的計算理論專題系列文章。希望透過平易近人的筆觸，讓有興趣的人能夠品嚐計算理論的有趣。目前已經在規劃當中，預計在一到兩週後將會開始進行連載！&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h2 id=&quot;本週總結&quot;&gt;本週總結&lt;/h2&gt;
+
+&lt;p&gt;預期目標：&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Computational Complexity: The polynomial hierarchy and time-space lower bound&lt;/li&gt;
+  &lt;li&gt;Pseudorandomness: 5-1&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;執行成果：&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Computational complexity: 100%&lt;/li&gt;
+  &lt;li&gt;Pseudorandomness: 100%&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>第十三週回顧</title>
+   <link href="http://cnchou.github.io/2016/02/23/week13/"/>
+   <updated>2016-02-23T00:00:00-05:00</updated>
+   <id>http://cnchou.github.io/2016/02/23/week13</id>
+   <content type="html">&lt;p&gt;經過兩個多月的努力，自主學習計畫的第一階段終於順利的如期完成了！看著一篇篇的筆記還有回顧心得，除了感嘆時間過得很快之外，也很替自己感到高興，能夠在期末考的壓力、全家出遊還有過年的外界誘惑下把預計的進度看完。這一個階段很多的教材是我在去年暑假就一直想要看，但是斷斷續續沒有完成的部分。透過這次自主學習計畫，一半靠自己的毅力還有一半的心理壓力，雖然中途有幾週延誤了進度，最後還是衝刺補了回來，算是達成了以前做不到的任務了吧！
+&lt;!--more--&gt;&lt;/p&gt;
+
+&lt;p&gt;不過當然還是有許多美中不足的地放，既然第一個階段告一個段落，就在這邊做一些檢討吧！&lt;/p&gt;
+
+&lt;p&gt;首先是時間的安排，因為兩個月的時間內包含了學期中、考試期間、寒假和過年，可以規律學習的時段非常不固定。在剛開始的前三四個禮拜，我都是利用禮拜一早上沒有課的兩三個小時把內容看一個段落，然後再利用零碎的晚上讀書時間跟週末把剩下的進度看完並且打筆記和回顧心得。然而到了考試和放假期間，在沒有事先規劃好的情況之下，就有點亂了手腳，導致連續三個禮拜進度落後。根據這個失敗的經驗，警惕我對於細節時間規劃的重要性，因此在新的學期開始課表確定後，我必須明確的制定好自主學習的時間和科目，希望透過這樣的要求，可以讓學習的效果提升，減少延誤的可能性。&lt;/p&gt;
+
+&lt;p&gt;除此之外，作業習題也是一個比較嚴重的問題。因為少了一般學校課程強致死線的規定，所以我變成會將作業的優先順序放在比較後面。再加上少了分數和同儕競爭的壓力，在寫作業時也會比較悠閒，造成進度緩慢。雖然這樣的好處是我可以把每個問題想的比較透徹一些，但是在進度上就變得不甚理想。於是在接下來的階段，我打算也要制定作業死線，強迫自己在有壓力的情況之下學習。同時也需要再更積極的和實驗室厲害的學長請教，不要再閉門造車。&lt;/p&gt;
+
+&lt;p&gt;隨著新學期的開始，自主學習計畫也要正式進入下半階段，期待在這兩個多月中，可以扎實有效率的把學習目標達成，並且改進之前自學遇到的問題，找到適合自己的一套自主學習方法！&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h2 id=&quot;本週總結&quot;&gt;本週總結&lt;/h2&gt;
+
+&lt;p&gt;預期目標：&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Computational Complexity: Review&lt;/li&gt;
+  &lt;li&gt;Pseudorandomness: Review&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;執行成果：&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Computational complexity: 100%&lt;/li&gt;
+  &lt;li&gt;Pseudorandomness: 100%&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>第十二週回顧</title>
+   <link href="http://cnchou.github.io/2016/02/17/week12/"/>
+   <updated>2016-02-17T00:00:00-05:00</updated>
+   <id>http://cnchou.github.io/2016/02/17/week12</id>
+   <content type="html">&lt;p&gt;才覺得寒假沒開始多久，農曆新年就緊接著來了，雖然這幾年越來越沒有像小時候那樣過節的氣氛，但是每年到了這個時候仍然都是最放鬆的時刻。今年春節的作息比較一致，每天起來吃個早餐開始唸一些書，泡完咖啡後再唸一下書，中午和家人聚餐吃飯聊聊天，午覺後再繼續唸書，晚上可能會看個電影或是影集，睡前再看看小說。生活被書本、食物和電影填滿了，三個都是我最喜歡做的事情，這樣的日子過得還真是愜意呀！
+&lt;!--more--&gt;&lt;/p&gt;
+
+&lt;p&gt;這禮拜的自主學習計畫是第一階段的最後一個讀書週，computational complexity的教材已經進入了最後一個章節：量子計算(quantum computing)，而pseudorandomness的部分也將要完結有關擴展圖(expander graph)的討論。今天就來簡單談一談量子計算吧！&lt;/p&gt;
+
+&lt;p&gt;用最不技術性的講法來解釋量子計算，要從他和傳統計算(classical computing)的差別談起。現在所有的電腦都是根據圖靈機(Turing machine)的模型來運算，而一切運算的最基礎單位就是位元(bit)，也就是平時人們喜歡說電腦是由0-1構成的。而量子電腦的不同之處就在這邊，運用了量子疊加態的特性，電腦科學家憑空創造了所謂的量子位元(qbit)，使得在我們「觀測」之前，一個量子位元到底是0還是1是無法被確切知道的！雖然現在量子電腦還沒有被量產，製造量子位元的技術也尚未成熟，相關的理論卻已經五花八門。電腦科學家和數學家們運用想像力和漂亮的數學模型成功建立了完整的量子計算理論，在某些應用上已經被證明比傳統電腦還要厲害。舉例來說，質因數分解(factoring)在傳統電腦尚未有多項式時間的演算法，然而在量子電腦上卻可以很快速地被解決。也因為許多問題可以在量子電腦上被有效率地解決，所以產生了一些相對應的新問題來思考還有什麼難題是連量子電腦都難以處理的。&lt;/p&gt;
+
+&lt;p&gt;於是，量子計算這個領域形成了一個蠻有趣的現象：數學理論遠遠超前於實務上的結果。看著書上一條條的定理和演算法，想像在未來三十年後這一切可能就成真了，真是令人五味雜陳。&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h2 id=&quot;本週總結&quot;&gt;本週總結&lt;/h2&gt;
+
+&lt;p&gt;預期目標：&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Computational Complexity: Quantum Computation: QBP;Quantum Computation: Fourier Transform and Factoring&lt;/li&gt;
+  &lt;li&gt;Pseudorandomness: 4.4&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;執行成果：&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Computational complexity: 100%&lt;/li&gt;
+  &lt;li&gt;Pseudorandomness: 100%&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>第十一週回顧</title>
+   <link href="http://cnchou.github.io/2016/02/16/week11/"/>
+   <updated>2016-02-16T00:00:00-05:00</updated>
+   <id>http://cnchou.github.io/2016/02/16/week11</id>
+   <content type="html">&lt;p&gt;這禮拜計算理論和pseudoransomness的進度都分別來到最精彩的部份，前者進入「代數複雜度」(Algebraic complexity)的領域，目標是研究進行平時常見的代數運算所花費的計算複雜度，很神奇的是前人把這些看起來與電腦習慣使用的0,1位元運算做了很深刻了連結，提出了對應的複雜度類別，讓人們可以對最直接的數學運算做分析，不必再將問題轉換成電腦可以表達的方式。
+&lt;!--more--&gt;&lt;/p&gt;
+
+&lt;p&gt;而pseudorandomness的進度則來到了擴展圖(expander graph)的建構。在前兩個禮拜的閱讀中，看到了很多擴展圖實際的應用，像是如果我們在它上面進行隨機漫步(random walk)，並用經過的點產生偽亂數(pseudorandomness)，如此一來所需要花的真實亂數成本將會大幅減少！然而建構擴展圖並非一件簡單的事情，要做出一個具有好性質的擴展圖做簡單的方法是用亂數構成。然而從應用端出發，我們就是為了減少亂數的消費才使用擴展圖，現在如果連建構擴展圖都需要很多亂數了，那豈不是本末倒置！？於是這禮拜在研究的方向就是要如何在不依靠亂數的情況下建立一個好的擴展圖，簡單來說，透過一些適當的圖像操作，我們可以讓一個小的擴展圖越變越大，並且控制參數使得擴展的程度(expansion)仍然維持到我們可以接受的範圍內。詳細的介紹可以參考整理出來的筆記： Expander Graphs - Construction.&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h2 id=&quot;本週總結&quot;&gt;本週總結&lt;/h2&gt;
+
+&lt;p&gt;預期目標：&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Computational Complexity: Algebraic Complexity: Perm vs. Det; Algebraic Circuit Lower Bounds&lt;/li&gt;
+  &lt;li&gt;Pseudorandomness: 4.3&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;執行成果：&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Computational complexity: 100%&lt;/li&gt;
+  &lt;li&gt;Pseudorandomness: 100%&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>第十週回顧</title>
+   <link href="http://cnchou.github.io/2016/02/11/week10/"/>
+   <updated>2016-02-11T00:00:00-05:00</updated>
+   <id>http://cnchou.github.io/2016/02/11/week10</id>
+   <content type="html">&lt;p&gt;上禮拜結束所有的期末報告之後，正式來到了大學生涯最後一個寒假。雖然是個假期，但是對於準備要申請國外研究所的我來說，這是當兵前最後一個空擋好好為接下來的研究還有課業打穩腳步。除了持續進行原本的自主學習計畫之外，這段期間還多了一個重要的學習目標：代數。因為在幾個月前得知當我放棄雙主修數學系改成輔修之後，原本可以抵免系上的線性代數課程變成無法充兼數學系的輔系必選學分，也就是說我必修再多修一門代數相關的課程。為了要拿到數學系的輔系，我必須跳過代數導論上，直接挑戰下學期的代數導論下！之前聽幾個雙主修的同學聊過代數導論這門課，大家紛紛認為是一門很硬不容易讀的科目，看來下學期除了自己的研究之外，在修課方面也會面臨不小的挑戰。
+&lt;!--more--&gt;&lt;/p&gt;
+
+&lt;p&gt;也因此我借了代數的課本，打算在寒假把上學期的課程內容努力唸完，換句話說，我要在短短四個禮拜的時間讀完一學期的教材並且熟絡到一定的程度，真是刺激呀！於是這禮拜就在代數還有計算理論以及研究之間過去了，算是順利的把代數的第一個大章節：群（Group）快速看完第一遍，接下來要重新仔細看過定理和證明的細節，然後希望可以把剩下兩個章節：環（Ring）和體（Field）掃過一遍。&lt;/p&gt;
+
+&lt;p&gt;至於自主學習計畫的部分，也規規矩矩地達成了目標，不過目前在習題的部分遇到了一些瓶頸，希望在之後幾個禮拜可以有所突破！&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h2 id=&quot;本週總結&quot;&gt;本週總結&lt;/h2&gt;
+
+&lt;p&gt;預期目標：&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Computational Complexity: Linearity Testing, More Inapproximability;Algebraic Complexity: AlgP, AlgNP&lt;/li&gt;
+  &lt;li&gt;Pseudorandomness: 4.2&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;執行成果：&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Computational complexity: 100%&lt;/li&gt;
+  &lt;li&gt;Pseudorandomness: 100%&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>第九週回顧</title>
+   <link href="http://cnchou.github.io/2016/01/29/week9/"/>
+   <updated>2016-01-29T00:00:00-05:00</updated>
+   <id>http://cnchou.github.io/2016/01/29/week9</id>
+   <content type="html">&lt;p&gt;繼上週期末考造成進度拖累之後，這禮拜面對的是五天四夜的家庭旅遊，再加上禮拜五下午有一個期末口試和報告，自主學習計畫面臨嚴峻的考驗。
+&lt;!--more--&gt;&lt;/p&gt;
+
+&lt;p&gt;再仔細思考規劃過後，覺得不可能再出去玩的時候讀書，這樣不但效率會比較差，還很有可能影響心情，加上這次打算要每天打遊記，於是橫下心來，決定把所有東西留到週末一次讀完！&lt;/p&gt;
+
+&lt;p&gt;於是開開心心的和家人玩了五天四夜之後，順利考完模型理論的口試還有專題的期末報告，禮拜六一早我便來到了圖書館，開始奮戰。由於是新的一個階段的開始，這禮拜的Pseudorandomness部分進入了全新的章節：Expander graph。Expander graph是應用數學中一個重要的工具，因為它具有高連結性，但是點與點之間卻是稀疏的，使得我們使用的時候付出的成本比較低，但是卻可以獲得很好的遍歷性質。我很興奮地迅速把基本的定義還有簡單的參數關係推導看完，並且做了幾題相關的題目，順利的將這禮拜的進度完成。&lt;/p&gt;
+
+&lt;p&gt;雖然剛好遇到了家庭旅遊，不過我在一開始便訂好計畫，並且在玩的時候好好的玩，在唸書的時候心無旁騖的享受，於是最終還是順利地達成目標。很高興這次的經驗告訴了我，讀書和生活都是很重要的，彼此之間是可以相互共存，只要能夠先計畫好，然後不要東想西想的，在當下享受正在做的一切，事情都可以順利做好的！&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h2 id=&quot;本週總結&quot;&gt;本週總結&lt;/h2&gt;
+
+&lt;p&gt;預期目標：&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Computational Complexity: PCPs and Hardness of Approximation;$\NP$ in $\PCP(poly(n),O(1))$&lt;/li&gt;
+  &lt;li&gt;Pseudorandomness: 4.1&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;執行成果：&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Computational complexity: 30%&lt;/li&gt;
+  &lt;li&gt;Pseudorandomness: 100%&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>第八週回顧</title>
+   <link href="http://cnchou.github.io/2016/01/25/week8/"/>
+   <updated>2016-01-25T00:00:00-05:00</updated>
+   <id>http://cnchou.github.io/2016/01/25/week8</id>
+   <content type="html">&lt;p&gt;當初在規劃進度的時候，特地設想到期末考中可能會有許多無法預期的事情發生，很可能沒辦法專心的學習新的範圍，因此故意把複習週排在這個時間點。而的確這禮拜因為一些煩心的事情，還有考試及meeting，進行的不是很順利。前四天下來，除了想了一些題目之外，幾乎沒有把之前的落後的進度補起來。再加上禮拜五回家、禮拜六投票日、禮拜日出發去家庭旅遊，即使在沒有多餘進度安排的情況之下，這禮拜的複習還是失敗了。
+&lt;!--more--&gt;&lt;/p&gt;
+
+&lt;p&gt;事後檢討起來，我認為有幾個可以改進的地方如下：&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;除了安排進度之外，更要排出「固定」的學習時間。雖然這是自主學習，但是如果是很隨性的找閒暇時間來閱讀資料和想題目，一旦事情多了起來，或是出現一些臨時狀況，就容易不知不覺拖累進度。因此仿效學校課程有固定的上課時間，如果自主學習也有定下每週閱讀、討論的時程，那麼相信可以減少進度落後的可能性。&lt;/li&gt;
+  &lt;li&gt;善加區分「專注時間」和「放鬆時間」。大三時我修了一門coursera上的課程：Learning How to Learn，在課程的最一開始，老師就向大家介紹這兩個不同的學習狀態。當我們處於專注時間時，可以處理一些瑣碎細膩的問題，以數學為例，這時就很適合把證明的細節走過一遍，了解每一個參數的意義還有式子之間的關聯。然而在放鬆時間的時候，並不意味什麼事情都不能做，此時我們可以任由創意奔騰，想想之前卡住很久的問題，或是對自己挑戰之前看完的東西，說不定就可以發現一些有趣沒有想過的方向。在這兩個不同的時間，適合學習的方式不太一樣，如果弄錯了，時常會事倍功半。反之，能夠如魚得水的掌控自己學習的狀況，那麼就可以完全發揮學習的效果了！&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;雖然很遺憾的這禮拜沒有完成預期的目標，但是從失敗中學習，期待之後遇到類似情況的時候可以處理得更好！&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h2 id=&quot;本週總結&quot;&gt;本週總結&lt;/h2&gt;
+
+&lt;p&gt;預期目標：&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Computational Complexity: Review&lt;/li&gt;
+  &lt;li&gt;Pseudorandomness: Review&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;執行成果：&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Computational complexity: 70%&lt;/li&gt;
+  &lt;li&gt;Pseudorandomness: 100%&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Day 1： 彩虹、台東市、雨過天晴</title>
+   <link href="http://cnchou.github.io/2016/01/17/day1/"/>
+   <updated>2016-01-17T00:00:00-05:00</updated>
+   <id>http://cnchou.github.io/2016/01/17/day1</id>
+   <content type="html">&lt;p&gt;&lt;a class=&quot;gallery&quot; href=&quot;/images/2016 Winter/IMG_0117-1.jpg&quot;&gt;&lt;img src=&quot;/images/2016 Winter/IMG_0117-1.jpg&quot; width=&quot;500px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;早上六點半，準時被媽媽叫醒，五天四夜的花東埔里之旅即將開始。
+&lt;!--more--&gt;&lt;/p&gt;
+
+&lt;p&gt;這次旅行是國中以來，第一次和家人長途旅遊。此外，也是第一次到台東，心中真是充滿了期待，希望可以在現在這麼忙碌的日子中，找回一些悠閒平靜，還有和家人相處的感覺。&lt;/p&gt;
+
+&lt;p&gt;&lt;a class=&quot;gallery&quot; href=&quot;/images/2016 Winter/map.png&quot;&gt;&lt;img src=&quot;/images/2016 Winter/map.png&quot; class=&quot;img-center&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;八點多出發，從73快速道路街上國道一號，往南行準備從新建好不久的南迴公路前往台東。這條路線是之前爸媽去墾丁的時候發現的，從台中到台東竟然只要五個小時左右，於是一大早七八點出發，預計加上一些休息，應該可以在下午到達目的地。&lt;/p&gt;
+
+&lt;p&gt;&lt;a class=&quot;gallery&quot; href=&quot;/images/2016 Winter/IMG_0117-2.jpg&quot;&gt;&lt;img src=&quot;/images/2016 Winter/IMG_0117-2.jpg&quot; width=&quot;300px&quot; class=&quot;img-center&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;在車上昏睡了一個多小時後，來到了第一個停靠點：台南的關廟休息站。一下車天氣陰陰的，微雨，上了廁所晃了一晃之後，來到了著名的休息站陸橋。&lt;/p&gt;
+
+&lt;p&gt;&lt;a class=&quot;gallery&quot; href=&quot;/images/2016 Winter/IMG_0117-3.jpg&quot;&gt;&lt;img src=&quot;/images/2016 Winter/IMG_0117-3.jpg&quot; width=&quot;300px&quot; class=&quot;img-center&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;第一次從國道的正中間看來來往往的車潮，雖然並不多，但是也是蠻壯觀的，想想看如果從更高空看下來，照條公路直接連通了台北到屏東，實在很了不起。&lt;/p&gt;
+
+&lt;p&gt;&lt;a class=&quot;gallery&quot; href=&quot;/images/2016 Winter/IMG_0117-4.jpg&quot;&gt;&lt;img src=&quot;/images/2016 Winter/IMG_0117-4.jpg&quot; width=&quot;300px&quot; class=&quot;img-center&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;往南再開了一個多小時，接近中午的時候到了第一個看到海的地方：屏東的品味軒休息站。此時的天氣仍舊陰陰的，海水也十分混濁，風很大浪也急，不像過去看到風和日麗時大海的熱情，而是大自然狂野的真性情。&lt;/p&gt;
+
+&lt;p&gt;離開屏東，開始下起了暴雨，窗外的景色被雨水模糊，爸爸謹慎地把雨刷開到最快，而我和弟弟則在後座進入了夢鄉。&lt;/p&gt;
+
+&lt;div class=&quot;w3-row&quot;&gt;
+&lt;div class=&quot;w3-half&quot;&gt;
+&lt;a class=&quot;gallery&quot; href=&quot;/images/2016 Winter/IMG_0117-5.jpg&quot;&gt;&lt;img src=&quot;/images/2016 Winter/IMG_0117-5.jpg&quot; width=&quot;300px&quot; /&gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class=&quot;w3-half&quot;&gt;
+&lt;a class=&quot;gallery&quot; href=&quot;/images/2016 Winter/IMG_0117-6.jpg&quot;&gt;&lt;img src=&quot;/images/2016 Winter/IMG_0117-6.jpg&quot; width=&quot;300px&quot; /&gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;被彩虹叫醒，大概是我從來沒有想過會發生的事情吧！在迷迷糊糊之中，聽見媽媽興奮的大叫「有彩虹，有彩虹」，努力睜開雙眼，看到了這輩子看過離我最近的彩虹。其中一端從不遠的岬角竄出，再以很小的曲率快速沒入太平洋。難得可以看到仰角這麼低的彩虹，這大概是只有在還邊才有的吧？回宿舍之後再來問問讀物理的學弟！&lt;/p&gt;
+
+&lt;div class=&quot;w3-row&quot;&gt;
+&lt;div class=&quot;w3-half&quot;&gt;
+&lt;a class=&quot;gallery&quot; href=&quot;/images/2016 Winter/IMG_0117-7.jpg&quot;&gt;&lt;img src=&quot;/images/2016 Winter/IMG_0117-7.jpg&quot; width=&quot;300px&quot; /&gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class=&quot;w3-half&quot;&gt;
+&lt;a class=&quot;gallery&quot; href=&quot;/images/2016 Winter/IMG_0117-8.jpg&quot;&gt;&lt;img src=&quot;/images/2016 Winter/IMG_0117-8.jpg&quot; width=&quot;300px&quot; /&gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;一路上我最喜歡的風景莫屬美麗的雲了。從高中開始就對雲有種莫名的情感，喜歡靜靜的看著雲慢慢的變化，有時候時形狀的變化，有時候是光影的變化。雲總是會讓我感覺到一切充滿了不確定性，但是又是漂亮美好的。&lt;/p&gt;
+
+&lt;p&gt;&lt;a class=&quot;gallery&quot; href=&quot;/images/2016 Winter/IMG_0117-9.jpg&quot;&gt;&lt;img src=&quot;/images/2016 Winter/IMG_0117-9.jpg&quot; width=&quot;300px&quot; class=&quot;img-center&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;到台東市區前的最後一站，我們來到了據說全台灣最漂亮的小學：富源國小。全校是採用所謂希臘式的建築，牆壁刷白，頗有地中海風情，不過比想像中的小不少，真可謂期待越大失望越大啊！&lt;/p&gt;
+
+&lt;div class=&quot;w3-row&quot;&gt;
+&lt;div class=&quot;w3-half&quot;&gt;
+&lt;a class=&quot;gallery&quot; href=&quot;/images/2016 Winter/IMG_0117-10.jpg&quot;&gt;&lt;img src=&quot;/images/2016 Winter/IMG_0117-10.jpg&quot; width=&quot;300px&quot; /&gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class=&quot;w3-half&quot;&gt;
+&lt;a class=&quot;gallery&quot; href=&quot;/images/2016 Winter/IMG_0117-11.jpg&quot;&gt;&lt;img src=&quot;/images/2016 Winter/IMG_0117-11.jpg&quot; width=&quot;300px&quot; /&gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;下午五點左右到了下榻的民宿，看起來是當地人特別興建作為民宿的地方，附近連續幾間都是類似設計的民宿。環境還算乾淨，至少在餐廳有個大書桌可以讓我用電腦和看書。&lt;/p&gt;
+
+&lt;p&gt;一整天下來大家也都累了，於是晚上就到附近的熱鬧商圈，隨便吃了點東西，逛了一下，就回民宿休息了。其實這幾年去過幾個地方例如花蓮宜蘭玩過後，發現各個城市的市中心真的都大同小異，尤其是夜市就不用說了。台東其實也是差不多，不過規模比較小，人也比較少。看到滿街穿插的連鎖商店，馬路上不戴安全帽的人們，還有小巷路中間突然出現的狗屎炸彈，在台東讓我感受到很強烈鄉下被商業化和都市化的衝擊，你可能原本還被便利商店、八方雲集和肯德基包圍，結果一轉入小巷就發現漆黑無比，再多往前走幾個路口，就發現要看到海了。&lt;/p&gt;
+
+&lt;p&gt;今天和台東的初次見面，的確體會到所謂慢活的感覺，放下城市的包袱，享受被海風用力地吹著，和家人在黑夜的海邊漫步，在夜中品嚐一個人的黑豆薏仁茶。&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>第七週回顧</title>
+   <link href="http://cnchou.github.io/2016/01/15/week7/"/>
+   <updated>2016-01-15T00:00:00-05:00</updated>
+   <id>http://cnchou.github.io/2016/01/15/week7</id>
+   <content type="html">&lt;p&gt;期末考前的一個禮拜，是最輕鬆，也是最讓人無法專注好好把一件事情完成的一週。這次的進度來到了我之前就很有興趣的主題：互動式證明(Interactive Proofs)。在二十多年前，$\IP$(Interactive Proofs的一個複雜度類別)被證明出和PSPACE(多項式空間複雜度)等價時，正式宣告了相對化技術(relativization technique)的死刑，並且開創了一個新的可能，緊接著Arora也發表了著名的$\PCP$定理，利用互動式證明的概念，將$\NP$定位在$\PCP(\log n,1)$，讓人們一度以為有機會解決$\P$ vs. $\NP$的問題，不過二十年過去了，$\P$ vs. $\NP$仍然懸而未解，倒是互動式證明的概念帶起了許多近代密碼學重要的概念。
+&lt;!--more--&gt;&lt;/p&gt;
+
+&lt;p&gt;拉回主動者學習計畫，這禮拜實在是過得有點渾渾噩噩，於是在最後沒有完成應該唸完的進度。不過在作業方面倒是有不錯的進展，最近Pseudorandomness讀到成對式獨立(pairwise-independent)相關的作業寫得還算得心應手，尤其是經過連續幾個題組的洗禮，等於是走過了兩三篇論文的結果，讓我對於這個去隨機化(derandomization)的技術有了更深刻了了解。&lt;/p&gt;
+
+&lt;p&gt;隨著這一個section的結束，這一學期也進入尾聲，在被知識沐浴的同時，時間仍然不留情地快速流過。突然感慨不知道十年二十年後，現在花了不少時間學的一些東西，搞半天才弄懂的定理，會不會還依然清晰，又或是早就忘光了？人終究還是個很local的生物，還是別想太多，做現在自己認為是值得做的事情吧！&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h2 id=&quot;本週總結&quot;&gt;本週總結&lt;/h2&gt;
+
+&lt;p&gt;預期目標：&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Computational Complexity: Interactive Proofs: IP;Variants of Interactive Proofs; $\AM$ vs. $\IP$, $\AM$ vs. $\PH$&lt;/li&gt;
+  &lt;li&gt;Pseudorandomness: 3.5&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;執行成果：&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Computational complexity: 100%&lt;/li&gt;
+  &lt;li&gt;Pseudorandomness: 100%&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>第六週回顧</title>
+   <link href="http://cnchou.github.io/2016/01/07/week6/"/>
+   <updated>2016-01-07T00:00:00-05:00</updated>
+   <id>http://cnchou.github.io/2016/01/07/week6</id>
+   <content type="html">&lt;p&gt;2015  年的最後一個禮拜在放榜的緊張情緒，還有三連假的悠閒中度過了。公費留學考試在這幾年刻意將放榜的日子選在12/31號，就像大學指考的放榜選在父親節一樣，讓大家在特別的日子中面對人生中重要的結果出爐。
+&lt;!--more--&gt;&lt;/p&gt;
+
+&lt;p&gt;12/31禮拜四一早和老師meeting結束後，就很緊張地打開網路查詢放榜結果，但是網站上面什麼東西都沒有，像是根本沒有這回事一樣。在圖書館待了一個早上，大概每隔十多分鐘就會刷新一下所有可能的網頁，但是依舊是沒有任何動靜。緊張的情緒延續到下午，上高等統計推論的時候，實在很難專注在黑板上一行行的式子。然而，一直到吃完晚餐教育部的網站仍然遲遲沒有公佈放榜結果，只有一則關於新黨去抗議慰安婦事件的新聞稿。終於在我即將放棄等待時，終於在八點多的時候看到放榜的公告了，然後也順利地考上了這次的公費留學，放下心中的一顆大石頭。&lt;/p&gt;
+
+&lt;p&gt;不過開心的時間可沒辦法多久，還有很多東西等著學習呢！這禮拜Pseudorandomness進入了第三章，開始介紹一些去亂數(derandomization)的技巧，裡頭夾雜了許多有趣的數學和機率，非常好玩，細節將會在之後陸續整理放上來。而computational complexity輪到了平均複雜度的章節，是我之前一直很沒有感覺的地方，對於定義的方式抓不太到想法。不過這禮拜再看的時候就有比較能夠理解每個定理的目的和核心概念，還有他們想要做到的事情是什麼，但是這實在是一個很大的主題，現在還都只是輕輕地品嘗一下而已，以後要再深入瞭解還有很長的一段路啊！&lt;/p&gt;
+
+&lt;p&gt;很快的再過兩個禮拜大四上學期就要結束了，這是第一個沒有打棒球隊的學期，也是幾乎都在讀書的學期，走到現在說實在的確有點開始疲乏了，東西常常讀不太進去。最近有開始試著做些放鬆的事情，像是打打撞球或是看個影片，調整讀書的心情和節奏。不過最重要的還是找到一個方向吧，是時候再檢討回想看看自己想要的是什麼，有時候一直忙碌地向前衝不見得就是比較好的。&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h2 id=&quot;本週總結&quot;&gt;本週總結&lt;/h2&gt;
+
+&lt;p&gt;預期目標：&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Computational Complexity: Average-Case Complexity&lt;/li&gt;
+  &lt;li&gt;Pseudorandomness: 3.3-3.4&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;執行成果：&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Computational complexity: 100%&lt;/li&gt;
+  &lt;li&gt;Pseudorandomness: 100%&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>第五週回顧</title>
+   <link href="http://cnchou.github.io/2015/12/29/week5/"/>
+   <updated>2015-12-29T00:00:00-05:00</updated>
+   <id>http://cnchou.github.io/2015/12/29/week5</id>
+   <content type="html">&lt;p&gt;&lt;a class=&quot;gallery&quot; href=&quot;/images/Active Learner/IMG_1229.jpg&quot;&gt;&lt;img src=&quot;/images/Active Learner/IMG_1229.jpg&quot; width=&quot;300px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;隨著年底的到來，時間果2015 Xmas然過得特別快，事情也令人多的感覺做不完。這禮拜身邊歡樂的氣氛讓自己稍微鬆懈了一下，同時週末要回家一趟，事情將要無法順利做完是意料中的事。看著行事曆一排排的死線，心中又很想要一些別的東西，做一些別的事情，真是左右為難啊！
+&lt;!--more--&gt;&lt;/p&gt;
+
+&lt;p&gt;還好當初在規劃自主學習計畫時有預料到這學期結尾的忙亂，於是刻意排一些之前已經看過的範圍，所以這週的進度很順利地利用兩個吃飯的時間還有半個晚上的圖書館解決了。而且看第二遍的好處除了幫這次省了一些時間之外，更讓我對於同樣的主題，有了比較深刻的見解和想法。例如這禮拜讀的counting complexity，是我之前最頭痛的地方，怎麼看都很沒有感覺，就是搞不懂為什麼要介紹這些定理，到底是重要在哪裡。這禮拜二重讀一遍時，突然恍然大悟，腦中頓時把counting complexity和其他不同的complexity定義連結在一起了！counting complexity的初衷就是要為另外一種類型的問題定義複雜度，而一些看似突兀的定理，想要做的事情其實很簡單，就是為了要把counting和其他的複雜度類別做連結。像是有名的Toda定理，就是將counting complexity和多項式階層(polynomial hierarchy)做了連結。&lt;/p&gt;
+
+&lt;p&gt;這禮拜雖然在忙亂中度過了，不過為了完成自主學習的計畫，還是想辦法硬著頭皮趕上進度。其實這樣還蠻有成就感的，一個禮拜這樣一點一點的累積，看著進度表上的完成率逐漸攀升，作業的答題率也越變越高，心中的成就感、學習的喜悅還有規劃好的進度壓力讓我更有動力和能量繼續完成學習，繼續加油！&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h2 id=&quot;本週總結&quot;&gt;本週總結&lt;/h2&gt;
+
+&lt;p&gt;預期目標：&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Computational Complexity: Counting ;Approximate Counting, Uniform Sampling&lt;/li&gt;
+  &lt;li&gt;Pseudorandomness: 3.1-3.2&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;執行成果：&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Computational complexity: 100%&lt;/li&gt;
+  &lt;li&gt;Pseudorandomness: 100%&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>第四週回顧</title>
+   <link href="http://cnchou.github.io/2015/12/20/week4/"/>
+   <updated>2015-12-20T00:00:00-05:00</updated>
+   <id>http://cnchou.github.io/2015/12/20/week4</id>
+   <content type="html">&lt;p&gt;這禮拜進入了自主學習者的第一個緩衝週，基本上因為進度都有跟上，所以這週大部份的時間都是花在做習題。然而事情沒有計畫的簡單，Pseudorandomness的習題大部份除了有很多小題之外，大多都需要一些全新的想法才有可能解得出來。像是第二章第九題的Spectral Graph Theory，那六個小題基本上就是那個領域最開始一些創新想法的簡單版，幾乎都需要一點點巧思才有可能解開。不過也因為如此，多少有訓練到自己看問題時的開放思維吧！
+&lt;!--more--&gt;&lt;/p&gt;
+
+&lt;p&gt;但是此時思考時間還有看參考資料之間的權衡就是一件很重要的事情了，網路上其實都可以多多少少查得到習題的解法，如果早一點放棄，趕快解出來，實在可以省非常多的時間，而這些時間就可以拿來讀更多東西或是寫其他的習題。但是用這樣子的方式學習，就有點失去了訓練思考的機會，誰知道哪天當自己做研究的時候，會不會就缺少了這樣子創新思考的能力？&lt;/p&gt;
+
+&lt;p&gt;我覺得，兩種的極端都不是一個好的學習方式，如果花太多時間自己想的確很容易陷入死胡同浪費寶貴的時間，直接看解答就和念書沒什麼兩樣，失去訓練研究能力的機會。看來如何平衡兩者的時間和時機是個非常重要的學習課題呀！也許，這也是當初Salil出題時的想法呢！&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h2 id=&quot;本週總結&quot;&gt;本週總結&lt;/h2&gt;
+
+&lt;p&gt;預期目標：&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Review&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;執行成果：&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Computational complexity: 100%&lt;/li&gt;
+  &lt;li&gt;Pseudorandomness: 100%&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>第三週回顧</title>
+   <link href="http://cnchou.github.io/2015/12/13/week3/"/>
+   <updated>2015-12-13T00:00:00-05:00</updated>
+   <id>http://cnchou.github.io/2015/12/13/week3</id>
+   <content type="html">&lt;p&gt;這禮拜在不知不覺的匆匆忙忙中結束了，相對起來主動學習計畫的執行顯得比較慌亂一點，有超過一半的內容是邊吃飯邊看過的，習題大多也是在搭車的路上，或是騎腳踏車的時候想。該看的都還是有看完，不過就沒有時間好好整理一下，題目更是沒有完整的時間好好思考，這大概就是沒有排每週固定時間的下場吧！
+&lt;!--more--&gt;&lt;/p&gt;
+
+&lt;p&gt;不過這禮拜可是非常精彩，禮拜一的英文讀書會是第一次請外籍老師來幫我們上課，一群人在清晨六點半聚在BOT的交誼廳練習英文口說，不管在心理上或是身體上都很累，但是每次結束回到學校時，看到從總圖上方緩緩升起的太陽，就覺得新的一個美好禮拜要開始了。&lt;/p&gt;
+
+&lt;p&gt;禮拜二在台大電機系聽了偶像：&lt;a href=&quot;https://people.eecs.berkeley.edu/~luca/&quot;&gt;Luca Trevison&lt;/a&gt;的演講。雖然遲到了一下，而且在中間突然轉到approximation的時候就完全跟不上，仍然覺得學到很多，從他鋪陳敘述研究的方式，可以感受到大師做研究的風範。禮拜三和中研院的學長們一起去交大參加Spectral Graph Theory的workshop，詳細內容可以參考這一篇。雖然現在網路日益發達，許多演講的影片、教學等等都可以直接有線上的版本可以遠距閱讀，但是在現場聽大師的演講，不同時做其他事情，和身邊的人一起全神貫注時，獲得的不只是當下的內容而已，似乎更可以了解清楚整個的脈絡，所以我想這種實體的研討會、演講、工作坊應該還是不可能完全被網路取代吧！&lt;/p&gt;
+
+&lt;p&gt;由於Luca來台灣十天，然後其實只有給兩個talk，於是很厚臉皮的請王老師約了Luca來聊最近在做的研究，而他也很爽快的答應了，在禮拜五的下午有一個小時的時間和他聊聊最近在做的事情。不過我和王老師心理都知道我們是在這個領域的新手，很害怕問蠢問題，不過我想有問總比沒問好，而且機會難得，有很多高觀點的看法還有現在最前端研究的狀態和瓶頸可以藉這個機會好好搞清楚。於是就在禮拜四的時候花了不少的時間在準備和Luca聊天要問的問題。&lt;/p&gt;
+
+&lt;p&gt;當天和他先約在學校附近的咖啡店，Luca果然是道地的義大利人，點了一杯espresso，讓在一旁的我很讚嘆。後來回到了王老師的辦公室，開始了討論。從我們的題目開始說起，然後問了一些有關這個領域最近的發展，看起來已知的工具和我們認知中的差不多少，唯一很強大的工具是一個叫做「平方和」(Sum of Square)的方法，我從十月初研究到最近，非常的有趣，但是也很深奧，在近年來理論CS這塊扮演蠻前衛的角色，很有希望破掉一個原本覺得很可能會成立的Unique Game Conjecture ，但是一切都還在進行當中。而我和王老師現在在做的研究是希望用它來建構某一類問題的時間複雜度lower bound，然而目前看到類似的研究都用了非常複雜的方法，於是我們很好奇有沒有其他容易的方式，但是從Luca的口氣聽來，這已經是目前最好的方法了，看來之後的研究還有很辛苦的一段路要走…&lt;/p&gt;
+
+&lt;p&gt;這一次和Luca的小小聚會，除了很榮幸能夠和大師交流之外，我覺得也從王老師身上學到了不少東西，從他和其他學者的互動中，學到了很多在比較偏學術的場合要注意的溝通表達技巧。而且也實在很感謝他幫我約到了Luca，這是我一個月前怎麼想也想不到的事情吧！真是幸運能夠跟王老師一起做研究！&lt;/p&gt;
+
+&lt;p&gt;下禮拜生活又要回到了正軌，該打起精神繼續努力了！&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h2 id=&quot;本週總結&quot;&gt;本週總結&lt;/h2&gt;
+&lt;p&gt;預期目標：&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Randomized Computation: Promise Problems;Randomized Reductions&lt;/li&gt;
+  &lt;li&gt;Pseudorandomness: 2.4&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;執行成果：&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Computational complexity: 100%&lt;/li&gt;
+  &lt;li&gt;Pseudorandomness: 100%&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>第二週回顧</title>
+   <link href="http://cnchou.github.io/2015/12/05/week2/"/>
+   <updated>2015-12-05T00:00:00-05:00</updated>
+   <id>http://cnchou.github.io/2015/12/05/week2</id>
+   <content type="html">&lt;p&gt;這禮拜是NTU Active Learner計畫的第二週，果然和預期的一樣仍然充滿了幹勁，不知道一個月後是否還能維持呢？
+&lt;!--more--&gt;
+本週的進度是隨機複雜度類別還有隨機性質(randomness)和其他計算模型性質的比較，例如隨機性質比非決定性(nondeterministic)還要強，但是比非均一性(nonuniformity)弱。而最令人感動的則莫屬機率方法(probabilistic method)了！每次看到使用機率方法的證明都令我心跳加快，忍不住叫好。&lt;/p&gt;
+
+&lt;p&gt;簡單報告一下學習的狀況，在這週開始的前兩天，就用零零碎碎的時間把pseudorandomness的2.3看完，然後在禮拜四晚上讀了complexity的進度，並且打了一篇心得文，主要是介紹隨機負責度類別背後的想法，以及和一般複雜度類別不太一樣的地方。&lt;/p&gt;
+
+&lt;p&gt;另外這週也開始進行作業了，由於之前曾經寫過一些，所以不算從零開始，但是剩下的也就是比較困難的。光是pseudorandomness第二單元四五題處理恆零多項式測驗(polynomial identity testing)的延伸，我就搞了半天仍沒有想法。於是和鍾老師&lt;sup&gt;1&lt;/sup&gt;約了在禮拜二早上討論，但是結束後聽得矇矇懂懂，又花了一段時間，終於在禮拜三晚上開竅了，其實重要的不是在於演算法問題的本身，更重要的是你對於當前的設定(是在有限體上還是整數群上？)，以及你想要的結果(再多項式時間內達到很小的誤差)有沒有很清楚的認知，找到是哪裡可能出問題，如此一來式子和目標一寫下，答案就呼之欲出了。&lt;/p&gt;
+
+&lt;p&gt;基本上這禮拜的學習蠻享受的，雖然在寫習題的過程中花了不少冤枉時間，但是我想這訓練到的是看題目還有面對未知事情的能力吧！&lt;/p&gt;
+
+&lt;p&gt;註解：
+[1]: 鍾楷閔老師是我在中研院資訊所實習的指導老師，目前仍有固定的研究合作。&lt;/p&gt;
+
+&lt;h2 id=&quot;本週總結&quot;&gt;本週總結&lt;/h2&gt;
+
+&lt;p&gt;預期目標：&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Randomized Computation: $\BPP$, $\RP$, $\ZPP$&lt;/li&gt;
+  &lt;li&gt;Pseudorandomness: 2.3&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;執行成果：&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Computational complexity: 100%&lt;/li&gt;
+  &lt;li&gt;Pseudorandomness: 100%&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>第一週回顧</title>
+   <link href="http://cnchou.github.io/2015/11/29/week1/"/>
+   <updated>2015-11-29T00:00:00-05:00</updated>
+   <id>http://cnchou.github.io/2015/11/29/week1</id>
+   <content type="html">&lt;p&gt;這禮拜是NTU Active Learner計畫的第一個禮拜，整體看來都在進度上，同時也在禮拜一的時候架了這一個部落格，接下來一些學習的心得，還有計劃遇到的困難等等都會記錄在這邊。
+&lt;!--more--&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;先從有趣的事情開始好了，我在禮拜一讀完Pseudorandomness第二章的前兩節後，馬上忍不住試用新的部落格，打了一篇名為：「Polynomial Identity Testing」的文章，紀錄一些看完的想法。後來我又陸續放上了幾篇文章，一切看起來風平浪靜，和預期的差不多。&lt;/p&gt;
+
+&lt;p&gt;時間到了禮拜三，我的gmail信箱出現了一封wordpress（這個部落格使用的軟體）寄來的奇怪信件，信中提到有位網友在我的第一篇文章留言了！當下我真的是又喜又驚，開心的是竟然有人會回覆我的文章，而且內容蠻正面的，把他的留言翻譯成中文意思就是他很被我的文章感動。同時更是感到驚訝我寫得有點專業性的內容，原本預期沒什麼人會有興趣看，結果在第三天就遇到了知音。於是我很興奮地快速回覆了他的留言，還很自豪地跟室友炫耀這件事情。&lt;/p&gt;
+
+&lt;p&gt;隔天一醒來打開電子信箱，哇塞又有三個人在我的文章下面留言了，而且看起來他們都非常喜歡，還有人說他把我的部落格加入他的bookmark了！這時候我開始覺得怪怪的了，透過他們留下來的聯絡資料，沿路找到了一些沒什麼在管理的部落格，於是我開始在懷疑會不會這只些無聊的人或程式呢？結果當天晚上再度查看時，留言數目已經暴增到了50，而且開始出現一些文不對題的東西，像是「你看起來不像是本地人，不過英文用的還不錯，韓國人應該會很喜歡你的部落格」、「看起來你很需要一台濾水機」、「看完你的文章後我對新陳代謝更加瞭解了！」。我看了實在是欲哭無淚，理性上覺得這些一定都是來自什麼奇怪學校資工系資料探勘課程的無聊project，但是感性上又覺得說不定裡面有那麼一個是我的知音，千萬不可以就隨便刪除掉了，因此我決定再等待一下。於是當我禮拜五早上打開電腦時，我發現留言數已經逼近兩百了，照這樣下去，下個禮拜應該就可以突破千人大關了吧…於是我上網查了一下，發現看來不少人遇到類似的情況，而且wordpress也有專門的防垃圾訊息的外掛可以使用，於是我立刻裝上，從此以後一切又回覆到了平靜。&lt;/p&gt;
+
+&lt;p&gt;這次被垃圾訊息塞爆部落格的事件，讓我有兩個感受，在這邊簡單分享一下。首先是感覺到人真的很容易受到外在的影響，在看到有人留言鼓勵我之後，我突然變得很有動力，連續打了兩三篇文章，想說不能辜負他們對我的讚許。現在想想，很好奇如果這一切都沒有發生，那我當時會這麼有拼勁嗎？哈哈這當然不會知道，但是不可否認的是受到了相當大正面的鼓勵。再來就是讓我蠻意外這些垃圾訊息竟然全部都是正面的文字，這也是讓我在感性層面很不能接受的部分，這些看起來這麼充滿能量的訊息，怎麼會是垃圾訊息呢！？而且這和平時我們看到的一些網路霸凌方向相反，說老實話，對於一個新手來說，這些是還蠻不錯的鼓勵（如果只有十個以內應該還不錯啦），因此我在最後也感到很矛盾，到底該怎麼處理呢？雖然最後的決定是趕盡殺絕，不過還是留下了最一開始的那一篇留言，就當作小小的紀念吧！&lt;/p&gt;
+
+&lt;p&gt;沒想到第一個禮拜的心得竟然大部份的內容是在講關於這個部落格遇到的故事，對於實際的學習過程沒有著墨太多，不過就當作一個輕鬆的開始吧，接下來就要開始認真接受知識的沐浴囉！&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;本週總結&quot;&gt;本週總結&lt;/h2&gt;
+
+&lt;p&gt;預期目標：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Computational complexity: Basic Circuit Complexity: $\Ppoly$; Circuit Depth: $\class{NC}$,$\class{AC}$&lt;/li&gt;
+  &lt;li&gt;Pseudorandomness: 2.1-2.2&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;執行成果：&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Computational complexity: 100%&lt;/li&gt;
+  &lt;li&gt;Pseudorandomness: 100%&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+ </entry>
+ 
+
+</feed>
