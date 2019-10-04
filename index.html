@@ -113,8 +113,8 @@
     </div>
 
     <nav class="sidebar-nav">
-      <a class="sidebar-nav-item active" href="/">About</a>
-      <a class="sidebar-nav-item" href="/research/">Research</a>
+      <a class="sidebar-nav-item" href="/">About</a>
+      <a class="sidebar-nav-item active" href="/research/">Research</a>
       <a class="sidebar-nav-item" href="/studygroup/">Study Group</a>
       <a class="sidebar-nav-item" href="/mooc/">MOOC</a>
       <a class="sidebar-nav-item" href="/baseball/">Baseball</a>
@@ -700,43 +700,37 @@ $
 </div>
 
       <div class="page">
-  <h1 class="page-title">About</h1>
-  <p><a><img id="frontphoto" src="/images/shaoheng_waterfall.jpg" onmouseover="this.src='/images/shaoheng_waterfall.jpg';" onmouseout="this.src='/images/shaoheng_waterfall.jpg';" /></a></p>
+<h1 class="page-title">Research</h1>
+  <p>My research interests are all kinds of algorithms: exact, approximation, randomized, streaming, online, and distributed/parallel ones, and also game theory and mechanism design.</p>
 
-<p>I am Shao-Heng Ko (柯劭珩), currently a research assistant at <a href="https://www.iis.sinica.edu.tw/index_en.html" target="_blank">Institute of Information Science (IIS), Academia Sinica</a> under the supervision of Dr. <a href="https://www.iis.sinica.edu.tw/pages/dnyang/index_en.html" target="_blank">De-Nian Yang</a>. I received my B.S. (2011-2015) and M.S. (2015-2017) degrees in <a href="https://web.ee.ntu.edu.tw/eng/index.php" target="_blank">Department/Graduate Institute of Electrical Engineering</a> at <a href="https://www.ntu.edu.tw" target="_blank">National Taiwan University (NTU)</a>, where I was very fortunate to have Professor <a href="http://www.ee.ntu.edu.tw/profile2?teacher_id=100129&p=3" target="_blank">Ho-Lin Chen</a> as my advisor and also Professor <a href="http://cc.ee.ntu.edu.tw/~ihsiangw/" target="_blank">I-Hsiang Wang</a> as my undergraduate research advisor.</p>
+<h2 id="conference-publications">Conference Publications</h2>
 
-<p>My research interests are algorithms and game theory/mechanism design. I am generally interested in all kinds of algorithms: exact, approximation, randomized, streaming, online, and distributed/parallel ones.</p>
+<p><strong>On VR Spatial Query for Dual Entangled Worlds</strong><br />
+<em>with Ying-Chun Lin, Hsu-Chao Lai, <a href="https://sites.psu.edu/wlee/" target="_blank">Wang-Chien Lee</a>, <a href="https://www.iis.sinica.edu.tw/pages/dnyang/index_en.html" target="_blank">De-Nian Yang</a></em><br />
+<em>To appear in ACM International Conference on Information and Knowledge Management (CIKM) 2019</em>.<br />
+<a href="https://arxiv.org/abs/1908.08691" target="_blank">[arxiv]</a> </p>
+Abstract<a onclick="myCollapse('CIKM19_Abstract')"><i class="fa fa-chevron-circle-down fa-1" aria-hidden="true" id="CIKM19_Abstract"></i></a>
+  <div id="CIKM19_Abstract" class="w3-container w3-hide">
+With the rapid advent of Virtual Reality (VR) technology and virtual tour applications, there is a research need on spatial queries tailored for simultaneous movements in both the physical and virtual worlds. Traditional spatial queries, designed mainly for one world, do not consider the entangled dual worlds in VR. In this paper, we first investigate the fundamental shortest-path query in VR as the building block for spatial queries, aiming to avoid hitting boundaries and obstacles in the physical environment by leveraging Redirected Walking (RW) in Computer Graphics. Specifically, we first formulate Dual-world Redirected-walking Obstacle-free Path (DROP) to find the minimum-distance path in the virtual world, which is constrained by the RW cost in the physical world to ensure immersive experience in VR. We prove DROP is NP-hard and design a fully polynomial-time approximation scheme, Dual Entangled World Navigation (DEWN), by finding Minimum Immersion Loss Range (MIL Range). Afterward, we show that the existing spatial query algorithms and index structures can leverage DEWN as a building block to support kNN and range queries in the dual worlds of VR. Experimental results and a user study with implementation in HTC VIVE manifest that DEWN outperforms the baselines with smoother RW operations in various VR scenarios.
+  </div>
+  <br>
 
-<p>Outside of computer science, I am also interested in Massive Open Online Courses (MOOCs). I was a MOOC explorer in Lab of Teaching Innovation (now part of the <a href="http://www.dlc.ntu.edu.tw/" target="_blank">Digital Learning Center</a>) at NTU from 2015-2017, where I attended study groups on MOOC research, helped enhancing some of <a href="https://www.coursera.org/taiwan" target="_blank">NTU MOOCs on Coursera</a>, as well as wrote pieces and curated expositions on online learning (Please see the MOOC page for those activities). I am also (casually) interested in Transportation and Urban Planning.</p>
 
-<p>I love playing baseball, watching baseball and also <a href="https://www.fangraphs.com/" target="_blank">Sabermetrics/baseball statistics</a>. Playing baseball is an essential part in my life that I would feel depressed without doing it for a month. I also enjoy playing handball and basketball casually. Moreover, I like playing board games; some of my favorite games are <a href="https://www.daysofwonder.com/tickettoride/en/" target="_blank">Tickets to Ride</a> and <a href="https://boardgamegeek.com/boardgame/10547/betrayal-house-hill">Betrayal at House on the Hill</a>. </p>
 
-<p>I was born in the beautiful harbor city of <a href="https://en.wikipedia.org/wiki/Kaohsiung" target="_blank">Kaohsiung</a>. I am also a descendant of the even-more-beautiful island of <a href="https://www.penghu-nsa.gov.tw/English/ScenicSpotDetail.aspx?Cond=1b4a87a6-6631-4e9b-b305-ecacd2f00364&TravelTheme=f6e43940-8866-474c-add4-23f6ec26fd9f" target="_blank">Ji-Bei</a>, the northernmost inhabited island among the <a href="https://en.wikipedia.org/wiki/Penghu" target="_blank">Penghu Islands</a>, famous for its sand beach.
 
-<h3 id="contact">Contact</h3>
+<p><br /></p>
+<h2 id="journal-publications">Master Thesis</h2>
 
-<p><strong>Office:</strong> Room 306, IIS, Academia Sinica, 128 Academia Road, Section 2, Nankang, Taipei 115, Taiwan.</p>
+<p><strong>Encouraging Peer Grading in MOOCs</strong><br />
+Due to huge participant sizes in Massive Open Online Courses (MOOCs), peer grading is practically the only existing solution to grading high-level assignments. One of the main issues of utilizing peer grading in MOOCs is that learners are not motivated and do not spend enough effort in grading. To modify current peer grading mechanism to induce better grading, we focus on the idea of making the learners'' grade depend on the accuracy of their grading of others'' work. We built a game theoretical model to characterize the rational behavior of learners in such a mechanism. We found a set of conditions which guarantees existence of pure-strategy equilibria. When the conditions are satisfied, the course designer can encourage the learners to spend more time on grading through tuning the mechanism parameters. Furthermore, when the learners are assumed to be homogeneous, we proved that in any pure equilibrium, any submitted work will be graded with identical effort by the relevant graders. With this property all the possible pure equilibria are theoretically calculable. We also extended our result to the case where some of the learners are not strategic or rational. We discussed applications of our results in practical situations.
 
-<p><strong>Email:</strong>
-<script language="JavaScript">
-function myEmailAccount() {
-  document.write("shaohengko");
-}
-function myAT() {
-  document.write(".");
-}
-function myDOT() {
-  document.write("@");
-}
-function myAT() {
-  document.write(".");
-}
-myEmailAccount();
-myDOT();
-document.write("gmail");
-myAT();
-document.write("com");
-</script></p>
+<p><br /></p>
+<h2 id="submittedmanuscripts">Submitted/Manuscripts</h2>
+
+<p><strong>Optimizing Item and Subgroup Configurations for Social-Aware VR Shopping</strong><br />
+<em>with Hsu-Chao Lai, <a href="https://basiclab.nctu.edu.tw/" target="_blank">Hong-Han Shuai</a>, <a href="https://www.iis.sinica.edu.tw/pages/dnyang/index_en.html" target="_blank">De-Nian Yang</a>, <a href="https://sites.psu.edu/wlee/" target="_blank">Wang-Chien Lee</a>, <a href="https://www.cs.uic.edu/~psyu/" target="_blank">Philip S. Yu</a>, </em>, in submission.<br /></p>
+
+[TODO] Add other projects...
 
 </div>
 
