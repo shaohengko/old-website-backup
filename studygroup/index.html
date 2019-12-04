@@ -28,6 +28,8 @@
   <link rel="stylesheet" href="/public/css/colorbox.css">
 
 
+
+
   <!-- JS -->
   <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
@@ -96,6 +98,24 @@
   .tooltip:hover .tooltiptext {
       visibility: visible;
   }
+
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
   </style>
 
 </head>
@@ -103,7 +123,20 @@
   <body  class="theme-base-0e">
 
 <div class="page">
-  <h1 class="page-title">Advanced Algorithms Study Group</h1>
+  <h1 class="page-title">Study Groups</h1>
+
+<div class="row">
+  <div class="column" style="background-color:#aaa;">
+    <h2>Column 1</h2>
+    <p>Some text..</p>
+  </div>
+  <div class="column" style="background-color:#bbb;">
+    <h2>Column 2</h2>
+    <p>Some text..</p>
+  </div>
+</div>
+
+
 
 <p>The advanced algorithms study group at Academia Sinica is exactly what the name says: just a bunch of guys (from Sinica/NTU/NTHU) studying algorithms together. We study approximation/randomized/streaming/online algorithms together, following the general outline in <a href="https://people.inf.ethz.ch/gmohsen/AA19/" target="_blank">Advanced Algorithms@ETHZ</a>, but incorporating more discussions on the applications of the algorithmic techniques in, e.g., social network or networking.</p>
 
