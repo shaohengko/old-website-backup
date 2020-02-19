@@ -10,7 +10,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
   <title>
-      Study Groups
+      Shao-Heng Ko
   </title>
 
   <!-- CSS -->
@@ -25,557 +25,191 @@
   <link rel="stylesheet" href="/public/css/color.css">
   <link rel="stylesheet" href="/public/css/colorbox.css">
 
+  <!-- JS -->
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    TeX: {
+      equationNumbers: {
+        autoNumber: "AMS"
+      }
+    },
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true,
+    }
+  });
+  </script>
+  <script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+  <!-- MathJax local
+  <script type="text/javascript" async src="/js/MathJax/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+  -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <!--
+  <script type="text/javascript" src="/js/turn/turn.min.js"></script>
+  -->
+
+  <!-- Add mermaid -->
+  <script src="https://cdn.rawgit.com/knsv/mermaid/6.0.0/dist/mermaid.min.js"></script>
+  <script>
+    mermaid.initialize({
+      startOnLoad:true
+    });
+  </script>
+  <link rel="stylesheet" href="/js/mermaid/dist/mermaid.css">
+
   <!-- tooltip -->
   <style>
-* {
-  box-sizing: border-box;
-}
+  .tooltip {
+      position: relative;
+      display: inline-block;
+  }
 
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-}
+  .tooltip .tooltiptext {
+      visibility: hidden;
+      width: 300px;
+      background-color: black;
+      color: #fff;
+      text-align: center;
+      border-radius: 6px;
+      padding: 5px 0;
 
-/* The grid: Three equal columns that floats next to each other */
-.column {
-  float: left;
-  width: 33.33%;
-  padding: 25px;
-  text-align: center;
-  font-size: 25px;
-  cursor: pointer;
-  color: black;
-}
+      /* Position the tooltip */
+      position: absolute;
+      z-index: 1;
+      top: 20px;
+  }
 
-.containerTab {
-  padding: 50px;
-  color: black;
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Closable button inside the container tab */
-.closebtn {
-  float: right;
-  color: black;
-  font-size: 35px;
-  cursor: pointer;
-}
-
-table {
-  table-layout: fixed;
-  width: 100%;
-}
+  .tooltip:hover .tooltiptext {
+      visibility: visible;
+  }
   </style>
 </head>
 
-<body  class="theme-base-0e">
+  <body  class="theme-base-0e">
+    <div class="sidebar w3-hide-small" id="mySidebar">
+  <div class="container">
+    <button class="w3-button sidebar w3-text-white w3-hide-medium w3-hide-large w3-right" onclick="sidebar_close()">&#9776;</button>
+    <div class="sidebar-about">
+      <div class="w3-text-white w3-center" style="font-size:22px;">
+        Shao-Heng Ko
+        <br>
+        (柯劭珩)
+      </div>
+    </div>
 
-<!-- Three columns -->
-<div class="row">
-  <div class="column" onclick="openTab('b1');" style="background:#fefbd8;">
-    Advanced Algorithms <br> Study Group
+    <nav class="sidebar-nav">
+      <a class="sidebar-nav-item active" href="/"><big>About</big></a>
+      <a class="sidebar-nav-item" href="/research/"><big>Research</big></a>
+      <a class="sidebar-nav-item" href="/notes/"><big>Talks/Projects</big></a>
+      <a class="sidebar-nav-item" href="/mooc/"><big>MOOC</big></a>
+      <a class="sidebar-nav-item" href="/baseball/"><big>Baseball</big></a>
+      <a class="sidebar-nav-item" href="/studygroup/"><big>Study Groups</big></a>
+    </nav>
   </div>
-  <div class="column" onclick="openTab('b2');" style="background:#d5f4e6;">
-    Graph Neural Networks <br> Study Group
-  </div>
-  <div class="column" onclick="openTab('b3');" style="background:#fea9c8;">
-    MPC/Stream/Distributed Algorithms <br> Study Group
+
+  <div class="w3-bottom">
+    <p style="font-size:12px">&copy; 2019 Shao-Heng Ko.<br>Last Edited: Feb 16, 2020.</p>
   </div>
 </div>
 
-<!-- Full-width columns: (hidden by default) -->
-<div id="b1" class="containerTab" style="display:none;background:#fefbd8">
-  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
-    <h1>Advanced Algorithms Study Group</h1>
-
-    <p><b>The advanced algorithms study group</b> at Academia Sinica is exactly what the name says: just a bunch of guys (from Sinica/NTU/NTHU) studying algorithms together. We study <b>approximation/randomized/streaming/online algorithms</b> together, following the general outline in <a href="https://people.inf.ethz.ch/gmohsen/AA19/" target="_blank">Advanced Algorithms@ETHZ</a>, but incorporating more discussions on the <b>applications</b> of the algorithmic techniques in, e.g., social network or networking.
-    </p>
-
-    <p><b>Coordinators:</b> Shao-Heng Ko and Sheng-Hao Chiang.</p>
-    <p><b>Meeting time:</b> Tuesday 3pm - 5pm or Friday 3pm - 5pm in Spring 2020 (Please see the detailed schedule below).</p>
-    <p><b>Resources:</b><br>
-      <ul>
-        <li><a href="https://people.inf.ethz.ch/gmohsen/AA19/" target="_blank">Course Website of Advanced Algorithms@ETHZ</a></li>
-        <li><a href="https://people.inf.ethz.ch/gmohsen/AA19/AAscript.pdf" target="_blank">Course Material of Advanced Algorithms@ETHZ</a></li>
-      </ul>
-    </p>
-
-    <font color="red">
-    <h2 id="schedule">Next meeting:</h2>
-    <div class="w3-responsive">
-      <table class="w3-table-all">
-        <tr>
-          <th style="width:15%">Date</th>
-          <th style="width:15%">Time</th>
-          <th style="width:10%">Location</th>
-          <th style="width:10%">Leader</th>
-          <th style="width:10%">Co-Leader</th>
-          <th style="width:50%">Topic and Content</th>
-        </tr>
-
-        <tr>
-          <td>2/28 2020 (Fri)</td>
-          <td>3:00 - 5:00 pm</td>
-          <td>Online</td>
-          <td>庭安</td>
-          <td>廷威</td>
-          <td><I>Re-run: 12/5</I><br>
-          (Please refer to the relevant meeting)</td>
-        </tr>
-
-      </table>
-    </div>
-    </font>
-
-    <h2 id="schedule">Future Schedule (Tentative):</h2>
-    <div class="w3-responsive">
-      <table class="w3-table-all">
-
-        <tr>
-          <th style="width:15%">Date</th>
-          <th style="width:15%">Time</th>
-          <th style="width:10%">Location</th>
-          <th style="width:10%">Leader</th>
-          <th style="width:10%">Co-Leader</th>
-          <th style="width:50%">Topic and Content</th>
-        </tr>
-
-        <tr>
-          <td>3/10 (Tue)</td>
-          <td>3:00 - 5:00 pm</td>
-          <td>Online</td>
-          <td>昱銓</td>
-          <td>一铄</td>
-          <td> <I>Lecture  07: Streaming Algorithms: Frequent Elements, Approximate Counting</I><br></td>
-        </tr>
-
-        <tr>
-          <td>3/17 (Tue)</td>
-          <td>3:00 - 5:00 pm</td>
-          <td>Online</td>
-          <td>廷威</td>
-          <td>劭珩</td>
-          <td> <I>Lecture  08: Streaming Algorithms: Distinct Elements, Alon-Matias-Szegedy's Moment Estimators</I><br></td>
-        </tr>
-
-        <tr>
-          <td>3/24 (Tue)</td>
-          <td>3:00 - 5:00 pm</td>
-          <td>IIS/Online</td>
-          <td>睿翊</td>
-          <td>劭珩</td>
-          <td> <I>Lecture  09: Streaming Algorithms: Graph Sketching</I><br></td>
-        </tr>
-
-        <tr>
-          <td>4/3 (Fri)</td>
-          <td>3:00 - 5:00 pm</td>
-          <td>Online</td>
-          <td>如均</td>
-          <td>盛浩</td>
-          <td> <I>Lecture  06: Probabilistic Tree Embedding & Buy-at-Bulk Network Design</I><br></td>
-        </tr>
-
-        <tr>
-          <td>4/10 (Fri)</td>
-          <td>3:00 - 5:00 pm</td>
-          <td>Online</td>
-          <td>TBD</td>
-          <td>TBD</td>
-          <td> <I>Makeup date (reserved)</I><br></td>
-        </tr>
-
-        <tr>
-          <td>4/28 (Tue)</td>
-          <td>3:00 - 5:00 pm</td>
-          <td>IIS/Online</td>
-          <td>志航</td>
-          <td>一铄</td>
-          <td> <I>Lecture  10: Graph Spanners</I><br></td>
-        </tr>
-
-        <tr>
-          <td>5/8 (Fri)</td>
-          <td>3:00 - 5:00 pm</td>
-          <td>Online</td>
-          <td>克允</td>
-          <td>光祥</td>
-          <td> <I>Lecture  11: Graph Sparsifiers</I><br></td>
-        </tr>
-
-        <tr>
-          <td>5/15 (Fri)</td>
-          <td>3:00 - 5:00 pm</td>
-          <td>Online</td>
-          <td>庭安</td>
-          <td>盛浩</td>
-          <td> <I>Lecture  12: Basic Online Algorithms</I><br></td>
-        </tr>
-
-        <tr>
-          <td>5/22 (Fri)</td>
-          <td>3:00 - 5:00 pm</td>
-          <td>Online</td>
-          <td>喬文</td>
-          <td>光祥</td>
-          <td> <I>Lecture  13: Online Algorithms: Yao's Principle and k-Server</I><br></td>
-        </tr>
-
-        <tr>
-          <td>TBD (after all of the above)</td>
-          <td>TBD</td>
-          <td>Online (Joint with GNN study group)</td>
-          <td>大哲(TBD)</td>
-          <td>TBD</td>
-          <td> <I>Lecture  14: Online Learning from Experts (The MWU Method)</I><br></td>
-        </tr>
-
-
-
-      </table>
-    </div>
-
-    <h2 id="schedule">Past meetings:</h2>
-    <div class="w3-responsive">
-      <table class="w3-table-all">
-
-        <tr>
-          <th style="width:15%">Date</th>
-          <th style="width:15%">Time</th>
-          <th style="width:10%">Location</th>
-          <th style="width:10%">Leader</th>
-          <th style="width:10%">Co-Leader</th>
-          <th style="width:50%">Topic and Content</th>
-        </tr>
-
-        <tr>
-          <td>10/18 2019 (Fri)</td>
-          <td>2:00 - 3:30 pm</td>
-          <td>N106</td>
-          <td>Shao-Heng</td>
-          <td>N/A</td>
-          <td> <I>Overview and Greedy Approximation (Set Cover/Vertex Cover)</I><br><a href="AA1018/1018.pdf" target="_blank">[PDF]</a><a href="AA1018/1018.pptx" target="_blank">[PPT]</a></td>
-        </tr>
-
-        <tr>
-          <td>10/28 2019 (Mon)</td>
-          <td> 3:30 - 5:00 pm</td>
-          <td>N101</td>
-          <td>Sheng-Hao</td>
-          <td>N/A</td>
-          <td> <I>Submodular Maximization and Influence Maximization</I></a><br><a href="AA1028/submodular.pdf" target="_blank">[Slide1-PDF]</a><a href="AA1028/submodular.pptx" target="_blank">[Slide1-PPT]</a><br><a href="AA1028/kdd03-slides.pdf" target="_blank">[Slide2-PDF]</a><a href="AA1028/kdd03-slides.ppt" target="_blank">[Slide2-PPT]</a><br><a href="AA1028/kdd03.pdf" target="_blank">[KDD03(The original paper)]</a><br><a href="AA1028/survey.pdf" target="_blank">[A 2018 survey on influence maximization]</a></td>
-        </tr>
-
-        <tr>
-          <td>11/15 2019 (Fri)</td> <td> 2:00 - 3:30 pm</td> <td>N106</td>
-          <td>Guang-Siang</td><td>N/A</td> <td> <I>PTAS/FPTAS/FPRAS/APX, Knapsack</I></a><br><a href="AA1115/ptas.pdf" target="_blank">[Slide1-PDF]</a><a href="AA1115/knapsack.pdf" target="_blank">[Slide2-PDF]</a></td>
-        </tr>
-
-        <tr>
-          <td>11/25 2019 (Mon)</td> <td>3:30 - 5:00 pm</td> <td>N101</td>
-          <td>Shao-Heng</td><td>N/A</td> <td> <I>Bin Packing, Online Bin Packing, Multidimensional Bin Packing</I></a><br>
-          <a href="AA1125/agenda.pptx" target="_blank">[Agenda(Overview)]</a><a href="AA1125/ENS_MOOC.pdf" target="_blank">[ENS_MOOC]</a><a href="AA1125/online.pptx" target="_blank">[Online]</a><a href="AA1125/2D.pdf" target="_blank">[2D]</a><a href="AA1125/survey.pdf" target="_blank">[Survey]</a></td>
-        </tr>
-
-        <tr>
-          <td>12/5 2019 (Thu)</td> <td>8:00 - 9:30 pm</td> <td>Online</td>
-          <td>Yishuo</td> <td>N/A</td><td><I>Chernoff Bound, Counting, #P, DNF/Graph Coloring Counting</I></a><br>
-          <a href="AA1205/1205.ppt" target="_blank">[Slides]</a></td>
-        </tr>
-
-        <tr>
-          <td>12/19 2019 (Thu)</td>
-          <td>8:00 - 9:30 pm</td>
-          <td>Online</td>
-          <td>Chi-Jen</td><td>N/A</td>
-          <td><I>LP/ILP and Randomized Rounding</I><br>
-          <a href="AA1219/slides.pdf" target="_blank">[Slides]</a><a href="AA1219/AA.pdf" target="_blank">[AA Scripts]</a><a href="AA1219/duality.pdf" target="_blank">[duality]</a><a href="AA1219/survey.pdf" target="_blank">[survey]</a> </td>
-        </tr>
-
-        <tr>
-          <td>1/15 2020 (Wed)</td>
-          <td>8:00 - 9:30 pm</td>
-          <td>Online</td>
-          <td>Chih-Hang</td><td>N/A</td>
-          <td><I>Multi-commodity Routing</I><br>
-          <a href="AA0115/main_slides.pptx" target="_blank">[Slides]</a> <a href="AA0115/note1.pdf" target="_blank">[Note 1]</a> <a href="AA0115/note2.pdf" target="_blank">[Note 2]</a> <a href="AA0115/note3.pdf" target="_blank">[Note 3]</a></td>
-        </tr>
-
-        <tr>
-          <td>1/31 2020 (Fri)</td>
-          <td>3:00 - 5:00 pm</td>
-          <td>Online</td>
-          <td>大哲</td><td>廷威</td>
-          <td><I>Re-run: 10/18 + 10/28</I><br>
-          (Please refer to the relevant meetings)</td>
-        </tr>
-
-        <tr>
-          <td>2/4 2020 (Tue)</td>
-          <td>3:00 - 5:00 pm</td>
-          <td>Online</td>
-          <td>喬文</td><td>如均</td>
-          <td><I>Re-run: 11/15</I><br>
-          (Please refer to the relevant meeting)</td>
-        </tr>
-
-        <tr>
-          <td>2/7 2020 (Fri)</td>
-          <td>3:00 - 5:00 pm</td>
-          <td>Online</td>
-          <td>克允</td>
-          <td>啟仁</td>
-          <td><I>Re-run: 11/25</I><br>
-          (Please refer to the relevant meeting)</td>
-        </tr>
-
-        <tr>
-          <td>2/14 2020 (Fri)</td>
-          <td>3:00 - 5:00 pm</td>
-          <td>Online</td>
-          <td>大哲</td>
-          <td></td>
-          <td><I>Re-run: 11/15; Dicussion about APX-hardness; Minimum Makespan Scheduling</I><br>
-          <a href="AA0214/makespan.ppt" target="_blank">[Slides-Makespan]</a> <a href="https://cstheory.stackexchange.com/questions/27833/does-np-hardness-of-c-approximation-for-some-c1-imply-apx-hardness" target="_blank">[Related Material]</a> <a href="http://www.cs.uu.nl/docs/vakken/an/an-approx-2016.pdf" target="_blank">[Material]</a></td>
-        </tr>
-
-      </table>
-    </div>
+<div class="sidebar w3-hide-medium w3-hide-large w3-right" id="mySmallSidebar">
+  <button class="w3-button sidebar w3-text-white" onclick="sidebar_open()">&#9776;</button>
+</div>
+<div class="content container">
+<div style="display:none">
 </div>
 
-<div id="b2" class="containerTab" style="display:none;background:#d5f4e6">
-  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
-  <iframe src="https://hackmd.io/Ga3mxIQyTrSVYLxskGG1mQ" style="height:700px;width:90%; border:2px solid green;"></iframe>
-    <!-- <h1>Graph Neural Networks Study Group</h1>
+      <div class="page">
+  <h1 class="page-title">About</h1>
+  <p><a><img id="frontphoto" src="/images/shaoheng_waterfall.jpg" onmouseover="this.src='/images/shaoheng_waterfall.jpg';" onmouseout="this.src='/images/shaoheng_waterfall.jpg';" /></a></p>
 
-    <p>What is the GNN Study Group?
-    </p>
+<p>I am Shao-Heng Ko (柯劭珩), currently a research assistant at <a href="https://www.iis.sinica.edu.tw/index_en.html" target="_blank">Institute of Information Science (IIS), Academia Sinica</a> under the supervision of Dr. <a href="https://www.iis.sinica.edu.tw/pages/dnyang/index_en.html" target="_blank">De-Nian Yang</a>. I received my B.S. (2011-2015) and M.S. (2015-2017) degrees in <a href="https://web.ee.ntu.edu.tw/eng/index.php" target="_blank">Department/Graduate Institute of Electrical Engineering</a> at <a href="https://www.ntu.edu.tw" target="_blank">National Taiwan University (NTU)</a>, where I was very fortunate to have Professor <a href="http://www.ee.ntu.edu.tw/profile2?teacher_id=100129&p=3" target="_blank">Ho-Lin Chen</a> as my advisor and also Professor <a href="http://cc.ee.ntu.edu.tw/~ihsiangw/" target="_blank">I-Hsiang Wang</a> as my undergraduate research advisor.</p>
 
-    <p><b>Coordinators:</b> Hsi-Wen Chen</p>
-    <p><b>Meeting time:</b> every other Thursday Online.</p>
-    <p><b>Resources:</b><br>
-      <ul>
-        <li>Resource Link</li>
-      </ul>
-    </p>
+<p>My research interests are algorithms and game theory/mechanism design. I am generally interested in all kinds of algorithms: exact, approximation, randomized, streaming, online, and distributed/parallel ones. At Academia Sinica, I design approximation algorithms for novel roblems with applications in Virtual Reality, marketing, social network, etc.</p>
 
-    <font color="red">
-    <h2 id="schedule">Next meeting:</h2>
-    <div class="w3-responsive">
-      <table class="w3-table-all">
-        <tr>
-          <th style="width:15%">Date</th>
-          <th style="width:15%">Time</th>
-          <th style="width:10%">Location</th>
-          <th style="width:10%">Leader</th>
-          <th style="width:60%">Topic and Content</th>
-        </tr>
+<p>Outside of computer science, I am also interested in Massive Open Online Courses (MOOCs). I was a MOOC explorer in Lab of Teaching Innovation (now part of the <a href="http://www.dlc.ntu.edu.tw/" target="_blank">Digital Learning Center</a>) at NTU from 2015-2017, where I did a lot of things around MOOCs, including studying, reviewing and even creating them. I am also casually interested in Transportation and Urban Planning.</p>
 
-        <tr>
-          <td>12/26 2019 (Thu)</td>
-          <td>8:00 - 9:30 pm</td>
-          <td>Online</td>
-          <td>Arwen</td>
-          <td><I>Network Embedding - Random Walk</I><br>
-          </td>
-        </tr>
-      </table>
-    </div>
-    </font>
+<p>I love playing baseball, watching baseball and also <a href="https://www.fangraphs.com/" target="_blank">Sabermetrics/baseball statistics</a>. Playing baseball is an essential part in my life. I also play a little handball and basketball. Moreover, I like playing board games; some of my favorites are <a href="https://www.daysofwonder.com/tickettoride/en/" target="_blank">Tickets to Ride</a> and <a href="https://boardgamegeek.com/boardgame/10547/betrayal-house-hill">Betrayal at House on the Hill</a>. </p>
 
-    <h2 id="schedule">Future Schedule (Tentative):</h2>
-    <div class="w3-responsive">
-      <table class="w3-table-all">
+<p>I was born in the beautiful harbor city of <a href="https://en.wikipedia.org/wiki/Kaohsiung" target="_blank">Kaohsiung</a>. I am also a descendant of the even-more-beautiful island of <a href="https://www.penghu-nsa.gov.tw/English/ScenicSpotDetail.aspx?Cond=1b4a87a6-6631-4e9b-b305-ecacd2f00364&TravelTheme=f6e43940-8866-474c-add4-23f6ec26fd9f" target="_blank">Ji-Bei</a>, the northernmost inhabited island among the <a href="https://en.wikipedia.org/wiki/Penghu" target="_blank">Penghu Islands</a>, famous for its sand beach.
 
-        <tr>
-          <th style="width:15%">Date</th>
-          <th style="width:15%">Time</th>
-          <th style="width:10%">Location</th>
-          <th style="width:10%">Leader</th>
-          <th style="width:60%">Topic and Content</th>
-        </tr>
+<p><a href="documents/CV.pdf" target="_blank">[Curriculum Vitae]</a>
 
-        <tr>
-          <td>1/16 2019 (Thu)</td>
-          <td>8:00 - 9:30 pm</td>
-          <td>Online</td>
-          <td>Vincent</td>
-          <td><I>HIN and Application</I><br>
-          </td>
-        </tr>
+<h3 id="contact">Contact</h3>
 
-      </table>
-    </div>
+<p><strong>Office:</strong> Room 306, IIS, Academia Sinica, 128 Academia Road, Section 2, Nankang, Taipei 115, Taiwan.</p>
 
-    <h2 id="schedule">Past meetings:</h2>
-    <div class="w3-responsive">
-      <table class="w3-table-all">
+<p><strong>Email:</strong>
+<script language="JavaScript">
+function myEmailAccount() {
+  document.write("shaohengko");
+}
+function myAT() {
+  document.write(".");
+}
+function myDOT() {
+  document.write("@");
+}
+function myAT() {
+  document.write(".");
+}
+myEmailAccount();
+myDOT();
+document.write("gmail");
+myAT();
+document.write("com");
+</script></p>
 
-        <tr>
-          <th style="width:15%">Date</th>
-          <th style="width:15%">Time</th>
-          <th style="width:10%">Location</th>
-          <th style="width:10%">Leader</th>
-          <th style="width:60%">Topic and Content</th>
-        </tr>
-
-        <tr>
-          <td>11/14 2019 (Thu)</td>
-          <td>9:30 - 11:00 pm</td>
-          <td>Online</td>
-          <td>Hsi-Wen</td>
-          <td> <I>Overview</I><br>
-          <a href="GNN1114/Overview.pdf" target="_blank">[Overview(PDF)]</a><a href="https://paper.dropbox.com/doc/Group-Study-1411-Network-Representation-Learning-KUMj7Ol7DpR4rRmtMFOgy" target="_blank">[Note by Zhi-Rui Tam]</a></td>
-        </tr>
-
-        <tr>
-          <td>12/12 2019 (Thu)</td>
-          <td>9:00 - 10:30 pm</td>
-          <td>Online</td>
-          <td>Ting-An</td>
-          <td><I>Network Embedding</I><br>
-          <a href="GNN1212/NE.pdf" target="_blank">[Slides(PDF)]</a></td>
-        </tr>
-
-      </table>
-    </div>
-</div>-->
 </div>
 
-<div id="b3" class="containerTab" style="display:none;background:#fea9c8">
-    <h1>Massive Parallel Computing, Streaming, and Distributed Algorithms Study Group</h1>
-
-    <p>To study frontier theory works in these domains.
-    </p>
-
-    <p><b>Coordinators:</b> Shao-Heng Ko</p>
-    <p><b>Meeting time:</b> randomly (always TBD)</p>
-    <p><b>Resources:</b><br>
-      <ul>
-        <li>Resource Link</li>
-      </ul>
-    </p>
-
-    <font color="red">
-    <h2 id="schedule">Next meeting:</h2>
-    <div class="w3-responsive">
-      <table class="w3-table-all">
-        <tr>
-          <th style="width:15%">Date</th>
-          <th style="width:10%">Time</th>
-          <th style="width:10%">Location</th>
-          <th style="width:25%">Leader</th>
-          <th style="width:45%">Topic and Content</th>
-        </tr>
-
-        <tr>
-          <td>TBD</td>
-          <td>TBD</td>
-          <td>TBD</td>
-          <td>TBD</td>
-          <td><I>TBD</I></a></td>
-        </tr>
-      </table>
     </div>
-    </font>
+  </body>
 
-    <h2 id="schedule">Future Schedule (Tentative):</h2>
-    <div class="w3-responsive">
-      <table class="w3-table-all">
-
-        <tr>
-          <th style="width:15%">Date</th>
-          <th style="width:10%">Time</th>
-          <th style="width:10%">Location</th>
-          <th style="width:25%">Leader</th>
-          <th style="width:45%">Topic and Content</th>
-        </tr>
-
-      </table>
-    </div>
-
-    <h2 id="schedule">Past meetings:</h2>
-    <div class="w3-responsive">
-      <table class="w3-table-all">
-
-        <tr>
-          <th style="width:15%">Date</th>
-          <th style="width:10%">Time</th>
-          <th style="width:10%">Location</th>
-          <th style="width:25%">Leader</th>
-          <th style="width:45%">Topic and Content</th>
-        </tr>
-
-        <tr>
-          <td>3/8 2018 (Thu)</td>
-          <td></td>
-          <td>N101</td>
-          <td>Shao-Heng</td>
-          <td> <I>Basic Streaming Model/Probabilistic Methods</I><br>
-            <a href="MPC03082018/0308.pdf" target="_blank">[Slides(PDF)]</a>
-            <a href="MPC03082018/0308.pptx" target="_blank">[Slides(PPT)]</a></td>
-        </tr>
-
-        <tr>
-          <td>4/19 2018 (Thu)</td>
-          <td></td>
-          <td>N101</td>
-          <td>Shao-Heng</td>
-          <td> <I>Count sketch/Heavy Hitter/Application in Computational Geometric</I><br>
-            <a href="MPC04192018/0419.pptx" target="_blank">[Slides(PPT)]</a></td>
-        </tr>
-
-        <tr>
-          <td>3/4 2019 (Mon)</td>
-          <td>12:00 pm</td>
-          <td>N107</td>
-          <td>Shao-Heng/Arwen/Vincent/Hsu-Chao</td>
-          <td> <I>Overview of SODA19; Introduction to MPC, streaming model, and distributed models</I><br>
-            <a href="MPC03042019/Overview.pptx" target="_blank">[Overview Slides(PPT)]</a><br>
-            <a href="https://www.cs.rutgers.edu/~sa1497/pages/coreset-edcs_matching-vc_2019.html" target="_blank">[SODA19(paper, slides, etc by S.Assadi)]</a><br>
-          </td>
-        </tr>
-
-        <tr>
-          <td>3/25 2019 (Mon)</td>
-          <td>12:00 pm</td>
-          <td>N406</td>
-          <td>Distributed: Hsu-Chao/Arwen/Yishuo/Guang-Siang/Sheng-Hao</td>
-          <td> <I>SPAA17(Composable Coresets)</I><br>
-            <a href="https://www.cs.rutgers.edu/~sa1497/pages/randomized-coreset_matching-vc_2017.html" target="_blank">[SPAA17(paper, slides, etc by S.Assadi)]</a></td>
-        </tr>
-
-        <tr>
-          <td>4/15 2019 (Mon)</td>
-          <td>12:00 pm</td>
-          <td>N406</td>
-          <td>Distributed: Hsu-Chao/Arwen/Guang-Siang/Sheng-Hao</td>
-          <td> <I>SODA16(EDCS)</I><br><a href="https://arxiv.org/pdf/1506.07076.pdf" target="_blank">[SODA16(paper) on arXiv]</a><a href="http://2016.highlightsofalgorithms.org/wp-content/uploads/2015/12/Cliff-Stein.pdf" target="_blank">[SODA16(slides) by A.Bernstein/C.Stein]</a></td>
-        </tr>
-      </table>
-    </div>
-</div>
-</div>
+  <!-- Footer -->
 
 <script>
-function openTab(tabName) {
-  var i, x;
-  x = document.getElementsByClassName("containerTab");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
-  }
-  document.getElementById(tabName).style.display = "block";
+// collapse
+function myCollapse(id) {
+    var x = document.getElementById(id);
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+    id_but = id.concat("-but");
+    var y = document.getElementById(id_but);
+    if (y != null) {
+      if (y.className.indexOf("fa-chevron-circle-down") != -1) {
+        y.className = y.className.replace(" fa-chevron-circle-down", " fa-chevron-circle-up");
+      } else {
+        y.className = y.className.replace(" fa-chevron-circle-up", " fa-chevron-circle-down");
+      }
+    }
 }
 </script>
 
-</body>
+<script>
+// colorbox
+ jQuery('a.gallery').colorbox();
+ $(".gallery").colorbox({
+  width: "60%"
+});
+</script>
 
-  <!-- Footer -->
+<script>
+// sidebar collapse
+function sidebar_open() {
+  document.getElementById("mySidebar").classList.remove("w3-hide-small");
+  document.getElementById("mySmallSidebar").classList.add("w3-hide-small");
+}
+function sidebar_close() {
+  document.getElementById("mySidebar").classList.add("w3-hide-small");
+  document.getElementById("mySmallSidebar").classList.remove("w3-hide-small");
+}
+</script>
+
 
 </html>
